@@ -5,7 +5,7 @@ public class Stitch : MonoBehaviour
 
   void Awake() {
     instance = this;
-    player = GameObject.FindWithTag("Player").GetComponent<Player>();
+    // player = GameObject.FindWithTag("Player").GetComponent<Player>();
   }
 
   // Treat this class as a singleton. This will hold the instance of the class.
