@@ -10,8 +10,5 @@ public enum eObjectType
 public enum eObjectType
 {
   NONE,
-  PLAYER,
-  LADDER,
-  SPROUT,
-  SCENE_EXIT
+  LADDER
 };

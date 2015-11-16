@@ -14,17 +14,8 @@ public class CollisionStubs : CollisionObj
   // Event handler that gets fired from the CollisionHandler instance attached to the BoxCollider/Rigidbody.
   new public virtual void HandleCollision(BaseObj other) {
     switch (other.Collision.Type) {
-      case eObjectType.PLAYER:
-        PlayerCollision(other);
-        break;
       case eObjectType.LADDER:
         LadderCollision(other as LadderObj);
-        break;
-      case eObjectType.SPROUT:
-        SproutCollision((Sprout)other);
-        break;
-      case eObjectType.SCENE_EXIT:
-        SceneExitCollision((SceneExit)other);
         break;
     }
   }
@@ -41,9 +32,6 @@ public class CollisionStubs : CollisionObj
    * FUNCTION STUBS
    **********************************/
 
-  protected virtual void PlayerCollision(BaseObj other) {}
   protected virtual void LadderCollision(LadderObj other) {}
   protected virtual void LadderExit(LadderObj other) {}
-  protected virtual void SproutCollision(Sprout other) {}
-  protected virtual void SceneExitCollision(SceneExit other) {}
 }
