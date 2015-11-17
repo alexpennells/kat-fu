@@ -1,33 +1,29 @@
 using System;
+using System.Timers;
 using UnityEngine;
 
 public class Kat_Base : InputObj {
 
-  [Tooltip("The speed that the sprite turns around")]
-  public float turnSpeed = 0.2f;
+  // Whehter the air kick is still up.
+  public bool hasAirAttack = true;
+
+  // The timer for the air kick.
+  public Timer airKickTimer = new Timer();
 
   protected override void Init() {
     Game.Camera.InitPosition();
+
+    airKickTimer.Elapsed += new ElapsedEventHandler(AirKickTimerElapsed);
+    airKickTimer.Interval = 500;
   }
 
-  protected override void Step() {
+  protected override void Step () {
     base.Step();
 
-    if (Physics.hspeed < 0 && transform.localScale.x > -1)
-      transform.localScale = transform.localScale - new Vector3(turnSpeed, 0, 0);
-    else if (Physics.hspeed > 0 && transform.localScale.x < 1)
-      transform.localScale = transform.localScale + new Vector3(turnSpeed, 0, 0);
-    else if (Physics.hspeed == 0) {
-      if (transform.localScale.x > 0 && transform.localScale.x < 1)
-        transform.localScale = transform.localScale + new Vector3(turnSpeed, 0, 0);
-      else if (transform.localScale.x < 0 && transform.localScale.x > -1)
-        transform.localScale = transform.localScale - new Vector3(turnSpeed, 0, 0);
+    if (!hasAirAttack && airKickTimer.Enabled) {
+      Physics.SkipNextFrictionUpdate();
+      Physics.SkipNextGravityUpdate();
     }
-
-    if (transform.localScale.x > 1)
-      transform.localScale = new Vector3(1, 1, 1);
-    else if (transform.localScale.x < -1)
-      transform.localScale = new Vector3(-1, 1, 1);
   }
 
   protected override void LeftHeld (float val) {
@@ -39,7 +35,32 @@ public class Kat_Base : InputObj {
   }
 
   protected override void JumpPressed () {
-    if (SolidPhysics.HasFooting)
+    if (SolidPhysics.HasFooting) {
       Physics.vspeed = 8;
+      Sprite.Play("kat_jump", 1f);
+      airKickTimer.Enabled = true;
+    }
+  }
+
+  protected override void AttackPressed () {
+    if (hasAirAttack && !SolidPhysics.HasFooting) {
+      hasAirAttack = false;
+      Physics.vspeed = 0;
+
+      if (transform.localScale.x < 0)
+        Physics.hspeed = -5;
+      else
+        Physics.hspeed = 5;
+
+      Sprite.Play("kat_kick", 2f);
+    }
+  }
+
+  /***********************************
+   * TIMER HANDLERS
+   **********************************/
+
+  private void AirKickTimerElapsed(object source, ElapsedEventArgs e) {
+      airKickTimer.Enabled = false;
   }
 }
