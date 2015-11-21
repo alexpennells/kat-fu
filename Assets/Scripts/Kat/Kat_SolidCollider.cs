@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class Kat_SolidCollider : SolidColliderObj {
   protected override void FootingCollision(SolidObj footing) {
-    (Base as Kat_Base).hasAirAttack = true;
-    (Base as Kat_Base).airKickTimer.Enabled = false;
+    base.FootingCollision(footing);
 
-    if (Base.Sprite.IsPlaying("kat_jump") || Base.Sprite.IsPlaying("kat_kick"))
+    (Base as Kat_Base).hasAirAttack = true;
+
+    if (Base.Sprite.IsPlaying("kat_jump", "kat_kick", "kat_pound", "kat_uppercut"))
       Base.Sprite.Play("kat_idle", 1f);
   }
 }
