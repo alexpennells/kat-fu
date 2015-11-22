@@ -70,7 +70,6 @@ public class Kat_Base : InputObj {
       Sprite.SetAlpha(0.5f);
       Sprite.Play("kat_dodge");
 
-
       if (transform.localScale.x < 0)
         Physics.hspeed = -7;
       else
@@ -80,7 +79,7 @@ public class Kat_Base : InputObj {
 
   protected override void AttackPressed () {
     if (!SolidPhysics.HasFooting) {
-      if (Game.DownHeld)
+      if (Game.DownHeld && !Sprite.IsPlaying("kat_pound"))
         StartPound();
       else if (hasAirAttack) {
         if (Game.UpHeld && !Sprite.IsPlaying("kat_uppercut")) {

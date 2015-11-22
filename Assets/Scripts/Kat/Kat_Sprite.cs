@@ -28,7 +28,7 @@ public class Kat_Sprite : SpriteObj {
         Play("kat_jump", 1f);
     }
 
-    if (Base.SolidPhysics.HasFooting && !IsPlaying("kat_punch_1", "kat_punch_2", "kat_lunge")) {
+    if (Base.SolidPhysics.HasFooting && !IsPlaying("kat_punch_1", "kat_punch_2", "kat_lunge", "kat_uppercut")) {
       if (!Game.LeftHeld && !Game.RightHeld)
         Play("kat_idle", 1f);
       else {
