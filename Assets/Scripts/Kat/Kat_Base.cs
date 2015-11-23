@@ -13,20 +13,12 @@ public class Kat_Base : InputObj {
   // Whether or not to play the next punch in a hit combo.
   public bool playNextPunch = false;
 
-  // The timers.
-  public Timer airKickTimer = new Timer();
-  public Timer groundKickTimer = new Timer();
-  public Timer dodgeTimer = new Timer();
-
   protected override void Init() {
     Game.Camera.InitPosition();
 
-    airKickTimer.Elapsed += new ElapsedEventHandler(AirKickTimerElapsed);
-    airKickTimer.Interval = 300;
-    groundKickTimer.Elapsed += new ElapsedEventHandler(GroundKickTimerElapsed);
-    groundKickTimer.Interval = 400;
-    dodgeTimer.Elapsed += new ElapsedEventHandler(DodgeTimerElapsed);
-    dodgeTimer.Interval = 300;
+    AirKickTimer.Interval = 300;
+    GroundKickTimer.Interval = 400;
+    DodgeTimer.Interval = 300;
   }
 
   protected override void Step () {
@@ -65,7 +57,7 @@ public class Kat_Base : InputObj {
 
   protected override void SkatePressed () {
     if (!stopPhysics && HasFooting) {
-      dodgeTimer.Enabled = true;
+      DodgeTimer.Enabled = true;
       stopPhysics = true;
       Sprite.SetAlpha(0.5f);
       Sprite.Play("kat_dodge");
@@ -125,7 +117,7 @@ public class Kat_Base : InputObj {
       Physics.hspeed = 7;
 
     Sprite.Play("kat_kick", 2f);
-    airKickTimer.Enabled = true;
+    AirKickTimer.Enabled = true;
   }
 
   private void StartGroundKick () {
@@ -137,7 +129,7 @@ public class Kat_Base : InputObj {
       Physics.hspeed = 7;
 
     Sprite.Play("kat_lunge", 2f);
-    groundKickTimer.Enabled = true;
+    GroundKickTimer.Enabled = true;
   }
 
   private void StartPound () {
@@ -148,7 +140,7 @@ public class Kat_Base : InputObj {
   }
 
   private void StartUppercut () {
-    groundKickTimer.Enabled = false;
+    GroundKickTimer.Enabled = false;
     stopPhysics = false;
     Sprite.Play("kat_uppercut", 2f);
     Physics.vspeed = 8;
@@ -158,18 +150,21 @@ public class Kat_Base : InputObj {
    * TIMER HANDLERS
    **********************************/
 
-  private void AirKickTimerElapsed(object source, ElapsedEventArgs e) {
-    airKickTimer.Enabled = false;
+  public Timer AirKickTimer { get { return Timer1; } }
+  protected override void Timer1Elapsed(object source, ElapsedEventArgs e) {
+    AirKickTimer.Enabled = false;
     stopPhysics = false;
   }
 
-  private void GroundKickTimerElapsed(object source, ElapsedEventArgs e) {
-    groundKickTimer.Enabled = false;
+  public Timer GroundKickTimer { get { return Timer2; } }
+  protected override void Timer2Elapsed(object source, ElapsedEventArgs e) {
+    GroundKickTimer.Enabled = false;
     stopPhysics = false;
   }
 
-  private void DodgeTimerElapsed(object source, ElapsedEventArgs e) {
-    dodgeTimer.Enabled = false;
+  public Timer DodgeTimer { get { return Timer3; } }
+  protected override void Timer3Elapsed(object source, ElapsedEventArgs e) {
+    DodgeTimer.Enabled = false;
     stopPhysics = false;
     Physics.hspeed = 0;
   }
