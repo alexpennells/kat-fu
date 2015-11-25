@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Zombie_Sprite : SpriteObj {
   public override void Step () {
-    if (IsPlaying("zombie_attack"))
+    if ((Base as Zombie_Base).attacking)
       return;
 
     if ((Base as Zombie_Base).InChaseRange()) {
@@ -22,7 +22,6 @@ public class Zombie_Sprite : SpriteObj {
   }
 
   public void AttackAnimComplete() {
-    Play("zombie_idle", 0.25f);
-    (Base as Zombie_Base).PreventAttackTimer.Enabled = true;
+    Play("zombie_idle", 1f);
   }
 }

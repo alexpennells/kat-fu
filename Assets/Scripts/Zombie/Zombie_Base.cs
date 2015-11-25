@@ -4,31 +4,41 @@ using System.Timers;
 using System.Collections;
 
 public class Zombie_Base : BaseObj {
-  private bool preventAttack = false;
+  public bool attacking = false;
 
   protected override void Init() {
-    PreventAttackTimer.Interval = 200;
+    AttackTimer.Interval = 300;
   }
 
   protected override void Step() {
-    base.Step();
+    if (InAttackRange() || attacking) {
+      if (!attacking && FacingKat()) {
+        Sprite.Play("zombie_attack", 1.5f);
+        attacking = true;
+        AttackTimer.Enabled = true;
+      }
 
-    if (Sprite.IsPlaying("zombie_attack"))
-      return;
+      Physics.hspeedMax = 4;
+      if (transform.localScale.x > 0)
+        Physics.hspeed += 0.25f;
+      else
+        Physics.hspeed -= 0.25f;
+    }
+    else if (InChaseRange()) {
+      Physics.SkipNextFrictionUpdate();
+      Physics.hspeedMax = 3;
 
-    Physics.SkipNextFrictionUpdate();
-
-    if (InChaseRange()) {
       if (x < Stitch.Kat.x)
         Physics.hspeed += 0.05f;
       else if (x > Stitch.Kat.x)
         Physics.hspeed -= 0.05f;
     }
+  }
 
-    if (!preventAttack && Math.Abs(Physics.hspeed) > 1 && InAttackRange()) {
-      Sprite.Play("zombie_attack", 1f);
-      preventAttack = true;
-    }
+  protected override void OffScreenStep() {
+    Physics.hspeed = 0;
+    AttackTimer.Enabled = false;
+    attacking = false;
   }
 
   public bool InChaseRange () {
@@ -40,13 +50,17 @@ public class Zombie_Base : BaseObj {
   public bool InAttackRange () {
     if (Stitch.Kat == null)
       return false;
-    return Math.Abs(Stitch.Kat.x - x) < 50;
+    return Math.Abs(Stitch.Kat.x - x) < 40;
   }
 
-  public Timer PreventAttackTimer { get { return Timer1; } }
+  public bool FacingKat () {
+    return (transform.localScale.x > 0 && Stitch.Kat.x > x) || (transform.localScale.x < 0 && Stitch.Kat.x < x);
+  }
+
+  public Timer AttackTimer { get { return Timer1; } }
   protected override void Timer1Elapsed(object source, ElapsedEventArgs e) {
-    PreventAttackTimer.Enabled = false;
-    preventAttack = false;
+    AttackTimer.Enabled = false;
+    attacking = false;
   }
 
 }

@@ -17,6 +17,12 @@ public class CollisionStubs : CollisionObj
       case eObjectType.LADDER:
         LadderCollision(other as LadderObj);
         break;
+      case eObjectType.KAT:
+        KatCollision(other as Kat_Base);
+        break;
+      case eObjectType.ZOMBIE:
+        ZombieCollision(other as Zombie_Base);
+        break;
     }
   }
 
@@ -34,4 +40,8 @@ public class CollisionStubs : CollisionObj
 
   protected virtual void LadderCollision(LadderObj other) {}
   protected virtual void LadderExit(LadderObj other) {}
+
+  protected virtual void KatCollision(Kat_Base other) {}
+  protected virtual void ZombieCollision(Zombie_Base other) {}
+
 }

@@ -10,5 +10,7 @@ public enum eObjectType
 public enum eObjectType
 {
   NONE,
-  LADDER
+  LADDER,
+  KAT,
+  ZOMBIE
 };
