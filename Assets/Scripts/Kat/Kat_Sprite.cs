@@ -21,7 +21,7 @@ public class Kat_Sprite : SpriteObj {
 
     TurnSprite();
 
-    if (IsPlaying("kat_lunge") && (Base as Kat_Base).stopPhysics == false) {
+    if (IsPlaying("kat_lunge", "kat_kick") && (Base as Kat_Base).stopPhysics == false) {
       if (Base.HasFooting)
         Play("kat_walk");
       else

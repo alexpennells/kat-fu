@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Zombie_Sprite : SpriteObj {
   public override void Step () {
-    if ((Base as Zombie_Base).attacking)
+    if ((Base as Zombie_Base).attacking || (Base as Zombie_Base).hurt)
       return;
 
     if ((Base as Zombie_Base).InChaseRange()) {

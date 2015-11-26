@@ -13,6 +13,11 @@ public class Kat_Base : InputObj {
   // Whether or not to play the next punch in a hit combo.
   public bool playNextPunch = false;
 
+  public bool Punching { get { return Sprite.IsPlaying("kat_punch_1", "kat_punch_2"); } }
+  public bool Kicking { get { return Sprite.IsPlaying("kat_kick", "kat_lunge"); } }
+  public bool GroundPounding { get { return Sprite.IsPlaying("kat_pound") && Physics.vspeed < 0; } }
+  public bool Uppercutting { get { return Sprite.IsPlaying("kat_uppercut") && Physics.vspeed > 0; } }
+
   protected override void Init() {
     Game.Camera.InitPosition();
 
