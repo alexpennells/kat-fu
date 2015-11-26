@@ -14,11 +14,11 @@ public class Kat_Collision : CollisionStubs {
       else
         other.Physics.hspeed = -other.Physics.hspeedMax;
 
-      if (Kat.Kicking)
+      if (Kat.Physics.hspeed != 0)
         BounceOffEnemy();
     }
 
-    if (Kat.GroundPounding) {
+    else if (Kat.GroundPounding) {
       other.GetHurt();
 
       if (other.transform.localScale.x < 0)
@@ -30,7 +30,7 @@ public class Kat_Collision : CollisionStubs {
       Kat.Physics.hspeed = 0;
     }
 
-    if (Kat.Uppercutting) {
+    else if (Kat.Uppercutting) {
       other.GetHurt();
 
       if (Kat.x > other.x)
@@ -39,6 +39,13 @@ public class Kat_Collision : CollisionStubs {
         other.Physics.hspeed = other.Physics.hspeedMax;
 
       BounceOffEnemy(8, false);
+    }
+
+    else if (!other.hurt && !Kat.Invincible && !Kat.Hurt) {
+      if (other.x > Kat.x)
+        Kat.GetHurt(-Kat.Physics.hspeedMax);
+      else
+        Kat.GetHurt(Kat.Physics.hspeedMax);
     }
   }
 

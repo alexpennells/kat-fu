@@ -7,6 +7,9 @@ public class Kat_Sprite : SpriteObj {
   public float turnSpeed = 0.2f;
 
   public override void Step() {
+    if ((Base as Kat_Base).Hurt)
+      return;
+
     if (IsPlaying("kat_dodge")) {
       if ((Base as Kat_Base).stopPhysics) {
         if (Base.Physics.hspeed > 0)
@@ -16,7 +19,7 @@ public class Kat_Sprite : SpriteObj {
         return;
       }
       else
-        Play("kat_idle");
+        Play("kat_idle", 1f);
     }
 
     TurnSprite();
@@ -37,7 +40,7 @@ public class Kat_Sprite : SpriteObj {
       }
     }
 
-    if (GetAlpha() < 1f) {
+    if (!(Base as Kat_Base).preventAlphaChange && GetAlpha() < 1f) {
       SetAlpha(GetAlpha() + 0.025f);
     }
   }
@@ -79,6 +82,9 @@ public class Kat_Sprite : SpriteObj {
         break;
       case "kat_punch_2":
         Play("kat_idle", 1f);
+        break;
+      case "kat_recover":
+        (Base as Kat_Base).StartInvincible();
         break;
       default:
         break;

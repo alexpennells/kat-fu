@@ -13,10 +13,38 @@ public class Kat_Base : InputObj {
   // Whether or not to play the next punch in a hit combo.
   public bool playNextPunch = false;
 
+  // Whether to prevent the alpha from fading back to 1 when hurt.
+  public bool preventAlphaChange = false;
+
+  public bool Invincible { get { return Sprite.GetAlpha() < 0.8f; } }
+  public bool Hurt { get { return Sprite.IsPlaying("kat_hurt", "kat_recover"); } }
   public bool Punching { get { return Sprite.IsPlaying("kat_punch_1", "kat_punch_2"); } }
   public bool Kicking { get { return Sprite.IsPlaying("kat_kick", "kat_lunge"); } }
   public bool GroundPounding { get { return Sprite.IsPlaying("kat_pound") && Physics.vspeed < 0; } }
   public bool Uppercutting { get { return Sprite.IsPlaying("kat_uppercut") && Physics.vspeed > 0; } }
+
+  public void GetHurt(float hspeed) {
+    stopPhysics = false;
+    AirKickTimer.Enabled = false;
+    GroundKickTimer.Enabled = false;
+    hasAirAttack = true;
+
+    Physics.vspeed = 0;
+    Physics.hspeed = hspeed;
+    if (hspeed < 0)
+      transform.localScale = new Vector3(1, 1, 1);
+    else
+      transform.localScale = new Vector3(-1, 1, 1);
+
+    Sprite.Play("kat_hurt", 1f);
+  }
+
+  public void StartInvincible() {
+    Sprite.SetAlpha(0.5f);
+    Sprite.Play("kat_idle", 1f);
+    InvincibleTimer.Enabled = true;
+    preventAlphaChange = true;
+  }
 
   protected override void Init() {
     Game.Camera.InitPosition();
@@ -24,9 +52,16 @@ public class Kat_Base : InputObj {
     AirKickTimer.Interval = 300;
     GroundKickTimer.Interval = 400;
     DodgeTimer.Interval = 300;
+    InvincibleTimer.Interval = 1000;
   }
 
   protected override void Step () {
+    if (Hurt) {
+      if (Physics.hspeed == 0 && Sprite.IsPlaying("kat_hurt"))
+        Sprite.Play("kat_recover");
+      return;
+    }
+
     base.Step();
 
     if (stopPhysics) {
@@ -172,5 +207,11 @@ public class Kat_Base : InputObj {
     DodgeTimer.Enabled = false;
     stopPhysics = false;
     Physics.hspeed = 0;
+  }
+
+  public Timer InvincibleTimer { get { return Timer4; } }
+  protected override void Timer4Elapsed(object source, ElapsedEventArgs e) {
+    InvincibleTimer.Enabled = false;
+    preventAlphaChange = false;
   }
 }
