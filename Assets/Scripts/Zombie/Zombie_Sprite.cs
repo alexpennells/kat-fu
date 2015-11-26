@@ -24,4 +24,8 @@ public class Zombie_Sprite : SpriteObj {
   public void AttackAnimComplete() {
     Play("zombie_idle", 1f);
   }
+
+  public void DieAnimComplete() {
+    Base.DestroySelf();
+  }
 }

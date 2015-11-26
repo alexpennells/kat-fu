@@ -6,6 +6,7 @@ using System.Collections;
 public class Zombie_Base : BaseObj {
   public bool attacking = false;
   public bool hurt = false;
+  public int health = 50;
 
   protected override void Init() {
     AttackTimer.Interval = 300;
@@ -46,10 +47,16 @@ public class Zombie_Base : BaseObj {
     attacking = false;
   }
 
-  public void GetHurt() {
-    Sprite.Play("zombie_hurt", 1f);
-    HurtTimer.Enabled = true;
+  public void GetHurt(int damage = 10) {
+    health -= damage;
     hurt = true;
+
+    if (health > 0) {
+      Sprite.Play("zombie_hurt", 1f);
+      HurtTimer.Enabled = true;
+    }
+    else
+      Sprite.Play("zombie_die", 1f);
   }
 
   public bool InChaseRange () {
