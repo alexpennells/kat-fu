@@ -12,5 +12,6 @@ public enum eObjectType
   NONE,
   LADDER,
   KAT,
-  ZOMBIE
+  ZOMBIE,
+  BAT
 };

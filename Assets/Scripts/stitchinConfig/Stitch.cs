@@ -8,7 +8,7 @@ public class Stitch : MonoBehaviour
 
   public static bool SHOW_GAME_GRID = false;
   public static bool SHOW_OBJ_ORIGIN = true;
-  public static bool SHOW_MASK_BOUNDS = false;
+  public static bool SHOW_MASK_BOUNDS = true;
   public static bool SHOW_TERRAIN_BOUNDS = true;
   public static bool SHOW_RAIL_PATHS = true;
   public static bool SHOW_CAMERA_BOUNDS = true;

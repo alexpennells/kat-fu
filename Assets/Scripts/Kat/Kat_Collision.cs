@@ -6,6 +6,8 @@ public class Kat_Collision : CollisionStubs {
   private Kat_Base Kat { get { return Base as Kat_Base; } }
 
   protected override void ZombieCollision(Zombie_Base other) {
+    if (other.Sprite.IsPlaying("zombie_die"))
+      return;
 
     if ((Kat.Punching && PunchSuccess(other)) || (Kat.Kicking && KickSuccess(other))) {
       other.GetHurt();
@@ -14,8 +16,52 @@ public class Kat_Collision : CollisionStubs {
       else
         other.Physics.hspeed = -other.Physics.hspeedMax;
 
-      if (Kat.Physics.hspeed != 0)
-        BounceOffEnemy();
+      BounceOffEnemy(6, Kat.Kicking);
+    }
+
+    else if (Kat.GroundPounding) {
+      other.GetHurt();
+
+      if (other.transform.localScale.x < 0)
+        other.Physics.hspeed = other.Physics.hspeedMax;
+      else
+        other.Physics.hspeed = -other.Physics.hspeedMax;
+
+      BounceOffEnemy(8, false);
+      Kat.Physics.hspeed = 0;
+    }
+
+    else if (Kat.Uppercutting) {
+      other.GetHurt();
+
+      if (Kat.x > other.x)
+        other.Physics.hspeed = -other.Physics.hspeedMax;
+      else
+        other.Physics.hspeed = other.Physics.hspeedMax;
+
+      BounceOffEnemy(8, false);
+    }
+
+    else if (!other.hurt && !Kat.Invincible && !Kat.Hurt) {
+      if (other.x > Kat.x)
+        Kat.GetHurt(-Kat.Physics.hspeedMax);
+      else
+        Kat.GetHurt(Kat.Physics.hspeedMax);
+    }
+  }
+
+  protected override void BatCollision(Bat_Base other) {
+    if (other.Sprite.IsPlaying("bat_die"))
+      return;
+
+    if ((Kat.Punching && PunchSuccess(other)) || (Kat.Kicking && KickSuccess(other))) {
+      other.GetHurt();
+      if (transform.localScale.x > 0)
+        other.Physics.hspeed = other.Physics.hspeedMax;
+      else
+        other.Physics.hspeed = -other.Physics.hspeedMax;
+
+      BounceOffEnemy(6, Kat.Kicking);
     }
 
     else if (Kat.GroundPounding) {

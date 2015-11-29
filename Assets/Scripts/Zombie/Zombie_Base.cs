@@ -48,6 +48,7 @@ public class Zombie_Base : BaseObj {
   }
 
   public void GetHurt(int damage = 10) {
+    HurtTimer.Enabled = false;
     health -= damage;
     hurt = true;
 
