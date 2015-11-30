@@ -56,10 +56,13 @@ public class Kat_Collision : CollisionStubs {
 
     if ((Kat.Punching && PunchSuccess(other)) || (Kat.Kicking && KickSuccess(other))) {
       other.GetHurt();
+
       if (transform.localScale.x > 0)
         other.Physics.hspeed = other.Physics.hspeedMax;
       else
         other.Physics.hspeed = -other.Physics.hspeedMax;
+
+      other.Physics.vspeed = (other.Mask.Center.y - Base.Mask.Center.y) / 2;
 
       BounceOffEnemy(6, Kat.Kicking);
     }
@@ -67,10 +70,8 @@ public class Kat_Collision : CollisionStubs {
     else if (Kat.GroundPounding) {
       other.GetHurt();
 
-      if (other.transform.localScale.x < 0)
-        other.Physics.hspeed = other.Physics.hspeedMax;
-      else
-        other.Physics.hspeed = -other.Physics.hspeedMax;
+      other.Physics.hspeed = 0;
+      other.Physics.vspeed = -other.Physics.vspeedMax;
 
       BounceOffEnemy(8, false);
       Kat.Physics.hspeed = 0;
@@ -79,10 +80,12 @@ public class Kat_Collision : CollisionStubs {
     else if (Kat.Uppercutting) {
       other.GetHurt();
 
-      if (Kat.x > other.x)
-        other.Physics.hspeed = -other.Physics.hspeedMax;
+      if (Kat.Physics.hspeed > 0)
+        other.Physics.hspeed = -(other.Physics.hspeedMax);
       else
         other.Physics.hspeed = other.Physics.hspeedMax;
+
+      other.Physics.vspeed = other.Physics.vspeedMax;
 
       BounceOffEnemy(8, false);
     }
@@ -92,6 +95,17 @@ public class Kat_Collision : CollisionStubs {
         Kat.GetHurt(-Kat.Physics.hspeedMax);
       else
         Kat.GetHurt(Kat.Physics.hspeedMax);
+    }
+  }
+
+  protected override void EnergyBallCollision(EnergyBall_Base other) {
+    if (!other.impacted && !Kat.Invincible && !Kat.Hurt) {
+      if (other.x > Kat.x)
+        Kat.GetHurt(-Kat.Physics.hspeedMax);
+      else
+        Kat.GetHurt(Kat.Physics.hspeedMax);
+
+      other.Impact();
     }
   }
 

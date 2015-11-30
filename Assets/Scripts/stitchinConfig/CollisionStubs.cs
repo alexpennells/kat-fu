@@ -26,6 +26,9 @@ public class CollisionStubs : CollisionObj
       case eObjectType.BAT:
         BatCollision(other as Bat_Base);
         break;
+      case eObjectType.ENERGY_BALL:
+        EnergyBallCollision(other as EnergyBall_Base);
+        break;
     }
   }
 
@@ -47,5 +50,6 @@ public class CollisionStubs : CollisionObj
   protected virtual void KatCollision(Kat_Base other) {}
   protected virtual void ZombieCollision(Zombie_Base other) {}
   protected virtual void BatCollision(Bat_Base other) {}
+  protected virtual void EnergyBallCollision(EnergyBall_Base other) {}
 
 }

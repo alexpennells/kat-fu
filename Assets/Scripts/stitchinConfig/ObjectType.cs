@@ -13,5 +13,6 @@ public enum eObjectType
   LADDER,
   KAT,
   ZOMBIE,
-  BAT
+  BAT,
+  ENERGY_BALL
 };

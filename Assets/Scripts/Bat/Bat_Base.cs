@@ -13,10 +13,17 @@ public class Bat_Base : BaseObj {
   public bool reverseX = false;
   public bool reverseY = false;
 
+  // The interval at which this guy will spit shit. If 0 he won't spit at all!
+  public int attackInterval = 0;
+
   public bool hurt = false;
   public int health = 50;
 
+  private bool attackOnNextStep = false;
+
   public void GetHurt (int damage = 10) {
+    attackOnNextStep = false;
+    AttackTimer.Enabled = false;
     HurtTimer.Enabled = false;
     health -= damage;
     hurt = true;
@@ -35,12 +42,26 @@ public class Bat_Base : BaseObj {
     min = new Vector2(x + min.x, Mask.Center.y + min.y);
 
     HurtTimer.Interval = 800;
+
+    if (attackInterval != 0) {
+      AttackTimer.Interval = attackInterval;
+      AttackTimer.Enabled = true;
+    }
   }
 
   protected override void Step () {
     if (Sprite.IsPlaying("bat_die")) {
       Physics.hspeed = 0;
       Physics.vspeed = 0;
+      return;
+    }
+
+    if (Sprite.IsPlaying("bat_hurt", "bat_attack"))
+      return;
+
+    if (attackOnNextStep) {
+      Sprite.Play("bat_attack", 1f);
+      attackOnNextStep = false;
       return;
     }
 
@@ -84,7 +105,17 @@ public class Bat_Base : BaseObj {
   public Timer HurtTimer { get { return Timer1; } }
   protected override void Timer1Elapsed(object source, ElapsedEventArgs e) {
     HurtTimer.Enabled = false;
+
+    if (attackInterval != 0)
+      AttackTimer.Enabled = true;
+
     hurt = false;
+  }
+
+  public Timer AttackTimer { get { return Timer2; } }
+  protected override void Timer2Elapsed(object source, ElapsedEventArgs e) {
+    AttackTimer.Enabled = false;
+    attackOnNextStep = true;
   }
 
 }
