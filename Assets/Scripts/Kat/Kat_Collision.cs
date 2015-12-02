@@ -39,7 +39,7 @@ public class Kat_Collision : CollisionStubs {
       else
         other.Physics.hspeed = other.Physics.hspeedMax;
 
-      BounceOffEnemy(8, false);
+      BounceOffEnemy(12, false);
     }
 
     else if (!other.hurt && !Kat.Invincible && !Kat.Hurt) {
@@ -80,14 +80,10 @@ public class Kat_Collision : CollisionStubs {
     else if (Kat.Uppercutting) {
       other.GetHurt();
 
-      if (Kat.Physics.hspeed > 0)
-        other.Physics.hspeed = -(other.Physics.hspeedMax);
-      else
-        other.Physics.hspeed = other.Physics.hspeedMax;
-
+      other.Physics.hspeed = (other.x - Base.x) / 2;
       other.Physics.vspeed = other.Physics.vspeedMax;
 
-      BounceOffEnemy(8, false);
+      BounceOffEnemy(12, false);
     }
 
     else if (!other.hurt && !Kat.Invincible && !Kat.Hurt) {
