@@ -7,6 +7,9 @@ public class Kat_Base : InputObj {
   // Whehter the air kick is still up.
   public bool hasAirAttack = true;
 
+  // Whehter the uppercut is still up.
+  public bool hasUppercut = true;
+
   // Whether to prevent friction and gravity.
   public bool stopPhysics = false;
 
@@ -28,6 +31,7 @@ public class Kat_Base : InputObj {
     AirKickTimer.Enabled = false;
     GroundKickTimer.Enabled = false;
     hasAirAttack = true;
+    hasUppercut = true;
 
     Physics.vspeed = 0;
     Physics.hspeed = hspeed;
@@ -114,14 +118,12 @@ public class Kat_Base : InputObj {
     if (!SolidPhysics.HasFooting) {
       if (Game.DownHeld && !Sprite.IsPlaying("kat_pound"))
         StartPound();
-      else if (hasAirAttack) {
-        if (Game.UpHeld && !Sprite.IsPlaying("kat_uppercut")) {
-          hasAirAttack = false;
+      else if (hasUppercut && Game.UpHeld) {
+        if (!Sprite.IsPlaying("kat_uppercut"))
           StartUppercut();
-        }
-        else
-          StartAirKick();
       }
+      else if (hasAirAttack)
+        StartAirKick();
     }
 
     if (SolidPhysics.HasFooting && !Sprite.IsPlaying("kat_uppercut")) {
@@ -181,6 +183,7 @@ public class Kat_Base : InputObj {
   }
 
   private void StartUppercut () {
+    hasUppercut = false;
     GroundKickTimer.Enabled = false;
     stopPhysics = false;
     Sprite.Play("kat_uppercut", 2f);

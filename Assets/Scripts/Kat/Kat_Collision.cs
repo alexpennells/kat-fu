@@ -167,6 +167,7 @@ public class Kat_Collision : CollisionStubs {
     Kat.AirKickTimer.Enabled = false;
     Kat.GroundKickTimer.Enabled = false;
     Kat.hasAirAttack = true;
+    Kat.hasUppercut = true;
 
     Kat.Physics.vspeed = newVspeed;
     if (changeHspeed) {
