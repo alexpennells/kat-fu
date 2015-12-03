@@ -57,6 +57,7 @@ public class Kat_Base : InputObj {
 
   protected override void Step () {
     if (Hurt) {
+      Physics.hspeedMax = 5;
       if (Physics.hspeed == 0 && Sprite.IsPlaying("kat_hurt"))
         Sprite.Play("kat_recover");
       return;

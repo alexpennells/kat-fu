@@ -14,5 +14,6 @@ public enum eObjectType
   KAT,
   ZOMBIE,
   BAT,
-  ENERGY_BALL
+  ENERGY_BALL,
+  WEED
 };
