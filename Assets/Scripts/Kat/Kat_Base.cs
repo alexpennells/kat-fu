@@ -20,11 +20,17 @@ public class Kat_Base : InputObj {
   public bool preventAlphaChange = false;
 
   public bool Invincible { get { return Sprite.GetAlpha() < 0.8f; } }
-  public bool Hurt { get { return Sprite.IsPlaying("kat_hurt", "kat_recover"); } }
+  public bool Hurt { get { return Sprite.IsPlaying("kat_hurt", "kat_recover", "kat_gun_hurt", "kat_gun_recover"); } }
   public bool Punching { get { return Sprite.IsPlaying("kat_punch_1", "kat_punch_2"); } }
   public bool Kicking { get { return Sprite.IsPlaying("kat_kick", "kat_lunge"); } }
   public bool GroundPounding { get { return Sprite.IsPlaying("kat_pound") && Physics.vspeed < 0; } }
   public bool Uppercutting { get { return Sprite.IsPlaying("kat_uppercut") && Physics.vspeed > 0; } }
+
+  private eKat_Stance stance = eKat_Stance.KATFU;
+  public eKat_Stance Stance {
+    get { return stance; }
+    set { stance = value; }
+  }
 
   public void GetHurt(float hspeed) {
     stopPhysics = false;
@@ -33,6 +39,7 @@ public class Kat_Base : InputObj {
     hasAirAttack = true;
     hasUppercut = true;
 
+    Physics.hspeedMax = 5;
     Physics.vspeed = 0;
     Physics.hspeed = hspeed;
     if (hspeed < 0)
@@ -40,12 +47,15 @@ public class Kat_Base : InputObj {
     else
       transform.localScale = new Vector3(-1, 1, 1);
 
-    Sprite.Play("kat_hurt", 1f);
+    if (Stance == eKat_Stance.KATFU)
+      Sprite.Play("kat_hurt", 1f);
+    else
+      Sprite.Play("kat_gun_hurt", 1f);
   }
 
   public void StartInvincible() {
     Sprite.SetAlpha(0.5f);
-    Sprite.Play("kat_idle", 1f);
+    (Sprite as Kat_Sprite).PlayIdle();
     InvincibleTimer.Enabled = true;
     preventAlphaChange = true;
   }
@@ -61,9 +71,12 @@ public class Kat_Base : InputObj {
 
   protected override void Step () {
     if (Hurt) {
-      Physics.hspeedMax = 5;
-      if (Physics.hspeed == 0 && Sprite.IsPlaying("kat_hurt"))
-        Sprite.Play("kat_recover");
+      if (Physics.hspeed == 0) {
+        if (Sprite.IsPlaying("kat_hurt"))
+          Sprite.Play("kat_recover");
+        else
+          Sprite.Play("kat_gun_recover");
+      }
       return;
     }
 
@@ -75,12 +88,22 @@ public class Kat_Base : InputObj {
       Physics.hspeedMax = 7;
     }
     else {
-      Physics.hspeedMax = 5;
+      if (Stance == eKat_Stance.KATFU)
+        Physics.hspeedMax = 5;
+      else if (Stance == eKat_Stance.GUN) {
+        if (!Game.AttackHeld)
+          Physics.hspeedMax = 4;
+        else
+          Physics.hspeedMax = 3;
+      }
     }
   }
 
   protected override void LeftHeld (float val) {
     if (stopPhysics || Sprite.IsPlaying("kat_punch_1", "kat_punch_2"))
+      return;
+
+    if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
       return;
 
     Physics.hspeed -= 0.5f;
@@ -90,18 +113,28 @@ public class Kat_Base : InputObj {
     if (stopPhysics || Sprite.IsPlaying("kat_punch_1", "kat_punch_2"))
       return;
 
+    if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
+      return;
+
     Physics.hspeed += 0.5f;
   }
 
   protected override void JumpPressed () {
-    if (SolidPhysics.HasFooting && !stopPhysics) {
+    if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
+      return;
+
+    if (HasFooting && !stopPhysics) {
       Physics.vspeed = 8;
-      Sprite.Play("kat_jump", 1f);
+      (Sprite as Kat_Sprite).PlayJump();
+      SolidPhysics.Collider.ClearFooting();
     }
   }
 
   protected override void SkatePressed () {
-    if (!stopPhysics && HasFooting) {
+    if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
+      return;
+
+    if (!stopPhysics && HasFooting && Stance == eKat_Stance.KATFU) {
       DodgeTimer.Enabled = true;
       stopPhysics = true;
       Sprite.SetAlpha(0.5f);
@@ -114,7 +147,23 @@ public class Kat_Base : InputObj {
     }
   }
 
+  protected override void GrindPressed () {
+    if (Sprite.IsPlaying("kat_idle", "kat_walk", "kat_gun_idle", "kat_gun_walk")) {
+      if (Stance == eKat_Stance.KATFU) {
+        Stance = eKat_Stance.GUN;
+        Sprite.Play("kat_gun_start");
+      }
+      else {
+        Stance = eKat_Stance.KATFU;
+        Sprite.Play("kat_gun_end");
+      }
+    }
+  }
+
   protected override void AttackPressed () {
+    if (Stance == eKat_Stance.GUN)
+      return;
+
     if (!SolidPhysics.HasFooting) {
       if (Game.DownHeld && !Sprite.IsPlaying("kat_pound"))
         StartPound();

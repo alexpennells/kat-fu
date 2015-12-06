@@ -5,7 +5,7 @@ using System.Collections;
 
 public class Weed_Base : BaseObj {
 
-  public float biteRange = 80f;
+  public float biteRange = 120f;
 
   // The interval at which this guy will spit shit. If 0 he won't spit at all!
   public int attackInterval = 0;
@@ -45,7 +45,7 @@ public class Weed_Base : BaseObj {
     if (Sprite.IsPlaying("weed_hurt", "weed_die", "weed_jump", "weed_land", "weed_air"))
       return;
 
-    if (VectorLib.GetDistanceX(this, Stitch.Kat) < 32f && Stitch.Kat.Mask.Bottom > Mask.Top + 10) {
+    if (VectorLib.GetDistanceX(this, Stitch.Kat) < 48f && Stitch.Kat.Mask.Bottom > Mask.Top) {
       Sprite.Play("weed_jump", 2f);
       AttackTimer.Enabled = false;
       return;

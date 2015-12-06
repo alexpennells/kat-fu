@@ -44,9 +44,9 @@ public class Kat_Collision : CollisionStubs {
 
     else if (!other.hurt && !Kat.Invincible && !Kat.Hurt) {
       if (other.x > Kat.x)
-        Kat.GetHurt(-Kat.Physics.hspeedMax);
+        Kat.GetHurt(-5);
       else
-        Kat.GetHurt(Kat.Physics.hspeedMax);
+        Kat.GetHurt(5);
     }
   }
 
@@ -88,9 +88,9 @@ public class Kat_Collision : CollisionStubs {
 
     else if (!other.hurt && !Kat.Invincible && !Kat.Hurt) {
       if (other.x > Kat.x)
-        Kat.GetHurt(-Kat.Physics.hspeedMax);
+        Kat.GetHurt(-5);
       else
-        Kat.GetHurt(Kat.Physics.hspeedMax);
+        Kat.GetHurt(5);
     }
   }
 
@@ -132,18 +132,18 @@ public class Kat_Collision : CollisionStubs {
 
     else if (!other.hurt && !Kat.Invincible && !Kat.Hurt) {
       if (other.x > Kat.x)
-        Kat.GetHurt(-Kat.Physics.hspeedMax);
+        Kat.GetHurt(-5);
       else
-        Kat.GetHurt(Kat.Physics.hspeedMax);
+        Kat.GetHurt(5);
     }
   }
 
   protected override void EnergyBallCollision(EnergyBall_Base other) {
     if (!other.impacted && !Kat.Invincible && !Kat.Hurt) {
       if (other.x > Kat.x)
-        Kat.GetHurt(-Kat.Physics.hspeedMax);
+        Kat.GetHurt(-5);
       else
-        Kat.GetHurt(Kat.Physics.hspeedMax);
+        Kat.GetHurt(5);
 
       other.Impact();
     }

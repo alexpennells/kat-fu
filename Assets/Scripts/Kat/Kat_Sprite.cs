@@ -6,12 +6,14 @@ public class Kat_Sprite : SpriteObj {
   [Tooltip("The speed that the sprite turns around")]
   public float turnSpeed = 0.2f;
 
+  private Kat_Base Kat { get { return Base as Kat_Base; } }
+
   public override void Step() {
-    if ((Base as Kat_Base).Hurt)
+    if (Kat.Hurt)
       return;
 
     if (IsPlaying("kat_dodge")) {
-      if ((Base as Kat_Base).stopPhysics) {
+      if (Kat.stopPhysics) {
         if (Base.Physics.hspeed > 0)
           transform.localScale = new Vector3(-1, 1, 1);
         else
@@ -19,29 +21,77 @@ public class Kat_Sprite : SpriteObj {
         return;
       }
       else
-        Play("kat_idle", 1f);
+        PlayIdle();
     }
 
-    TurnSprite();
+    if (Kat.Stance != eKat_Stance.GUN || !Game.AttackHeld)
+      TurnSprite();
 
-    if (IsPlaying("kat_lunge", "kat_kick") && (Base as Kat_Base).stopPhysics == false) {
+    if (IsPlaying("kat_lunge", "kat_kick") && Kat.stopPhysics == false) {
       if (Base.HasFooting)
-        Play("kat_walk");
+        PlayWalk();
       else
-        Play("kat_jump", 1f);
+        PlayJump();
     }
 
-    if (Base.SolidPhysics.HasFooting && !IsPlaying("kat_punch_1", "kat_punch_2", "kat_lunge", "kat_uppercut")) {
+    if (IsPlaying("kat_jump", "kat_gun_jump", "kat_gun_jump_shoot"))
+      PlayJump();
+
+    if (Base.HasFooting && !IsPlaying("kat_punch_1", "kat_punch_2", "kat_lunge", "kat_uppercut")) {
       if (!Game.LeftHeld && !Game.RightHeld)
-        Play("kat_idle", 1f);
+        PlayIdle();
       else {
-        Play("kat_walk");
+        PlayWalk();
         SetSpeed(Math.Abs(Base.Physics.hspeed / 4f));
       }
     }
 
-    if (!(Base as Kat_Base).preventAlphaChange && GetAlpha() < 1f) {
+    if (!Kat.preventAlphaChange && GetAlpha() < 1f) {
       SetAlpha(GetAlpha() + 0.025f);
+    }
+  }
+
+  public void PlayIdle() {
+    if (IsPlaying("kat_gun_start", "kat_gun_end"))
+      return;
+
+    if (Kat.Stance == eKat_Stance.KATFU)
+      Play("kat_idle", 1f);
+    else if (Kat.Stance == eKat_Stance.GUN) {
+      if (!Game.AttackHeld)
+        Play("kat_gun_idle", 1f);
+      else
+        Play("kat_gun_idle_shoot", 1f);
+    }
+  }
+
+  public void PlayWalk() {
+    if (IsPlaying("kat_gun_start", "kat_gun_end"))
+      return;
+
+    if (Kat.Stance == eKat_Stance.KATFU)
+      Play("kat_walk");
+    else if (Kat.Stance == eKat_Stance.GUN) {
+      if (!Game.AttackHeld)
+        Play("kat_gun_walk");
+      else
+        Play("kat_gun_walk_shoot");
+    }
+
+    SetSpeed(Math.Abs(Base.Physics.hspeed / 4f));
+  }
+
+  public void PlayJump() {
+    if (IsPlaying("kat_gun_start", "kat_gun_end"))
+      return;
+
+    if (Kat.Stance == eKat_Stance.KATFU)
+      Play("kat_jump", 1f);
+    else if (Kat.Stance == eKat_Stance.GUN) {
+      if (!Game.AttackHeld)
+        Play("kat_gun_jump", 1f);
+      else
+        Play("kat_gun_jump_shoot", 1f);
     }
   }
 
@@ -50,41 +100,34 @@ public class Kat_Sprite : SpriteObj {
       transform.localScale = new Vector3(-1, 1, 1);
     else if (Base.Physics.hspeed > 0)
       transform.localScale = new Vector3(1, 1, 1);
-
-    // if (Base.Physics.hspeed < 0 && transform.localScale.x > -1)
-    //   transform.localScale = transform.localScale - new Vector3(turnSpeed, 0, 0);
-    // else if (Base.Physics.hspeed > 0 && transform.localScale.x < 1)
-    //   transform.localScale = transform.localScale + new Vector3(turnSpeed, 0, 0);
-    // else if (Base.Physics.hspeed == 0) {
-    //   if (transform.localScale.x > 0 && transform.localScale.x < 1)
-    //     transform.localScale = transform.localScale + new Vector3(turnSpeed, 0, 0);
-    //   else if (transform.localScale.x < 0 && transform.localScale.x > -1)
-    //     transform.localScale = transform.localScale - new Vector3(turnSpeed, 0, 0);
-    // }
-
-    // if (transform.localScale.x > 1)
-    //   transform.localScale = new Vector3(1, 1, 1);
-    // else if (transform.localScale.x < -1)
-    //   transform.localScale = new Vector3(-1, 1, 1);
   }
 
   public void AnimationComplete (string animation) {
     switch (animation) {
       case "kat_pound":
         Base.Physics.vspeed = -8;
-        (Base as Kat_Base).stopPhysics = false;
+        Kat.stopPhysics = false;
         break;
       case "kat_punch_1":
-        if ((Base as Kat_Base).playNextPunch)
+        if (Kat.playNextPunch)
           Play("kat_punch_2", 1f);
         else
-          Play("kat_idle", 1f);
+          PlayIdle();
         break;
       case "kat_punch_2":
-        Play("kat_idle", 1f);
+        PlayIdle();
         break;
       case "kat_recover":
-        (Base as Kat_Base).StartInvincible();
+        Kat.StartInvincible();
+        break;
+      case "kat_gun_recover":
+        Kat.StartInvincible();
+        break;
+      case "kat_gun_start":
+        Play("kat_gun_idle", 1f);
+        break;
+      case "kat_gun_end":
+        Play("kat_idle", 1f);
         break;
       default:
         break;

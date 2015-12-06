@@ -53,6 +53,9 @@ public class Weed_Sprite : SpriteObj {
   }
 
   public void LandAnimComplete() {
+    if ((Base as Weed_Base).attackInterval != 0)
+      (Base as Weed_Base).AttackTimer.Enabled = true;
+
     Play("weed_idle", 0.5f);
   }
 

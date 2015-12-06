@@ -7,7 +7,9 @@ public class Kat_SolidCollider : SolidColliderObj {
     (Base as Kat_Base).hasAirAttack = true;
     (Base as Kat_Base).hasUppercut = true;
 
-    if (Base.Sprite.IsPlaying("kat_jump", "kat_kick", "kat_pound", "kat_uppercut"))
-      Base.Sprite.Play("kat_idle", 1f);
+    if (Base.Sprite.IsPlaying("kat_uppercut")) {
+      SpriteObj katSprite = Base.Sprite;
+      (katSprite as Kat_Sprite).PlayIdle();
+    }
   }
 }
