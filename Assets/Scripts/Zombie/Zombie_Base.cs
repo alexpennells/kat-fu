@@ -10,12 +10,17 @@ public class Zombie_Base : BaseObj {
 
   protected override void Init() {
     AttackTimer.Interval = 300;
-    HurtTimer.Interval = 500;
+    HurtTimer.Interval = 250;
   }
 
   protected override void Step() {
-    if (hurt)
+    if (hurt) {
+      Physics.SkipNextFrictionUpdate();
+      Physics.hspeedMax = 2;
       return;
+    }
+
+    Physics.hspeedMax = 3;
 
     if (InAttackRange() || attacking) {
       if (!attacking && FacingKat()) {

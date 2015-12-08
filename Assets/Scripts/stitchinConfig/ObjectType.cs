@@ -15,5 +15,6 @@ public enum eObjectType
   ZOMBIE,
   BAT,
   ENERGY_BALL,
-  WEED
+  WEED,
+  BULLET
 };

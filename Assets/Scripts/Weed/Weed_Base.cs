@@ -31,7 +31,7 @@ public class Weed_Base : BaseObj {
   }
 
   protected override void Init () {
-    HurtTimer.Interval = 800;
+    HurtTimer.Interval = 250;
 
     if (attackInterval != 0) {
       AttackTimer.Interval = attackInterval;

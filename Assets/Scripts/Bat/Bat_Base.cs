@@ -41,7 +41,7 @@ public class Bat_Base : BaseObj {
     max = new Vector2(x + max.x, Mask.Center.y + max.y);
     min = new Vector2(x + min.x, Mask.Center.y + min.y);
 
-    HurtTimer.Interval = 800;
+    HurtTimer.Interval = 300;
 
     if (attackInterval != 0) {
       AttackTimer.Interval = attackInterval;

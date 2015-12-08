@@ -9,7 +9,7 @@ public class Kat_Sprite : SpriteObj {
   private Kat_Base Kat { get { return Base as Kat_Base; } }
 
   public override void Step() {
-    if (Kat.Hurt)
+    if (Kat.Hurt || IsPlaying("kat_gun_start", "kat_gun_end"))
       return;
 
     if (IsPlaying("kat_dodge")) {

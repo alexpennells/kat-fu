@@ -72,7 +72,7 @@ public class Kat_Base : InputObj {
   protected override void Step () {
     if (Hurt) {
       if (Physics.hspeed == 0) {
-        if (Sprite.IsPlaying("kat_hurt"))
+        if (Stance == eKat_Stance.KATFU)
           Sprite.Play("kat_recover");
         else
           Sprite.Play("kat_gun_recover");
@@ -151,11 +151,11 @@ public class Kat_Base : InputObj {
     if (Sprite.IsPlaying("kat_idle", "kat_walk", "kat_gun_idle", "kat_gun_walk")) {
       if (Stance == eKat_Stance.KATFU) {
         Stance = eKat_Stance.GUN;
-        Sprite.Play("kat_gun_start");
+        Sprite.Play("kat_gun_start", 1f);
       }
       else {
         Stance = eKat_Stance.KATFU;
-        Sprite.Play("kat_gun_end");
+        Sprite.Play("kat_gun_end", 1f);
       }
     }
   }
@@ -237,6 +237,15 @@ public class Kat_Base : InputObj {
     stopPhysics = false;
     Sprite.Play("kat_uppercut", 2f);
     Physics.vspeed = 8;
+  }
+
+  public void CreateBullet() {
+    BaseObj bullet = Game.Create("Bullet", new Vector2(x, Mask.Center.y - 5));
+
+    if (transform.localScale.x > 0)
+      bullet.Physics.hspeed = 10;
+    else
+      bullet.Physics.hspeed = -10;
   }
 
   /***********************************
