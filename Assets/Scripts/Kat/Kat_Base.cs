@@ -47,6 +47,7 @@ public class Kat_Base : InputObj {
     else
       transform.localScale = new Vector3(-1, 1, 1);
 
+    Sound.Play("Hurt");
     if (Stance == eKat_Stance.KATFU)
       Sprite.Play("kat_hurt", 1f);
     else
@@ -73,9 +74,9 @@ public class Kat_Base : InputObj {
     if (Hurt) {
       if (Physics.hspeed == 0) {
         if (Stance == eKat_Stance.KATFU)
-          Sprite.Play("kat_recover");
+          Sprite.Play("kat_recover", 1f);
         else
-          Sprite.Play("kat_gun_recover");
+          Sprite.Play("kat_gun_recover", 1f);
       }
       return;
     }
@@ -126,6 +127,7 @@ public class Kat_Base : InputObj {
     if (HasFooting && !stopPhysics) {
       Physics.vspeed = 8;
       (Sprite as Kat_Sprite).PlayJump();
+      (Sprite as Kat_Sprite).PlayLandSound();
       SolidPhysics.Collider.ClearFooting();
     }
   }
@@ -138,7 +140,8 @@ public class Kat_Base : InputObj {
       DodgeTimer.Enabled = true;
       stopPhysics = true;
       Sprite.SetAlpha(0.5f);
-      Sprite.Play("kat_dodge");
+      Sprite.Play("kat_dodge", 1f);
+      Sound.Play("Dodge");
 
       if (transform.localScale.x < 0)
         Physics.hspeed = -7;
@@ -152,10 +155,12 @@ public class Kat_Base : InputObj {
       if (Stance == eKat_Stance.KATFU) {
         Stance = eKat_Stance.GUN;
         Sprite.Play("kat_gun_start", 1f);
+        Sound.Play("GunStart");
       }
       else {
         Stance = eKat_Stance.KATFU;
         Sprite.Play("kat_gun_end", 1f);
+        Sound.Play("GunEnd");
       }
     }
   }
@@ -192,7 +197,8 @@ public class Kat_Base : InputObj {
       if (Sprite.IsPlaying("kat_punch_1"))
         playNextPunch = true;
       else if (!Sprite.IsPlaying("kat_punch_2")) {
-        Sprite.Play("kat_punch_1", 1f);
+        Sound.Play("Punch");
+        Sprite.Play("kat_punch_1", 0.5f);
         playNextPunch = false;
       }
     }
@@ -209,6 +215,7 @@ public class Kat_Base : InputObj {
       Physics.hspeed = 7;
 
     Sprite.Play("kat_kick", 2f);
+    Sound.Play("Kick");
     AirKickTimer.Enabled = true;
   }
 
@@ -221,11 +228,13 @@ public class Kat_Base : InputObj {
       Physics.hspeed = 7;
 
     Sprite.Play("kat_lunge", 2f);
+    Sound.Play("Kick");
     GroundKickTimer.Enabled = true;
   }
 
   private void StartPound () {
     Sprite.Play("kat_pound", 1f);
+    Sound.Play("Uppercut");
     hasAirAttack = false;
     stopPhysics = true;
     Physics.vspeed = 2f;
@@ -236,11 +245,13 @@ public class Kat_Base : InputObj {
     GroundKickTimer.Enabled = false;
     stopPhysics = false;
     Sprite.Play("kat_uppercut", 2f);
+    Sound.Play("Uppercut");
     Physics.vspeed = 8;
   }
 
   public void CreateBullet() {
     BaseObj bullet = Game.Create("Bullet", new Vector2(x, Mask.Center.y - 5));
+    Sound.Play("Gunshot");
 
     if (transform.localScale.x > 0)
       bullet.Physics.hspeed = 10;

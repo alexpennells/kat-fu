@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class Kat_Sprite : SpriteObj {
 
-  [Tooltip("The speed that the sprite turns around")]
-  public float turnSpeed = 0.2f;
-
   private Kat_Base Kat { get { return Base as Kat_Base; } }
 
   public override void Step() {
@@ -60,8 +57,12 @@ public class Kat_Sprite : SpriteObj {
     else if (Kat.Stance == eKat_Stance.GUN) {
       if (!Game.AttackHeld)
         Play("kat_gun_idle", 1f);
-      else
-        Play("kat_gun_idle_shoot", 1f);
+      else {
+        if (IsPlaying("kat_gun_walk_shoot"))
+          Play("kat_gun_idle_shoot", 1f, 0.13f);
+        else
+          Play("kat_gun_idle_shoot", 1f);
+      }
     }
   }
 
@@ -70,12 +71,16 @@ public class Kat_Sprite : SpriteObj {
       return;
 
     if (Kat.Stance == eKat_Stance.KATFU)
-      Play("kat_walk");
+      Play("kat_walk", 1f);
     else if (Kat.Stance == eKat_Stance.GUN) {
       if (!Game.AttackHeld)
-        Play("kat_gun_walk");
-      else
-        Play("kat_gun_walk_shoot");
+        Play("kat_gun_walk", 1f);
+      else {
+        if (IsPlaying("kat_gun_idle_shoot"))
+          Play("kat_gun_walk_shoot", 1f, 0.13f);
+        else
+          Play("kat_gun_walk_shoot", 1f);
+      }
     }
 
     SetSpeed(Math.Abs(Base.Physics.hspeed / 4f));
@@ -102,15 +107,21 @@ public class Kat_Sprite : SpriteObj {
       transform.localScale = new Vector3(1, 1, 1);
   }
 
+  public void PlayFootstepSound() { Base.Sound.Play("Footstep"); }
+  public void PlayLandSound() { Base.Sound.Play("Land"); }
+
   public void AnimationComplete (string animation) {
     switch (animation) {
       case "kat_pound":
         Base.Physics.vspeed = -8;
+        Base.Physics.hspeed = 0;
         Kat.stopPhysics = false;
         break;
       case "kat_punch_1":
-        if (Kat.playNextPunch)
+        if (Kat.playNextPunch) {
           Play("kat_punch_2", 1f);
+          Base.Sound.Play("Punch");
+        }
         else
           PlayIdle();
         break;

@@ -178,5 +178,6 @@ public class Kat_Collision : CollisionStubs {
     }
 
     Base.Sprite.Play("kat_spin", 2f);
+    Kat.Sound.Play("Attack");
   }
 }

@@ -5,7 +5,7 @@ public class Bat_Sprite : SpriteObj {
   public override void Step () {
     if (IsPlaying("bat_hurt")) {
       if (!(Base as Bat_Base).hurt)
-        Play("bat_fly");
+        Play("bat_fly", 1f);
       else
         return;
     }

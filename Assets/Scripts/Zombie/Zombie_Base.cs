@@ -16,7 +16,7 @@ public class Zombie_Base : BaseObj {
   protected override void Step() {
     if (hurt) {
       Physics.SkipNextFrictionUpdate();
-      Physics.hspeedMax = 2;
+      Physics.hspeedMax = 1;
       return;
     }
 

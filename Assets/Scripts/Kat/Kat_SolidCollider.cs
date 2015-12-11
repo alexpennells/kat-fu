@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Kat_SolidCollider : SolidColliderObj {
   protected override void FootingCollision(SolidObj footing) {
+    if (Base.Physics.vspeed != 0)
+      Base.Sound.Play("Land");
+
     base.FootingCollision(footing);
 
     (Base as Kat_Base).hasAirAttack = true;

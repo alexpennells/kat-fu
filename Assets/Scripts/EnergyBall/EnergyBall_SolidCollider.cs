@@ -1,18 +1,14 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class EnergyBall_SolidCollider : SolidColliderObj {
-  protected override void FootingCollision(SolidObj footing) {
-    if (!(Base as EnergyBall_Base).impacted)
-      (Base as EnergyBall_Base).Impact();
-  }
+  protected override bool HandleAllCollisions(List<SolidObj> walls, List<SolidObj> roofs, List<SolidObj> footings) {
+    if (walls.Count > 0 || roofs.Count > 0 || footings.Count > 0) {
+      if (!(Base as EnergyBall_Base).impacted)
+        (Base as EnergyBall_Base).Impact();
+      return false;
+    }
 
-  protected override void RoofCollision(SolidObj roof) {
-    if (!(Base as EnergyBall_Base).impacted)
-      (Base as EnergyBall_Base).Impact();
-  }
-
-  protected override void WallCollision(SolidObj wall) {
-    if (!(Base as EnergyBall_Base).impacted)
-      (Base as EnergyBall_Base).Impact();
+    return true;
   }
 }
