@@ -114,7 +114,6 @@ public class Kat_Sprite : SpriteObj {
     switch (animation) {
       case "kat_pound":
         Base.Physics.vspeed = -8;
-        Base.Physics.hspeed = 0;
         Kat.stopPhysics = false;
         break;
       case "kat_punch_1":
