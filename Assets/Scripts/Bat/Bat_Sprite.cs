@@ -5,7 +5,7 @@ public class Bat_Sprite : SpriteObj {
   public override void Step () {
     if (IsPlaying("bat_hurt")) {
       if (!(Base as Bat_Base).hurt)
-        Play("bat_fly", 1f);
+        Play("Fly");
       else
         return;
     }
@@ -24,7 +24,7 @@ public class Bat_Sprite : SpriteObj {
     if ((Base as Bat_Base).attackInterval != 0)
       (Base as Bat_Base).AttackTimer.Enabled = true;
 
-    Play("bat_fly", 1f);
+    Play("Fly");
   }
 
   public void CreateEnergyBall() {
@@ -34,5 +34,21 @@ public class Bat_Sprite : SpriteObj {
 
   public void DieAnimComplete() {
     Base.DestroySelf();
+  }
+
+  public void PlayFly(float time) {
+    Animate("bat_fly", 1f);
+  }
+
+  public void PlayAttack(float time) {
+    Animate("bat_attack", 1f);
+  }
+
+  public void PlayHurt(float time) {
+    Animate("bat_hurt", 1f);
+  }
+
+  public void PlayDie(float time) {
+    Animate("bat_die", 1f);
   }
 }

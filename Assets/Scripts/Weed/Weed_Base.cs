@@ -23,11 +23,11 @@ public class Weed_Base : BaseObj {
     hurt = true;
 
     if (health > 0) {
-      Sprite.Play("weed_hurt", 1f);
+      Sprite.Play("Hurt");
       HurtTimer.Enabled = true;
     }
     else
-      Sprite.Play("weed_die", 1f);
+      Sprite.Play("Die");
   }
 
   protected override void Init () {
@@ -38,7 +38,7 @@ public class Weed_Base : BaseObj {
       AttackTimer.Enabled = true;
     }
 
-    Sprite.Play("weed_idle", 0.5f);
+    Sprite.Play("Idle");
   }
 
   protected override void Step () {
@@ -46,23 +46,23 @@ public class Weed_Base : BaseObj {
       return;
 
     if (VectorLib.GetDistanceX(this, Stitch.Kat) < 48f && Stitch.Kat.Mask.Bottom > Mask.Top) {
-      Sprite.Play("weed_jump", 2f);
+      Sprite.Play("Jump");
       AttackTimer.Enabled = false;
       return;
     }
     else if (VectorLib.GetDistance(this, Stitch.Kat) < biteRange) {
-      Sprite.Play("weed_bite", 1.5f);
+      Sprite.Play("Bite");
       AttackTimer.Enabled = false;
       return;
     }
     else if (Sprite.IsPlaying("weed_bite")) {
-      Sprite.Play("weed_idle", 0.5f);
+      Sprite.Play("Idle");
       AttackTimer.Enabled = true;
       attackOnNextStep = false;
     }
 
     if (attackOnNextStep) {
-      Sprite.Play("weed_spit", 1f);
+      Sprite.Play("Spit");
       attackOnNextStep = false;
       return;
     }

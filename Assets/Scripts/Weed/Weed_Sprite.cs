@@ -8,13 +8,13 @@ public class Weed_Sprite : SpriteObj {
         HurtTurnSprite();
 
     if (IsPlaying("weed_hurt") && !(Base as Weed_Base).hurt)
-      Play("weed_idle", 0.5f);
+      Play("Idle");
 
     if (IsPlaying("weed_hurt", "weed_die"))
       return;
 
     if (!Base.SolidPhysics.HasFooting)
-      Play("weed_air", 1f);
+      Play("Air");
 
     if (IsPlaying("weed_jump", "weed_land", "weed_air"))
       return;
@@ -40,7 +40,7 @@ public class Weed_Sprite : SpriteObj {
     if ((Base as Weed_Base).attackInterval != 0)
       (Base as Weed_Base).AttackTimer.Enabled = true;
 
-    Play("weed_idle", 0.5f);
+    Play("Idle");
   }
 
   public void CreateEnergyBall() {
@@ -56,10 +56,42 @@ public class Weed_Sprite : SpriteObj {
     if ((Base as Weed_Base).attackInterval != 0)
       (Base as Weed_Base).AttackTimer.Enabled = true;
 
-    Play("weed_idle", 0.5f);
+    Play("Idle");
   }
 
   public void DieAnimComplete() {
     Base.DestroySelf();
+  }
+
+  public void PlayIdle(float time) {
+    Animate("weed_idle", 0.5f);
+  }
+
+  public void PlayBite(float time) {
+    Animate("weed_bite", 1.5f);
+  }
+
+  public void PlaySpit(float time) {
+    Animate("weed_spit", 1f);
+  }
+
+  public void PlayJump(float time) {
+    Animate("weed_jump", 2f);
+  }
+
+  public void PlayAir(float time) {
+    Animate("weed_air", 1f);
+  }
+
+  public void PlayLand(float time) {
+    Animate("weed_land", 1f);
+  }
+
+  public void PlayHurt(float time) {
+    Animate("weed_hurt", 1f);
+  }
+
+  public void PlayDie(float time) {
+    Animate("weed_die", 1f);
   }
 }

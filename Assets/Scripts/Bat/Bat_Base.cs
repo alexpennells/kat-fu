@@ -29,11 +29,11 @@ public class Bat_Base : BaseObj {
     hurt = true;
 
     if (health > 0) {
-      Sprite.Play("bat_hurt", 1f);
+      Sprite.Play("Hurt");
       HurtTimer.Enabled = true;
     }
     else
-      Sprite.Play("bat_die", 1f);
+      Sprite.Play("Die");
   }
 
   protected override void Init () {
@@ -60,7 +60,7 @@ public class Bat_Base : BaseObj {
       return;
 
     if (attackOnNextStep) {
-      Sprite.Play("bat_attack", 1f);
+      Sprite.Play("Attack");
       attackOnNextStep = false;
       return;
     }

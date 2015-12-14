@@ -10,6 +10,6 @@ public class EnergyBall_Base : BaseObj {
     Physics.hspeed = 0;
     Physics.vspeed = 0;
     impacted = true;
-    Sprite.Play("energy_die", 1f);
+    Sprite.Play("Die");
   }
 }

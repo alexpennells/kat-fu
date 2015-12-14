@@ -13,7 +13,6 @@ public class Bullet_Base : BaseObj {
     Physics.vspeed = 0;
     impacted = true;
     DestroySelf();
-    // Sprite.Play("energy_die", 1f);
   }
 
   protected override void Step () {

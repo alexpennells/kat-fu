@@ -6,6 +6,6 @@ public class Weed_SolidCollider : SolidColliderObj {
     base.FootingCollision(footing);
 
     if (Base.Sprite.IsPlaying("weed_air"))
-      Base.Sprite.Play("weed_land", 1f);
+      Base.Sprite.Play("Land");
   }
 }

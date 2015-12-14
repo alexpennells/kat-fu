@@ -15,4 +15,8 @@ public class EnergyBall_Sprite : SpriteObj {
   public void DieAnimComplete() {
     Base.DestroySelf();
   }
+
+  public void PlayDie(float time) {
+    Animate("energy_die", 1f);
+  }
 }

@@ -177,7 +177,7 @@ public class Kat_Collision : CollisionStubs {
         Kat.Physics.hspeed = 4;
     }
 
-    Base.Sprite.Play("kat_spin", 2f);
+    Base.Sprite.Animate("kat_spin", 2f);
     Kat.Sound.Play("Attack");
   }
 }

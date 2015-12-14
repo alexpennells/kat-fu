@@ -53,15 +53,15 @@ public class Kat_Sprite : SpriteObj {
       return;
 
     if (Kat.Stance == eKat_Stance.KATFU)
-      Play("kat_idle", 1f);
+      Animate("kat_idle", 1f);
     else if (Kat.Stance == eKat_Stance.GUN) {
       if (!Game.AttackHeld)
-        Play("kat_gun_idle", 1f);
+        Animate("kat_gun_idle", 1f);
       else {
         if (IsPlaying("kat_gun_walk_shoot"))
-          Play("kat_gun_idle_shoot", 1f, 0.13f);
+          Animate("kat_gun_idle_shoot", 1f, 0.13f);
         else
-          Play("kat_gun_idle_shoot", 1f);
+          Animate("kat_gun_idle_shoot", 1f);
       }
     }
   }
@@ -71,15 +71,15 @@ public class Kat_Sprite : SpriteObj {
       return;
 
     if (Kat.Stance == eKat_Stance.KATFU)
-      Play("kat_walk", 1f);
+      Animate("kat_walk", 1f);
     else if (Kat.Stance == eKat_Stance.GUN) {
       if (!Game.AttackHeld)
-        Play("kat_gun_walk", 1f);
+        Animate("kat_gun_walk", 1f);
       else {
         if (IsPlaying("kat_gun_idle_shoot"))
-          Play("kat_gun_walk_shoot", 1f, 0.13f);
+          Animate("kat_gun_walk_shoot", 1f, 0.13f);
         else
-          Play("kat_gun_walk_shoot", 1f);
+          Animate("kat_gun_walk_shoot", 1f);
       }
     }
 
@@ -91,12 +91,12 @@ public class Kat_Sprite : SpriteObj {
       return;
 
     if (Kat.Stance == eKat_Stance.KATFU)
-      Play("kat_jump", 1f);
+      Animate("kat_jump", 1f);
     else if (Kat.Stance == eKat_Stance.GUN) {
       if (!Game.AttackHeld)
-        Play("kat_gun_jump", 1f);
+        Animate("kat_gun_jump", 1f);
       else
-        Play("kat_gun_jump_shoot", 1f);
+        Animate("kat_gun_jump_shoot", 1f);
     }
   }
 
@@ -118,7 +118,7 @@ public class Kat_Sprite : SpriteObj {
         break;
       case "kat_punch_1":
         if (Kat.playNextPunch) {
-          Play("kat_punch_2", 1f);
+          Animate("kat_punch_2", 1f);
           Base.Sound.Play("Punch");
         }
         else
@@ -134,10 +134,10 @@ public class Kat_Sprite : SpriteObj {
         Kat.StartInvincible();
         break;
       case "kat_gun_start":
-        Play("kat_gun_idle", 1f);
+        Animate("kat_gun_idle", 1f);
         break;
       case "kat_gun_end":
-        Play("kat_idle", 1f);
+        Animate("kat_idle", 1f);
         break;
       default:
         break;

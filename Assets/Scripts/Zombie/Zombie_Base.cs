@@ -24,7 +24,7 @@ public class Zombie_Base : BaseObj {
 
     if (InAttackRange() || attacking) {
       if (!attacking && FacingKat()) {
-        Sprite.Play("zombie_attack", 1.5f);
+        Sprite.Play("Attack");
         attacking = true;
         AttackTimer.Enabled = true;
       }
@@ -58,11 +58,11 @@ public class Zombie_Base : BaseObj {
     hurt = true;
 
     if (health > 0) {
-      Sprite.Play("zombie_hurt", 1f);
+      Sprite.Play("Hurt");
       HurtTimer.Enabled = true;
     }
     else
-      Sprite.Play("zombie_die", 1f);
+      Sprite.Play("Die");
   }
 
   public bool InChaseRange () {
