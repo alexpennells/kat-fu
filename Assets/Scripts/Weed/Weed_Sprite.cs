@@ -63,35 +63,39 @@ public class Weed_Sprite : SpriteObj {
     Base.DestroySelf();
   }
 
-  public void PlayIdle(float time) {
+  /***********************************
+   * ANIMATION DEFINITIONS
+   **********************************/
+
+  public void PlayIdle() {
     Animate("weed_idle", 0.5f);
   }
 
-  public void PlayBite(float time) {
+  public void PlayBite() {
     Animate("weed_bite", 1.5f);
   }
 
-  public void PlaySpit(float time) {
+  public void PlaySpit() {
     Animate("weed_spit", 1f);
   }
 
-  public void PlayJump(float time) {
+  public void PlayJump() {
     Animate("weed_jump", 2f);
   }
 
-  public void PlayAir(float time) {
+  public void PlayAir() {
     Animate("weed_air", 1f);
   }
 
-  public void PlayLand(float time) {
+  public void PlayLand() {
     Animate("weed_land", 1f);
   }
 
-  public void PlayHurt(float time) {
+  public void PlayHurt() {
     Animate("weed_hurt", 1f);
   }
 
-  public void PlayDie(float time) {
+  public void PlayDie() {
     Animate("weed_die", 1f);
   }
 }

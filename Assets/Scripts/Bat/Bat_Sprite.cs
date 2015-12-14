@@ -36,19 +36,23 @@ public class Bat_Sprite : SpriteObj {
     Base.DestroySelf();
   }
 
-  public void PlayFly(float time) {
+  /***********************************
+   * ANIMATION DEFINITIONS
+   **********************************/
+
+  public void PlayFly() {
     Animate("bat_fly", 1f);
   }
 
-  public void PlayAttack(float time) {
+  public void PlayAttack() {
     Animate("bat_attack", 1f);
   }
 
-  public void PlayHurt(float time) {
+  public void PlayHurt() {
     Animate("bat_hurt", 1f);
   }
 
-  public void PlayDie(float time) {
+  public void PlayDie() {
     Animate("bat_die", 1f);
   }
 }

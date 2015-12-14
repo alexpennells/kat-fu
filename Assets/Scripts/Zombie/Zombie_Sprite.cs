@@ -29,23 +29,27 @@ public class Zombie_Sprite : SpriteObj {
     Base.DestroySelf();
   }
 
-  public void PlayIdle(float time) {
+  /***********************************
+   * ANIMATION DEFINITIONS
+   **********************************/
+
+  public void PlayIdle() {
     Animate("zombie_idle", 0.25f);
   }
 
-  public void PlayWalk(float time) {
+  public void PlayWalk() {
     Animate("zombie_walk", 1f);
   }
 
-  public void PlayAttack(float time) {
+  public void PlayAttack() {
     Animate("zombie_attack", 1.5f);
   }
 
-  public void PlayHurt(float time) {
+  public void PlayHurt() {
     Animate("zombie_hurt", 1f);
   }
 
-  public void PlayDie(float time) {
+  public void PlayDie() {
     Animate("zombie_die", 1f);
   }
 }
