@@ -9,7 +9,7 @@ public class Kat_Sprite : SpriteObj {
     if (Kat.Hurt || IsPlaying("kat_gun_start", "kat_gun_end"))
       return;
 
-    if (IsPlaying("kat_dodge")) {
+    if (IsPlaying("kat_dodge", "kat_gun_dodge")) {
       if (Kat.stopPhysics) {
         if (Base.Physics.hspeed > 0)
           transform.localScale = new Vector3(-1, 1, 1);
@@ -149,7 +149,10 @@ public class Kat_Sprite : SpriteObj {
   }
 
   public void PlayDodge() {
-    Animate("kat_dodge", 1f);
+    if (Kat.Stance == eKat_Stance.KATFU)
+      Animate("kat_dodge", 1f);
+    else
+      Animate("kat_gun_dodge", 1f);
     SetAlpha(0.5f);
   }
 

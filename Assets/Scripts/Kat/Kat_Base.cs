@@ -129,16 +129,16 @@ public class Kat_Base : InputObj {
     if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
       return;
 
-    if (!stopPhysics && HasFooting && Stance == eKat_Stance.KATFU) {
+    if (!stopPhysics && HasFooting) {
       DodgeTimer.Enabled = true;
       stopPhysics = true;
       Sprite.Play("Dodge");
       Sound.Play("Dodge");
 
       if (transform.localScale.x < 0)
-        Physics.hspeed = -7;
+        Physics.hspeed = (Stance == eKat_Stance.KATFU ? -7 : -5);
       else
-        Physics.hspeed = 7;
+        Physics.hspeed = (Stance == eKat_Stance.KATFU ? 7 : 5);
     }
   }
 
