@@ -16,5 +16,6 @@ public enum eObjectType
   BAT,
   ENERGY_BALL,
   WEED,
-  BULLET
+  BULLET,
+  GLOB
 };

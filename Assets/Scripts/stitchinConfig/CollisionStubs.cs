@@ -35,6 +35,9 @@ public class CollisionStubs : CollisionObj
       case eObjectType.BULLET:
         BulletCollision(other as Bullet_Base);
         break;
+      case eObjectType.GLOB:
+        GlobCollision(other as Glob_Base);
+        break;
     }
   }
 
@@ -59,5 +62,6 @@ public class CollisionStubs : CollisionObj
   protected virtual void EnergyBallCollision(EnergyBall_Base other) {}
   protected virtual void WeedCollision(Weed_Base other) {}
   protected virtual void BulletCollision(Bullet_Base other) {}
+  protected virtual void GlobCollision(Glob_Base other) {}
 
 }

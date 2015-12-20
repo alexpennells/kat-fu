@@ -138,6 +138,52 @@ public class Kat_Collision : CollisionStubs {
     }
   }
 
+  protected override void GlobCollision(Glob_Base other) {
+    if (other.Sprite.IsPlaying("glob_die"))
+      return;
+
+    if (GroundAttackSuccess(other)) {
+      other.GetHurt();
+      if (Base.Physics.hspeed > 0)
+        other.Physics.hspeed = 4;
+      else
+        other.Physics.hspeed = -4;
+
+      BounceOffEnemy(6, Kat.Kicking);
+    }
+
+    else if (Kat.GroundPounding) {
+      other.GetHurt();
+
+      other.Physics.vspeed = -2;
+      if (other.transform.localScale.x < 0)
+        other.Physics.hspeed = 2;
+      else
+        other.Physics.hspeed = -2;
+
+      BounceOffEnemy(8, false);
+      Kat.Physics.hspeed = 0;
+    }
+
+    else if (Kat.Uppercutting) {
+      other.GetHurt();
+
+      if (Kat.x > other.x)
+        other.Physics.hspeed = -2;
+      else
+        other.Physics.hspeed = 2;
+
+      BounceOffEnemy(12, false);
+    }
+
+    else if (!other.hurt && !Kat.Invincible && !Kat.Hurt) {
+      if (other.x > Kat.x)
+        Kat.GetHurt(-5);
+      else
+        Kat.GetHurt(5);
+    }
+  }
+
   protected override void EnergyBallCollision(EnergyBall_Base other) {
     if (!other.impacted && !Kat.Invincible && !Kat.Hurt) {
       if (other.x > Kat.x)

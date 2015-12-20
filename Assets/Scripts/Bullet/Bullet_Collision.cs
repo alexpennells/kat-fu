@@ -40,4 +40,16 @@ public class Bullet_Collision : CollisionStubs {
 
     Base.DestroySelf();
   }
+
+  protected override void GlobCollision(Glob_Base other) {
+    other.GetHurt(5);
+
+    if (Base.Physics.hspeed > 0)
+      other.Physics.hspeed += 0.75f;
+    else
+      other.Physics.hspeed -= 0.75f;
+
+    Base.DestroySelf();
+  }
+
 }
