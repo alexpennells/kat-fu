@@ -52,4 +52,11 @@ public class Bullet_Collision : CollisionStubs {
     Base.DestroySelf();
   }
 
+  protected override void RecyclingCollision(Recycling_Base other) {
+    other.GetHurt(10);
+    other.Physics.hspeed = (Base.Physics.hspeed > 0) ? 1f : -1f;
+
+    Base.DestroySelf();
+  }
+
 }

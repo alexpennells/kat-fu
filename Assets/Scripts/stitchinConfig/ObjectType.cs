@@ -17,5 +17,6 @@ public enum eObjectType
   ENERGY_BALL,
   WEED,
   BULLET,
-  GLOB
+  GLOB,
+  RECYCLING
 };

@@ -125,6 +125,11 @@ public class Kat_Base : InputObj {
     }
   }
 
+  protected override void JumpReleased () {
+    if (Sprite.IsPlaying("kat_jump", "kat_gun_jump", "kat_gun_jump_shoot") && Physics.vspeed > 2)
+      Physics.vspeed = 2;
+  }
+
   protected override void SkatePressed () {
     if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
       return;

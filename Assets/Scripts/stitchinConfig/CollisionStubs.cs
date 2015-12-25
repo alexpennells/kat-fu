@@ -38,6 +38,9 @@ public class CollisionStubs : CollisionObj
       case eObjectType.GLOB:
         GlobCollision(other as Glob_Base);
         break;
+      case eObjectType.RECYCLING:
+        RecyclingCollision(other as Recycling_Base);
+        break;
     }
   }
 
@@ -63,5 +66,5 @@ public class CollisionStubs : CollisionObj
   protected virtual void WeedCollision(Weed_Base other) {}
   protected virtual void BulletCollision(Bullet_Base other) {}
   protected virtual void GlobCollision(Glob_Base other) {}
-
+  protected virtual void RecyclingCollision(Recycling_Base other) {}
 }
