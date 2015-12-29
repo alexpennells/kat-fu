@@ -11,7 +11,7 @@ public class Recycling_Base : BaseObj {
   public int jumpHeight = 5;
 
   [Tooltip("Speed the object moves when in the air")]
-  public int moveSpeed = 1;
+  public float moveSpeed = 1;
 
   [Tooltip("Enemy total health before death")]
   public int health = 20;
@@ -65,28 +65,29 @@ public class Recycling_Base : BaseObj {
 
     if (HasFooting && canJump && !hurt) {
       // Jump towards the cat.
-      if (x < TurfMin) {
-        Physics.hspeed = moveSpeed;
-        Physics.vspeed = jumpHeight;
-        JumpTimer.Enabled = true;
-        canJump = false;
-      }
-      else if (x > TurfMax) {
-        Physics.hspeed = -moveSpeed;
-        Physics.vspeed = jumpHeight;
-        JumpTimer.Enabled = true;
-        canJump = false;
-      }
-      else if (Stitch.Kat.x > TurfMin && Stitch.Kat.x < TurfMax) {
-        Physics.hspeed = (Stitch.Kat.x > x) ? moveSpeed : -moveSpeed;
-        Physics.vspeed = jumpHeight;
-        JumpTimer.Enabled = true;
-        canJump = false;
-      }
+      if (x < TurfMin)
+        StartJump(moveSpeed);
+      else if (x > TurfMax)
+        StartJump(-moveSpeed);
+      else if (Stitch.Kat.x > TurfMin && Stitch.Kat.x < TurfMax)
+        StartJump(Stitch.Kat.x > x ? moveSpeed : -moveSpeed);
     }
   }
 
+  public void StartJump(float hspeed) {
+    if (Sound)
+      Sound.Play("Bounce");
+
+    Physics.hspeed = hspeed;
+    Physics.vspeed = jumpHeight;
+    JumpTimer.Enabled = true;
+    canJump = false;
+  }
+
   public void GetHurt(int damage = 10) {
+    if (Sound)
+      Sound.Play("Hurt");
+
     HurtTimer.Enabled = false;
     JumpTimer.Enabled = false;
 
