@@ -17,10 +17,10 @@ public class Recycling_Base : BaseObj {
   public int health = 20;
 
   [Tooltip("The min X position that this object will move to")]
-  public float turfMin = -40f;
+  public float turfMin = -100f;
 
   [Tooltip("The max X position that this object will move to")]
-  public float turfMax = 40f;
+  public float turfMax = 100f;
 
   /***********************************
    * PRIVATE VARS AND ACCESSORS
@@ -48,7 +48,17 @@ public class Recycling_Base : BaseObj {
   }
 
   protected override void Step () {
-    transform.rotation = Quaternion.AngleAxis(Physics.vspeed * (Physics.hspeed > 0 ? 2 : -2), Vector3.forward);
+    if (hurt && health <= 0) {
+      Physics.SkipNextFrictionUpdate();
+
+      transform.RotateAround(
+        Collision.Handler.GetComponent<BoxCollider2D>().bounds.center,
+        Vector3.forward,
+        3f * ((Physics.hspeed >= 0) ? -5 : 5)
+      );
+    }
+    else
+      transform.rotation = Quaternion.AngleAxis(Physics.vspeed * (Physics.hspeed > 0 ? 2 : -2), Vector3.forward);
 
     if (!HasFooting)
       Physics.SkipNextFrictionUpdate();
@@ -83,8 +93,14 @@ public class Recycling_Base : BaseObj {
     health -= damage;
     hurt = true;
 
-    HurtTimer.Enabled = true;
-    JumpTimer.Enabled = true;
+    if (health <= 0) {
+      Physics.vspeed = 3;
+      Physics.gravity = 0.25f;
+      Destroy(SolidPhysics.Collider);
+    } else {
+      HurtTimer.Enabled = true;
+      JumpTimer.Enabled = true;
+    }
   }
 
   /***********************************
