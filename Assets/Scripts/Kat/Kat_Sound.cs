@@ -1,4 +1,8 @@
+using System;
+
 public class Kat_Sound : SoundObj {
+  public override Type Lib { get { return typeof(Kat_SFXLib); } }
+
   public void PlayFootstep() {
     Game.SFX.Play("Footstep" + Game.Random.Next(1, 5), 0.8f);
   }

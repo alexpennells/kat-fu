@@ -1,4 +1,8 @@
+using System;
+
 public class WaterBottle_Sound : SoundObj {
+  public override Type Lib { get { return typeof(WaterBottle_SFXLib); } }
+
   public void PlayBounce() {
     Game.SFX.Play("WaterBottleBounce", 0.4f);
   }
