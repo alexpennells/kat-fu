@@ -18,5 +18,6 @@ public enum eObjectType
   WEED,
   BULLET,
   GLOB,
-  RECYCLING
+  RECYCLING,
+  BOX_SPAWNER
 };

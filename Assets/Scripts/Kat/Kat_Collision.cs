@@ -220,6 +220,33 @@ public class Kat_Collision : CollisionStubs {
     }
   }
 
+  protected override void BoxSpawnerCollision(BoxSpawner_Base other) {
+    if (GroundAttackSuccess(other)) {
+      other.GetHurt();
+      other.Physics.hspeed = (Base.transform.localScale.x > 0) ? 4 : -4;
+      BounceOffEnemy(5);
+    }
+
+    else if (Kat.GroundPounding) {
+      other.GetHurt();
+      other.Physics.hspeed = (other.transform.localScale.x < 0) ? 2 : -2;
+      BounceOffEnemy(5);
+      Kat.Physics.hspeed = 0;
+    }
+
+    else if (Kat.Uppercutting) {
+      other.GetHurt();
+      other.Physics.hspeed = (Kat.x > other.x) ? -2 : 2;
+      BounceOffEnemy(6, false);
+      Kat.Physics.hspeed = (Kat.x > other.x) ? 4 : -4;
+    }
+
+    else {
+      BounceOffEnemy(5, false);
+      Kat.Physics.hspeed = (Kat.x > other.x) ? 4 : -4;
+    }
+  }
+
   protected override void EnergyBallCollision(EnergyBall_Base other) {
     if (!other.impacted && !Kat.Invincible && !Kat.Hurt) {
       if (other.x > Kat.x)
@@ -260,6 +287,5 @@ public class Kat_Collision : CollisionStubs {
     }
 
     Base.Sprite.Play("Spin");
-    Kat.Sound.Play("Attack");
   }
 }

@@ -41,6 +41,9 @@ public class CollisionStubs : CollisionObj
       case eObjectType.RECYCLING:
         RecyclingCollision(other as Recycling_Base);
         break;
+      case eObjectType.BOX_SPAWNER:
+        BoxSpawnerCollision(other as BoxSpawner_Base);
+        break;
     }
   }
 
@@ -67,4 +70,5 @@ public class CollisionStubs : CollisionObj
   protected virtual void BulletCollision(Bullet_Base other) {}
   protected virtual void GlobCollision(Glob_Base other) {}
   protected virtual void RecyclingCollision(Recycling_Base other) {}
+  protected virtual void BoxSpawnerCollision(BoxSpawner_Base other) {}
 }

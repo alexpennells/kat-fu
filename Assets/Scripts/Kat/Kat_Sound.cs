@@ -1,6 +1,6 @@
 public class Kat_Sound : SoundObj {
   public void PlayFootstep() {
-    Game.SFX.Play("Footstep" + Game.Random.Next(1, 5), 0.5f);
+    Game.SFX.Play("Footstep" + Game.Random.Next(1, 5), 0.8f);
   }
 
   public void PlayLand() {
@@ -16,7 +16,7 @@ public class Kat_Sound : SoundObj {
   }
 
   public void PlayAttack(){
-    Game.SFX.Play("CatAttack" + Game.Random.Next(1, 4), 0.5f);
+    Game.SFX.Play("CatAttack" + Game.Random.Next(1, 4), 0.1f);
   }
 
   public void PlayHiss(){
@@ -32,18 +32,18 @@ public class Kat_Sound : SoundObj {
   }
 
   public void PlayGunStart() {
-    Game.SFX.Play("GunStart", 0.5f);
+    Game.SFX.Play("GunStart", 0.3f);
   }
 
   public void PlayGunEnd() {
-    Game.SFX.Play("GunEnd", 0.5f);
+    Game.SFX.Play("GunEnd", 0.3f);
   }
 
   public void PlayGunshot() {
-    Game.SFX.Play("Gunshot" + Game.Random.Next(1, 4), 0.8f);
+    Game.SFX.Play("Gunshot" + Game.Random.Next(1, 4), 0.5f);
   }
 
   public void PlayHurt() {
-    Game.SFX.Play("CatHurt", 1f);
+    Game.SFX.Play("CatHurt", 0.5f);
   }
 }

@@ -21,7 +21,7 @@ public class Kat_Sprite : SpriteObj {
         Play("Idle");
     }
 
-    if (Kat.Stance != eKat_Stance.GUN || !Game.AttackHeld)
+    if (Kat.Stance != eKat_Stance.GUN || (!Game.AttackHeld && !Game.DownHeld))
       TurnSprite();
 
     if (IsPlaying("kat_lunge", "kat_kick") && Kat.stopPhysics == false) {

@@ -35,6 +35,14 @@ public class Recycling_Base : BaseObj {
   private bool hurt = false;
   public bool Hurt { get { return hurt; } }
 
+  // The spawner of this object, if it exists.
+  private BoxSpawner_Base spawner = null;
+  public BoxSpawner_Base Spawner { get { return spawner; } set { spawner = value; } }
+
+  // Whether or not the rendering layer has been adjusted to the front of a spawner yet.
+  private bool hasAdjustedLayer = true;
+  public bool HasAdjustedLayer { get { return hurt; } set { hasAdjustedLayer = value; } }
+
   /***********************************
    * FUNCTIONS
    **********************************/
@@ -48,6 +56,11 @@ public class Recycling_Base : BaseObj {
   }
 
   protected override void Step () {
+    if (!hasAdjustedLayer && Physics.vspeed < 0) {
+      hasAdjustedLayer = true;
+      GetComponent<SpriteRenderer>().sortingOrder = 40;
+    }
+
     if (hurt && health <= 0) {
       Physics.SkipNextFrictionUpdate();
 
@@ -98,6 +111,10 @@ public class Recycling_Base : BaseObj {
       Physics.vspeed = 3;
       Physics.gravity = 0.25f;
       Destroy(SolidPhysics.Collider);
+      Stitch.Kat.Sound.Play("Attack");
+
+      if (spawner != null)
+        spawner.RemoveSpawn(ID);
     } else {
       HurtTimer.Enabled = true;
       JumpTimer.Enabled = true;
