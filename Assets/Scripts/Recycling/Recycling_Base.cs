@@ -148,8 +148,8 @@ public class Recycling_Base : BaseObj {
     if (!Application.isPlaying)
       startX = x;
 
-    Debug.DrawLine(new Vector3(TurfMin, Mask.Center.y - 10, 0), new Vector3(TurfMin, Mask.Center.y + 10, 0), Color.magenta, 0, false);
-    Debug.DrawLine(new Vector3(TurfMax, Mask.Center.y - 10, 0), new Vector3(TurfMax, Mask.Center.y + 10, 0), Color.magenta, 0, false);
+    Debug.DrawLine(new Vector3(TurfMin, Mask.Center.y - 10, z), new Vector3(TurfMin, Mask.Center.y + 10, z), Color.magenta, 0, false);
+    Debug.DrawLine(new Vector3(TurfMax, Mask.Center.y - 10, z), new Vector3(TurfMax, Mask.Center.y + 10, z), Color.magenta, 0, false);
   }
 
 }

@@ -44,6 +44,9 @@ public class CollisionStubs : CollisionObj
       case eObjectType.BOX_SPAWNER:
         BoxSpawnerCollision(other as BoxSpawner_Base);
         break;
+      case eObjectType.DOG:
+        DogCollision(other as Dog_Base);
+        break;
     }
   }
 
@@ -71,4 +74,5 @@ public class CollisionStubs : CollisionObj
   protected virtual void GlobCollision(Glob_Base other) {}
   protected virtual void RecyclingCollision(Recycling_Base other) {}
   protected virtual void BoxSpawnerCollision(BoxSpawner_Base other) {}
+  protected virtual void DogCollision(Dog_Base other) {}
 }

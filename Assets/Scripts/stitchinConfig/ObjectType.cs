@@ -19,5 +19,6 @@ public enum eObjectType
   BULLET,
   GLOB,
   RECYCLING,
-  BOX_SPAWNER
+  BOX_SPAWNER,
+  DOG
 };
