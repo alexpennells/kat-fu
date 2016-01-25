@@ -14,9 +14,9 @@ public class Glob_Sprite : SpriteObj {
       return;
 
     if (Stitch.Kat.x < Base.x)
-      transform.localScale = new Vector3(-1, 1, 1);
+      FacingLeft = true;
     else if (Stitch.Kat.x > Base.x)
-      transform.localScale = new Vector3(1, 1, 1);
+      FacingRight = true;
   }
 
   public void DieAnimComplete() {

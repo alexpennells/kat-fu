@@ -1,0 +1,750 @@
+fileFormatVersion: 2
+guid: a53b0dc36237b40ef9ae2585f92cc272
+timeCreated: 1453687769
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dog_0
+    21300002: dog_1
+    21300004: dog_2
+    21300006: dog_3
+    21300008: dog_4
+    21300010: dog_5
+    21300012: dog_6
+    21300014: dog_7
+    21300016: dog_8
+    21300018: dog_9
+    21300020: dog_10
+    21300022: dog_11
+    21300024: dog_12
+    21300026: dog_13
+    21300028: dog_14
+    21300030: dog_15
+    21300032: dog_16
+    21300034: dog_17
+    21300036: dog_18
+    21300038: dog_19
+    21300040: dog_20
+    21300042: dog_21
+    21300044: dog_22
+    21300046: dog_23
+    21300048: dog_24
+    21300050: dog_25
+    21300052: dog_26
+    21300054: dog_27
+    21300056: dog_28
+    21300058: dog_29
+    21300060: dog_30
+    21300062: dog_31
+    21300064: dog_32
+    21300066: dog_33
+    21300068: dog_34
+    21300070: dog_35
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: dog_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.5, y: 26.944445}
+        - {x: -10.5, y: 14.944445}
+        - {x: -10.5, y: 1.9444447}
+        - {x: -8.5, y: -0.055555344}
+        - {x: 10.5, y: -0.055555344}
+        - {x: 11.5, y: 5.9444447}
+        - {x: 11.5, y: 25.944445}
+        - {x: 9.5, y: 26.944445}
+    - name: dog_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.111111, y: 26.944445}
+        - {x: -8.111111, y: -0.055555344}
+        - {x: 10.888889, y: -0.055555344}
+        - {x: 12.888889, y: 4.9444447}
+        - {x: 12.888889, y: 25.944445}
+        - {x: 7.8888893, y: 26.944445}
+    - name: dog_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.222221, y: 26.944445}
+        - {x: -9.222221, y: 3.9444447}
+        - {x: -7.2222214, y: -0.055555344}
+        - {x: 10.777779, y: -0.055555344}
+        - {x: 12.777779, y: 1.9444447}
+        - {x: 12.777779, y: 26.944445}
+    - name: dog_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.666672, y: 27.944445}
+        - {x: -7.3333282, y: 27.944445}
+        - {x: -9.333328, y: 21.944445}
+        - {x: -9.333328, y: 1.9444447}
+        - {x: -8.333328, y: -0.055555344}
+        - {x: 9.666672, y: -0.055555344}
+        - {x: 11.666672, y: 8.944445}
+        - {x: 11.666672, y: 23.944445}
+    - name: dog_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.4444427, y: 26.944445}
+        - {x: -8.444443, y: 20.944445}
+        - {x: -8.444443, y: 0.94444466}
+        - {x: -6.4444427, y: -0.055555344}
+        - {x: 9.555557, y: -0.055555344}
+        - {x: 12.555557, y: 1.9444447}
+        - {x: 12.555557, y: 24.944445}
+        - {x: 11.555557, y: 26.944445}
+    - name: dog_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.555542, y: 27.944445}
+        - {x: -8.555542, y: 23.944445}
+        - {x: -8.555542, y: 8.944445}
+        - {x: -5.555542, y: -0.055555344}
+        - {x: 10.444458, y: -0.055555344}
+        - {x: 12.444458, y: 3.9444447}
+        - {x: 12.444458, y: 26.944445}
+        - {x: 9.444458, y: 27.944445}
+    - name: dog_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.6666565, y: 27.944445}
+        - {x: -9.6666565, y: 0.94444466}
+        - {x: -6.6666565, y: -0.055555344}
+        - {x: 12.3333435, y: -0.055555344}
+        - {x: 12.3333435, y: 25.944445}
+        - {x: 11.3333435, y: 27.944445}
+    - name: dog_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.222229, y: 23.944445}
+        - {x: 9.222229, y: 26.944445}
+        - {x: -7.777771, y: 26.944445}
+        - {x: -10.777771, y: 21.944445}
+        - {x: -10.777771, y: 0.94444466}
+        - {x: -9.777771, y: -0.055555344}
+        - {x: 8.222229, y: -0.055555344}
+        - {x: 12.222229, y: 8.944445}
+    - name: dog_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.6111145, y: 26.944445}
+        - {x: -4.3888855, y: 26.944445}
+        - {x: -8.3888855, y: 21.944445}
+        - {x: -7.3888855, y: 18.944445}
+        - {x: -9.3888855, y: 11.944445}
+        - {x: -9.3888855, y: 4.9444447}
+        - {x: -8.3888855, y: -0.055555344}
+        - {x: 8.6111145, y: -0.055555344}
+        - {x: 12.6111145, y: 6.9444447}
+        - {x: 12.6111145, y: 15.944445}
+        - {x: 11.6111145, y: 22.944445}
+    - name: dog_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 27.944445}
+        - {x: -8.5, y: 25.944445}
+        - {x: -8.5, y: -0.055555344}
+        - {x: 12.5, y: -0.055555344}
+        - {x: 12.5, y: 27.944445}
+    - name: dog_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.111084, y: 26.944445}
+        - {x: -7.111084, y: -0.055555344}
+        - {x: 12.888916, y: -0.055555344}
+        - {x: 13.888916, y: 2.9444447}
+        - {x: 13.888916, y: 26.944445}
+    - name: dog_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.222229, y: 27.944445}
+        - {x: -8.222229, y: 4.9444447}
+        - {x: -5.222229, y: -0.055555344}
+        - {x: 10.777771, y: -0.055555344}
+        - {x: 12.777771, y: 2.9444447}
+        - {x: 12.777771, y: 24.944445}
+        - {x: 11.777771, y: 27.944445}
+    - name: dog_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.333313, y: 27.944445}
+        - {x: -8.333313, y: 25.944445}
+        - {x: -8.333313, y: 3.9444447}
+        - {x: -3.333313, y: -0.055555344}
+        - {x: 6.666687, y: -0.055555344}
+        - {x: 11.666687, y: 1.9444447}
+        - {x: 11.666687, y: 24.944445}
+        - {x: 8.666687, y: 27.944445}
+    - name: dog_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.444458, y: 26.944445}
+        - {x: -8.444458, y: -0.055555344}
+        - {x: 11.555542, y: -0.055555344}
+        - {x: 11.555542, y: 26.944445}
+    - name: dog_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.555542, y: 26.944445}
+        - {x: -10.555542, y: -0.055555344}
+        - {x: 10.444458, y: -0.055555344}
+        - {x: 10.444458, y: 23.944445}
+        - {x: 7.444458, y: 26.944445}
+    - name: dog_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.666687, y: 25.944445}
+        - {x: -20.666687, y: 18.944445}
+        - {x: -20.666687, y: 5.9444447}
+        - {x: -12.666687, y: -0.055555344}
+        - {x: 8.333313, y: -0.055555344}
+        - {x: 10.333313, y: 3.9444447}
+        - {x: 10.333313, y: 14.944445}
+        - {x: -4.666687, y: 25.944445}
+    - name: dog_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.777771, y: 14.944445}
+        - {x: -25.777771, y: 13.944445}
+        - {x: -26.777771, y: 1.9444447}
+        - {x: -26.777771, y: -0.055555344}
+        - {x: 7.222229, y: -0.055555344}
+        - {x: 7.222229, y: 14.944445}
+    - name: dog_17
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.388855, y: 25.944445}
+        - {x: -9.388855, y: 20.944445}
+        - {x: -9.388855, y: -0.055555344}
+        - {x: 14.611145, y: -0.055555344}
+        - {x: 14.611145, y: 14.944445}
+        - {x: 9.611145, y: 25.944445}
+    - name: dog_18
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.5, y: 25.944445}
+        - {x: -10.5, y: 0.94444466}
+        - {x: -9.5, y: -0.055555344}
+        - {x: 13.5, y: -0.055555344}
+        - {x: 14.5, y: 1.9444447}
+        - {x: 14.5, y: 22.944445}
+        - {x: 8.5, y: 25.944445}
+    - name: dog_19
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.888916, y: 25.944445}
+        - {x: -6.111084, y: 25.944445}
+        - {x: -9.111084, y: 19.944445}
+        - {x: -9.111084, y: 0.94444466}
+        - {x: -6.111084, y: -0.055555344}
+        - {x: 9.888916, y: -0.055555344}
+        - {x: 12.888916, y: 10.944445}
+        - {x: 12.888916, y: 20.944445}
+    - name: dog_20
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.222168, y: 26.944445}
+        - {x: -9.222168, y: 25.944445}
+        - {x: -9.222168, y: 4.9444447}
+        - {x: -4.222168, y: -0.055555344}
+        - {x: 9.777832, y: -0.055555344}
+        - {x: 12.777832, y: 3.9444447}
+        - {x: 12.777832, y: 23.944445}
+        - {x: 11.777832, y: 26.944445}
+    - name: dog_21
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.333374, y: 27.944445}
+        - {x: -9.333374, y: 26.944445}
+        - {x: -9.333374, y: 4.9444447}
+        - {x: -6.333374, y: -0.055555344}
+        - {x: 11.666626, y: -0.055555344}
+        - {x: 11.666626, y: 23.944445}
+        - {x: 8.666626, y: 27.944445}
+    - name: dog_22
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.444458, y: 27.944445}
+        - {x: -8.444458, y: 4.9444447}
+        - {x: -7.444458, y: -0.055555344}
+        - {x: 9.555542, y: -0.055555344}
+        - {x: 11.555542, y: 4.9444447}
+        - {x: 11.555542, y: 27.944445}
+    - name: dog_23
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.444458, y: 26.944445}
+        - {x: -7.555542, y: 26.944445}
+        - {x: -9.555542, y: 24.944445}
+        - {x: -10.555542, y: 21.944445}
+        - {x: -10.555542, y: 9.944445}
+        - {x: -6.555542, y: -0.055555344}
+        - {x: 7.444458, y: -0.055555344}
+        - {x: 12.444458, y: 3.9444447}
+        - {x: 12.444458, y: 25.944445}
+    - name: dog_24
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.666626, y: 25.944445}
+        - {x: -10.666626, y: 21.944445}
+        - {x: -10.666626, y: 15.944445}
+        - {x: -8.666626, y: -0.055555344}
+        - {x: 11.333374, y: -0.055555344}
+        - {x: 11.333374, y: 24.944445}
+        - {x: 5.333374, y: 25.944445}
+    - name: dog_25
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.22229, y: 26.944445}
+        - {x: -12.77771, y: 26.944445}
+        - {x: -12.77771, y: 0.94444466}
+        - {x: -11.77771, y: -0.055555344}
+        - {x: 4.22229, y: -0.055555344}
+        - {x: 15.22229, y: 1.9444447}
+        - {x: 15.22229, y: 9.944445}
+        - {x: 11.22229, y: 19.944445}
+    - name: dog_26
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.388916, y: 26.944445}
+        - {x: -11.388916, y: -0.055555344}
+        - {x: 14.611084, y: -0.055555344}
+        - {x: 15.611084, y: 1.9444447}
+        - {x: 15.611084, y: 12.944445}
+        - {x: 5.611084, y: 26.944445}
+    - name: dog_27
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: 26.944445}
+        - {x: -10.5, y: 25.944445}
+        - {x: -10.5, y: 3.9444447}
+        - {x: -6.5, y: -0.055555344}
+        - {x: 3.5, y: -0.055555344}
+        - {x: 9.5, y: 3.9444447}
+        - {x: 9.5, y: 23.944445}
+        - {x: 5.5, y: 26.944445}
+    - name: dog_28
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5.888916, y: 26.944445}
+        - {x: -7.111084, y: 26.944445}
+        - {x: -9.111084, y: 24.944445}
+        - {x: -9.111084, y: 2.9444447}
+        - {x: -4.111084, y: -0.055555344}
+        - {x: 5.888916, y: -0.055555344}
+        - {x: 10.888916, y: 8.944445}
+        - {x: 10.888916, y: 22.944445}
+    - name: dog_29
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.222168, y: 26.944445}
+        - {x: -11.222168, y: 23.944445}
+        - {x: -11.222168, y: 3.9444447}
+        - {x: -9.222168, y: -0.055555344}
+        - {x: 14.777832, y: -0.055555344}
+        - {x: 14.777832, y: 19.944445}
+        - {x: 6.777832, y: 26.944445}
+    - name: dog_30
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.666626, y: 25.944445}
+        - {x: -2.333374, y: 25.944445}
+        - {x: -11.333374, y: 17.944445}
+        - {x: -11.333374, y: 0.94444466}
+        - {x: -10.333374, y: -0.055555344}
+        - {x: 6.666626, y: -0.055555344}
+        - {x: 16.666626, y: 12.944445}
+        - {x: 16.666626, y: 19.944445}
+        - {x: 15.666626, y: 22.944445}
+    - name: dog_31
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2.555542, y: 25.944445}
+        - {x: -2.444458, y: 25.944445}
+        - {x: -8.444458, y: 23.944445}
+        - {x: -13.444458, y: 16.944445}
+        - {x: -13.444458, y: 13.944445}
+        - {x: -12.444458, y: 8.944445}
+        - {x: -1.444458, y: -0.055555344}
+        - {x: 10.555542, y: -0.055555344}
+        - {x: 14.555542, y: 6.9444447}
+        - {x: 14.555542, y: 15.944445}
+    - name: dog_32
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.555542, y: 25.944445}
+        - {x: -12.555542, y: 11.944445}
+        - {x: -12.555542, y: -0.055555344}
+        - {x: 15.444458, y: -0.055555344}
+        - {x: 15.444458, y: 16.944445}
+        - {x: 8.444458, y: 25.944445}
+    - name: dog_33
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.666626, y: 25.944445}
+        - {x: -12.666626, y: 24.944445}
+        - {x: -13.666626, y: 18.944445}
+        - {x: -13.666626, y: 3.9444447}
+        - {x: -11.666626, y: -0.055555344}
+        - {x: 11.333374, y: -0.055555344}
+        - {x: 14.333374, y: 0.94444466}
+        - {x: 14.333374, y: 11.944445}
+        - {x: 1.333374, y: 25.944445}
+    - name: dog_34
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.77771, y: 26.944445}
+        - {x: -11.77771, y: 0.94444466}
+        - {x: -9.77771, y: -0.055555344}
+        - {x: 8.22229, y: -0.055555344}
+        - {x: 9.22229, y: 10.944445}
+        - {x: 9.22229, y: 23.944445}
+        - {x: 6.22229, y: 26.944445}
+    - name: dog_35
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.388916, y: 26.944445}
+        - {x: -10.388916, y: 24.944445}
+        - {x: -10.388916, y: 2.9444447}
+        - {x: -7.388916, y: -0.055555344}
+        - {x: 8.611084, y: -0.055555344}
+        - {x: 10.611084, y: 7.9444447}
+        - {x: 10.611084, y: 25.944445}
+        - {x: 7.611084, y: 26.944445}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

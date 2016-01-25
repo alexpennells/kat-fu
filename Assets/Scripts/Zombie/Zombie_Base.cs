@@ -30,7 +30,7 @@ public class Zombie_Base : BaseObj {
       }
 
       Physics.hspeedMax = 4;
-      if (transform.localScale.x > 0)
+      if (Sprite.FacingRight)
         Physics.hspeed += 0.25f;
       else
         Physics.hspeed -= 0.25f;
@@ -78,7 +78,7 @@ public class Zombie_Base : BaseObj {
   }
 
   public bool FacingKat () {
-    return (transform.localScale.x > 0 && Stitch.Kat.x > x) || (transform.localScale.x < 0 && Stitch.Kat.x < x);
+    return (Sprite.FacingRight && Stitch.Kat.x > x) || (Sprite.FacingLeft && Stitch.Kat.x < x);
   }
 
   public Timer AttackTimer { get { return Timer1; } }

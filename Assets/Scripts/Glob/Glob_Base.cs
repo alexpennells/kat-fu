@@ -45,11 +45,11 @@ public class Glob_Base : BaseObj {
 
   public void StartJump () {
     if (Sprite.IsPlaying("glob_jump")) {
-      Physics.hspeed = (transform.localScale.x > 0) ? 3 : -3;
+      Physics.hspeed = (Sprite.FacingRight) ? 3 : -3;
       Physics.vspeed = 6;
     }
     else {
-      Physics.hspeed = (transform.localScale.x > 0) ? 6 : -6;
+      Physics.hspeed = (Sprite.FacingRight) ? 6 : -6;
       Physics.vspeed = 5;
     }
   }

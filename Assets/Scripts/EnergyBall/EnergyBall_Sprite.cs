@@ -7,9 +7,9 @@ public class EnergyBall_Sprite : SpriteObj {
 
   public override void Step () {
     if (Base.Physics.hspeed > 0)
-      transform.localScale = new Vector3(1, 1, 1);
+      FacingRight = true;
     else
-      transform.localScale = new Vector3(-1, 1, 1);
+      FacingLeft = true;
   }
 
   public void DieAnimComplete() {

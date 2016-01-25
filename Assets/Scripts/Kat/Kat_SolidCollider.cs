@@ -28,6 +28,10 @@ public class Kat_SolidCollider : SolidColliderObj {
       Base.Sprite.Play("Idle");
   }
 
+  protected override void WallCollision (SolidObj wall) {
+    Base.Physics.hspeed = 0;
+  }
+
   private void BounceOffGround () {
     Stitch.Kat.stopPhysics = false;
     Stitch.Kat.AirKickTimer.Enabled = false;

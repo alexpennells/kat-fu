@@ -16,9 +16,9 @@ public class Zombie_Sprite : SpriteObj {
 
   private void TurnSprite() {
     if (Stitch.Kat.x < Base.x)
-      transform.localScale = new Vector3(-1, 1, 1);
+      FacingLeft = true;
     else if (Stitch.Kat.x > Base.x)
-      transform.localScale = new Vector3(1, 1, 1);
+      FacingRight = true;
   }
 
   public void AttackAnimComplete() {

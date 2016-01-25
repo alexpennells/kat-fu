@@ -12,9 +12,9 @@ public class Kat_Sprite : SpriteObj {
     if (IsPlaying("kat_dodge", "kat_gun_dodge")) {
       if (Kat.stopPhysics) {
         if (Base.Physics.hspeed > 0)
-          transform.localScale = new Vector3(-1, 1, 1);
+          FacingLeft = true;
         else
-          transform.localScale = new Vector3(1, 1, 1);
+          FacingRight = true;
         return;
       }
       else
@@ -50,9 +50,9 @@ public class Kat_Sprite : SpriteObj {
 
   private void TurnSprite() {
     if (Base.Physics.hspeed < 0)
-      transform.localScale = new Vector3(-1, 1, 1);
+      FacingLeft = true;
     else if (Base.Physics.hspeed > 0)
-      transform.localScale = new Vector3(1, 1, 1);
+      FacingRight = true;
   }
 
   public void PlayFootstepSound() { Base.Sound.Play("Footstep"); }

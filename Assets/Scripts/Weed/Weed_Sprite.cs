@@ -24,16 +24,16 @@ public class Weed_Sprite : SpriteObj {
 
   private void TurnSprite() {
     if (Stitch.Kat.x < Base.x)
-      transform.localScale = new Vector3(1, 1, 1);
+      FacingRight = true;
     else if (Stitch.Kat.x > Base.x)
-      transform.localScale = new Vector3(-1, 1, 1);
+      FacingLeft = true;
   }
 
   private void HurtTurnSprite() {
     if (Base.Physics.hspeed > 0)
-      transform.localScale = new Vector3(1, 1, 1);
+      FacingRight = true;
     else if (Base.Physics.hspeed < 0)
-      transform.localScale = new Vector3(-1, 1, 1);
+      FacingLeft = true;
   }
 
   public void SpitAnimComplete() {

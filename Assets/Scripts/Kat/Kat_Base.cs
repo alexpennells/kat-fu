@@ -43,9 +43,9 @@ public class Kat_Base : InputObj {
     Physics.vspeed = 0;
     Physics.hspeed = hspeed;
     if (hspeed < 0)
-      transform.localScale = new Vector3(1, 1, 1);
+      Sprite.FacingRight = true;
     else
-      transform.localScale = new Vector3(-1, 1, 1);
+      Sprite.FacingLeft = true;
 
     Sound.Play("Hurt");
     Sprite.Play("Hurt");
@@ -140,7 +140,7 @@ public class Kat_Base : InputObj {
       Sprite.Play("Dodge");
       Sound.Play("Dodge");
 
-      if (transform.localScale.x < 0)
+      if (Sprite.FacingLeft)
         Physics.hspeed = (Stance == eKat_Stance.KATFU ? -7 : -5);
       else
         Physics.hspeed = (Stance == eKat_Stance.KATFU ? 7 : 5);
@@ -206,7 +206,7 @@ public class Kat_Base : InputObj {
     stopPhysics = true;
     Physics.vspeed = 0;
 
-    if (transform.localScale.x < 0)
+    if (Sprite.FacingLeft)
       Physics.hspeed = -7;
     else
       Physics.hspeed = 7;
@@ -219,7 +219,7 @@ public class Kat_Base : InputObj {
   private void StartGroundKick () {
     stopPhysics = true;
 
-    if (transform.localScale.x < 0)
+    if (Sprite.FacingLeft)
       Physics.hspeed = -7;
     else
       Physics.hspeed = 7;
@@ -250,7 +250,7 @@ public class Kat_Base : InputObj {
     BaseObj bullet = Game.Create("Bullet", new Vector2(x, Mask.Center.y - 5));
     Sound.Play("Gunshot");
 
-    if (transform.localScale.x > 0)
+    if (Sprite.FacingRight)
       bullet.Physics.hspeed = 10;
     else
       bullet.Physics.hspeed = -10;

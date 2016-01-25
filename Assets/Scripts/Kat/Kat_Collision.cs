@@ -11,7 +11,7 @@ public class Kat_Collision : CollisionStubs {
 
     if (GroundAttackSuccess(other)) {
       other.GetHurt();
-      if (transform.localScale.x > 0)
+      if (Base.Sprite.FacingRight)
         other.Physics.hspeed = other.Physics.hspeedMax;
       else
         other.Physics.hspeed = -other.Physics.hspeedMax;
@@ -22,7 +22,7 @@ public class Kat_Collision : CollisionStubs {
     else if (Kat.GroundPounding) {
       other.GetHurt();
 
-      if (other.transform.localScale.x < 0)
+      if (other.Sprite.FacingLeft)
         other.Physics.hspeed = other.Physics.hspeedMax;
       else
         other.Physics.hspeed = -other.Physics.hspeedMax;
@@ -57,7 +57,7 @@ public class Kat_Collision : CollisionStubs {
     if (GroundAttackSuccess(other)) {
       other.GetHurt();
 
-      if (transform.localScale.x > 0)
+      if (Base.Sprite.FacingRight)
         other.Physics.hspeed = other.Physics.hspeedMax;
       else
         other.Physics.hspeed = -other.Physics.hspeedMax;
@@ -101,7 +101,7 @@ public class Kat_Collision : CollisionStubs {
     if (!other.Sprite.IsPlaying("weed_bite") && GroundAttackSuccess(other)) {
       other.GetHurt();
 
-      if (transform.localScale.x > 0)
+      if (Base.Sprite.FacingRight)
         other.Physics.hspeed = other.Physics.hspeedMax;
       else
         other.Physics.hspeed = -other.Physics.hspeedMax;
@@ -156,7 +156,7 @@ public class Kat_Collision : CollisionStubs {
       other.GetHurt();
 
       other.Physics.vspeed = -2;
-      if (other.transform.localScale.x < 0)
+      if (other.Sprite.FacingLeft)
         other.Physics.hspeed = 2;
       else
         other.Physics.hspeed = -2;
@@ -187,7 +187,7 @@ public class Kat_Collision : CollisionStubs {
   protected override void RecyclingCollision(Recycling_Base other) {
     if (GroundAttackSuccess(other)) {
       other.GetHurt();
-      other.Physics.hspeed = (Base.transform.localScale.x > 0) ? 4 : -4;
+      other.Physics.hspeed = (Base.Sprite.FacingRight) ? 4 : -4;
 
       if (Kat.Kicking)
         BounceOffEnemy(6);
@@ -199,7 +199,7 @@ public class Kat_Collision : CollisionStubs {
       other.GetHurt();
 
       other.Physics.vspeed = -2;
-      other.Physics.hspeed = (other.transform.localScale.x < 0) ? 2 : -2;
+      other.Physics.hspeed = (other.Sprite.FacingLeft) ? 2 : -2;
 
       BounceOffEnemy(8, false);
       Kat.Physics.hspeed = 0;
@@ -223,13 +223,13 @@ public class Kat_Collision : CollisionStubs {
   protected override void BoxSpawnerCollision(BoxSpawner_Base other) {
     if (GroundAttackSuccess(other)) {
       other.GetHurt();
-      other.Physics.hspeed = (Base.transform.localScale.x > 0) ? 4 : -4;
+      other.Physics.hspeed = (Base.Sprite.FacingRight) ? 4 : -4;
       BounceOffEnemy(5);
     }
 
     else if (Kat.GroundPounding) {
       other.GetHurt();
-      other.Physics.hspeed = (other.transform.localScale.x < 0) ? 2 : -2;
+      other.Physics.hspeed = (other.Sprite.FacingLeft) ? 2 : -2;
       BounceOffEnemy(5);
       Kat.Physics.hspeed = 0;
     }
@@ -260,11 +260,11 @@ public class Kat_Collision : CollisionStubs {
 
   // Whether or not Punchin is facing the enemy object when punching/kicking.
   private bool PunchSuccess (BaseObj other) {
-    return ((transform.localScale.x > 0 && other.x > Kat.x) || (transform.localScale.x < 0 && other.x < Kat.x));
+    return ((Base.Sprite.FacingRight && other.x > Kat.x) || (Base.Sprite.FacingLeft && other.x < Kat.x));
   }
 
   private bool KickSuccess (BaseObj other) {
-    return ((transform.localScale.x > 0 && (other.x + 20) > Kat.x) || (transform.localScale.x < 0 && (other.x - 20) < Kat.x));
+    return ((Base.Sprite.FacingRight && (other.x + 20) > Kat.x) || (Base.Sprite.FacingLeft && (other.x - 20) < Kat.x));
   }
 
   private bool GroundAttackSuccess (BaseObj other) {
@@ -280,7 +280,7 @@ public class Kat_Collision : CollisionStubs {
 
     Kat.Physics.vspeed = newVspeed;
     if (changeHspeed) {
-      if (transform.localScale.x > 0)
+      if (Base.Sprite.FacingRight)
         Kat.Physics.hspeed = -4;
       else
         Kat.Physics.hspeed = 4;
