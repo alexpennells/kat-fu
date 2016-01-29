@@ -12,7 +12,7 @@ public class Stitch : MonoBehaviour
   public static bool SHOW_TERRAIN_BOUNDS = true;
   public static bool SHOW_RAIL_PATHS = true;
   public static bool SHOW_CAMERA_BOUNDS = true;
-  public static bool SHOW_EXIT_BOUNDS = true;
+  public static bool SHOW_ENTRANCES = true;
 
   /***********************************
    * GAME CONSTANTS

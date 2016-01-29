@@ -248,6 +248,7 @@ public class Kat_Base : InputObj {
 
   public void CreateBullet() {
     BaseObj bullet = Game.Create("Bullet", new Vector2(x, Mask.Center.y - 5));
+    bullet.z = z;
     Sound.Play("Gunshot");
 
     if (Sprite.FacingRight)

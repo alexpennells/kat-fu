@@ -5,6 +5,10 @@ public class Kat_Collision : CollisionStubs {
 
   private Kat_Base Kat { get { return Base as Kat_Base; } }
 
+  protected override void SceneExitCollision(SceneExit other) {
+    Game.ChangeScene(other.sceneName, other.exitID);
+  }
+
   protected override void ZombieCollision(Zombie_Base other) {
     if (other.Sprite.IsPlaying("zombie_die"))
       return;

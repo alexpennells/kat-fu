@@ -20,5 +20,6 @@ public enum eObjectType
   GLOB,
   RECYCLING,
   BOX_SPAWNER,
-  DOG
+  DOG,
+  SCENE_EXIT
 };
