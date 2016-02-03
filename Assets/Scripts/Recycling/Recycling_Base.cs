@@ -76,7 +76,7 @@ public class Recycling_Base : BaseObj {
     if (!HasFooting)
       Physics.SkipNextFrictionUpdate();
 
-    if (HasFooting && canJump && !hurt) {
+    if (HasFooting && canJump && !hurt && Stitch.Kat.z == z) {
       // Jump towards the cat.
       if (x < TurfMin)
         StartJump(moveSpeed);

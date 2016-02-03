@@ -1,9 +1,15 @@
 using UnityEngine;
+using System;
 using System.Collections;
 
 public class Dog_Sprite : SpriteObj {
   public override void Step () {
     TurnSprite();
+
+    if (Base.Physics.hspeed == 0)
+      PlayIdle();
+    else
+      PlayWalk();
   }
 
   private void TurnSprite() {
@@ -18,6 +24,10 @@ public class Dog_Sprite : SpriteObj {
    **********************************/
 
   public void PlayIdle() {
-    Animate("dog_idle", 0.25f);
+    Animate("dog_idle", 0.5f);
+  }
+
+  public void PlayWalk() {
+    Animate("dog_walk", Math.Abs(Base.Physics.hspeed / 4f));
   }
 }
