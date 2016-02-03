@@ -40,7 +40,7 @@ public class Kat_SolidCollider : SolidColliderObj {
     Stitch.Kat.hasUppercut = true;
 
     Base.Physics.hspeed = 0;
-    Base.Physics.vspeed = 7;
+    Base.Physics.vspeed = 5;
 
     Base.Sprite.Play("Spin");
     bounced = true;

@@ -19,6 +19,21 @@ public class Kat_Base : InputObj {
   // Whether to prevent the alpha from fading back to 1 when hurt.
   public bool preventAlphaChange = false;
 
+  [Tooltip("Vertical speed of the cat when jumping")]
+  public float jumpSpeed = 6;
+
+  [Tooltip("Vertical speed of the cat when doing an uppercut")]
+  public float uppercutSpeed = 5;
+
+  [Tooltip("Horizontal speed of the cat when doing a kick")]
+  public float kickSpeed = 7;
+
+  [Tooltip("Horizontal speed of the cat when walking in Kat-fu stance")]
+  public float walkSpeed = 4;
+
+  [Tooltip("Horizontal speed of the cat when walking in Gun stance")]
+  public float gunWalkSpeed = 3;
+
   public bool Invincible { get { return Sprite.GetAlpha() < 0.8f; } }
   public bool Hurt { get { return Sprite.IsPlaying("kat_hurt", "kat_recover", "kat_gun_hurt", "kat_gun_recover"); } }
   public bool Punching { get { return Sprite.IsPlaying("kat_punch_1", "kat_punch_2"); } }
@@ -39,7 +54,7 @@ public class Kat_Base : InputObj {
     hasAirAttack = true;
     hasUppercut = true;
 
-    Physics.hspeedMax = 5;
+    Physics.hspeedMax = this.walkSpeed;
     Physics.vspeed = 0;
     Physics.hspeed = hspeed;
     if (hspeed < 0)
@@ -79,16 +94,16 @@ public class Kat_Base : InputObj {
     if (stopPhysics) {
       Physics.SkipNextFrictionUpdate();
       Physics.SkipNextGravityUpdate();
-      Physics.hspeedMax = 7;
+      Physics.hspeedMax = this.kickSpeed;
     }
     else {
       if (Stance == eKat_Stance.KATFU)
-        Physics.hspeedMax = 5;
+        Physics.hspeedMax = this.walkSpeed;
       else if (Stance == eKat_Stance.GUN) {
         if (!Game.AttackHeld)
-          Physics.hspeedMax = 4;
+          Physics.hspeedMax = this.gunWalkSpeed;
         else
-          Physics.hspeedMax = 3;
+          Physics.hspeedMax = this.gunWalkSpeed - 1;
       }
     }
   }
@@ -118,7 +133,7 @@ public class Kat_Base : InputObj {
       return;
 
     if (HasFooting && !stopPhysics) {
-      Physics.vspeed = 8;
+      Physics.vspeed = this.jumpSpeed;
       Sprite.Play("Jump");
       (Sprite as Kat_Sprite).PlayLandSound();
       SolidPhysics.Collider.ClearFooting();
@@ -141,9 +156,9 @@ public class Kat_Base : InputObj {
       Sound.Play("Dodge");
 
       if (Sprite.FacingLeft)
-        Physics.hspeed = (Stance == eKat_Stance.KATFU ? -7 : -5);
+        Physics.hspeed = (Stance == eKat_Stance.KATFU ? -this.walkSpeed : -this.gunWalkSpeed) - 2;
       else
-        Physics.hspeed = (Stance == eKat_Stance.KATFU ? 7 : 5);
+        Physics.hspeed = (Stance == eKat_Stance.KATFU ? this.walkSpeed : this.gunWalkSpeed) + 2;
     }
   }
 
@@ -207,9 +222,9 @@ public class Kat_Base : InputObj {
     Physics.vspeed = 0;
 
     if (Sprite.FacingLeft)
-      Physics.hspeed = -7;
+      Physics.hspeed = -this.kickSpeed;
     else
-      Physics.hspeed = 7;
+      Physics.hspeed = this.kickSpeed;
 
     Sprite.Play("Kick");
     Sound.Play("Kick");
@@ -220,9 +235,9 @@ public class Kat_Base : InputObj {
     stopPhysics = true;
 
     if (Sprite.FacingLeft)
-      Physics.hspeed = -7;
+      Physics.hspeed = -this.kickSpeed;
     else
-      Physics.hspeed = 7;
+      Physics.hspeed = this.kickSpeed;
 
     Sprite.Play("Kick");
     Sound.Play("Kick");
@@ -243,7 +258,7 @@ public class Kat_Base : InputObj {
     stopPhysics = false;
     Sprite.Play("Uppercut");
     Sound.Play("Uppercut");
-    Physics.vspeed = 8;
+    Physics.vspeed = this.uppercutSpeed;
   }
 
   public void CreateBullet() {

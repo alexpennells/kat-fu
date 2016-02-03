@@ -75,6 +75,9 @@ public class Kat_Sprite : SpriteObj {
       case "kat_punch_2":
         Play("Idle");
         break;
+      case "kat_uppercut":
+        Play("Jump");
+        break;
       case "kat_recover":
         Kat.StartInvincible();
         break;
@@ -179,7 +182,7 @@ public class Kat_Sprite : SpriteObj {
   }
 
   public void PlayUppercut() {
-    Animate("kat_uppercut", 2f);
+    Animate("kat_uppercut", 1f);
   }
 
   public void PlayGroundPound() {
@@ -187,7 +190,7 @@ public class Kat_Sprite : SpriteObj {
   }
 
   public void PlaySpin() {
-    Animate("kat_spin", 2f);
+    Animate("kat_spin", 1.5f);
   }
 
   public void PlayHurt() {
