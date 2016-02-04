@@ -21,5 +21,6 @@ public enum eObjectType
   RECYCLING,
   BOX_SPAWNER,
   DOG,
-  SCENE_EXIT
+  SCENE_EXIT,
+  AIR_VENT
 };

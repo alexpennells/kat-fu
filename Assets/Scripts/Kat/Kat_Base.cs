@@ -259,6 +259,7 @@ public class Kat_Base : InputObj {
     Sprite.Play("Uppercut");
     Sound.Play("Uppercut");
     Physics.vspeed = this.uppercutSpeed;
+    Game.CreateParticle("JumpRipple", Mask.Center);
   }
 
   public void CreateBullet() {

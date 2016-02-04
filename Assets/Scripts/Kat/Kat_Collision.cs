@@ -9,6 +9,18 @@ public class Kat_Collision : CollisionStubs {
     Game.ChangeScene(other.sceneName, other.exitID);
   }
 
+  protected override void AirVentCollision(AirVent_Base other) {
+    if (Base.Physics.vspeed < -3)
+      Base.Physics.vspeed = -3;
+
+    Base.Physics.vspeed += other.ventPower;
+
+    if (Base.Physics.vspeed > 5)
+      Base.Physics.vspeed = 5;
+
+    Base.Physics.SkipNextGravityUpdate();
+  }
+
   protected override void ZombieCollision(Zombie_Base other) {
     if (other.Sprite.IsPlaying("zombie_die"))
       return;

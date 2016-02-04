@@ -1,6 +1,7 @@
 # Ignore stitchin engine
 Assets/Scripts/stitchin/
 Assets/Ferr*
+Assets/ToonParticles*
 
 # Unity generated folders
 Temp/

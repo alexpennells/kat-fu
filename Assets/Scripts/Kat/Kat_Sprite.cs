@@ -167,10 +167,22 @@ public class Kat_Sprite : SpriteObj {
   }
 
   public void PlayPunch1() {
+    bool isCrit = Game.Random.Next(1, 10) == 5;
+    if (FacingLeft)
+      Game.CreateParticle(isCrit ? "SlashCritLeft" : "SlashLeft", new Vector3(Base.Mask.Center.x - 8, Base.Mask.Center.y, Base.z));
+    else
+      Game.CreateParticle(isCrit ? "SlashCritRight" : "SlashRight", new Vector3(Base.Mask.Center.x + 8, Base.Mask.Center.y, Base.z));
+
     Animate("kat_punch_1", 1f);
   }
 
   public void PlayPunch2() {
+    bool isCrit = Game.Random.Next(1, 10) == 5;
+    if (FacingLeft)
+      Game.CreateParticle(isCrit ? "SlashCritLeft" : "SlashLeft", new Vector3(Base.Mask.Center.x - 8, Base.Mask.Center.y, Base.z));
+    else
+      Game.CreateParticle(isCrit ? "SlashCritRight" : "SlashRight", new Vector3(Base.Mask.Center.x + 8, Base.Mask.Center.y, Base.z));
+
     Animate("kat_punch_2", 1f);
   }
 
