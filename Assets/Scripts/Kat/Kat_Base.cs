@@ -74,7 +74,12 @@ public class Kat_Base : InputObj {
   }
 
   protected override void Init() {
+    if (Game.Instance.Entrance)
+      Position = Game.Instance.Entrance.StartPosition();
+
     Game.Camera.InitPosition();
+
+    y = y + Mask.LocalBottom;
 
     AirKickTimer.Interval = 300;
     GroundKickTimer.Interval = 400;

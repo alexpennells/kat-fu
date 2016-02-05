@@ -6,6 +6,9 @@ public class Kat_Collision : CollisionStubs {
   private Kat_Base Kat { get { return Base as Kat_Base; } }
 
   protected override void SceneExitCollision(SceneExit other) {
+    if (other.isDoor && !Game.UpHeld)
+      return;
+
     Game.ChangeScene(other.sceneName, other.exitID);
   }
 
