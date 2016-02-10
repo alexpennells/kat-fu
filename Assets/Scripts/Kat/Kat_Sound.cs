@@ -50,4 +50,8 @@ public class Kat_Sound : SoundObj {
   public void PlayHurt() {
     Game.SFX.Play("CatHurt", 0.5f);
   }
+
+  public void PlayImpact() {
+    Game.SFX.Play("GroundPoundImpact", 1f);
+  }
 }

@@ -9,6 +9,7 @@ public class Kat_SFXLib : SFXLib {
       new Clip("Gunshot", 3),
       new Clip("Footstep", 4),
       new Clip("Punch", 3),
+      new Clip("GroundPoundImpact", 1),
       new Clip("CatDodge", 1),
       new Clip("CatAttack", 3),
       new Clip("CatHiss", 3),

@@ -42,6 +42,10 @@ public class Kat_SolidCollider : SolidColliderObj {
     Base.Physics.hspeed = 0;
     Base.Physics.vspeed = 5;
 
+    bool isCrit = Game.Random.Next(1, 10) == 5;
+    Game.CreateParticle(isCrit ? "GroundPoundCrit" : "GroundPound", new Vector3(Base.x, Base.Mask.Bottom, Base.z));
+
+    Base.Sound.Play("Impact");
     Base.Sprite.Play("Spin");
     bounced = true;
   }
