@@ -77,7 +77,7 @@ public class Kat_Base : InputObj {
     if (Game.Instance.Entrance)
       Position = Game.Instance.Entrance.StartPosition();
 
-    Game.Camera.InitPosition();
+    Game.Camera.JumpToPosition();
 
     y = y + Mask.LocalBottom;
 
