@@ -28,6 +28,6 @@ public class Dog_Sprite : SpriteObj {
   }
 
   public void PlayWalk() {
-    Animate("dog_walk", Math.Abs(Base.Physics.hspeed / 4f));
+    Animate("dog_walk", 1.4f - Math.Abs((Base.Physics.hspeed / 8f)));
   }
 }
