@@ -9,7 +9,7 @@ public class Kat_Collision : CollisionStubs {
     if (other.isDoor && (!Game.UpHeld || !Base.HasFooting))
       return;
 
-    Game.ChangeScene(other.sceneName, other.exitID);
+    Game.ChangeScene(other.sceneName, other.exitID, "KatHead");
   }
 
   protected override void AirVentCollision(AirVent_Base other) {
