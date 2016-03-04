@@ -73,14 +73,25 @@ public class Kat_Base : InputObj {
     preventAlphaChange = true;
   }
 
-  protected override void Init() {
-    if (Game.Instance.Entrance)
-      Position = Game.Instance.Entrance.StartPosition();
+  protected override void LoadReferences() {
+    // Don't initialize scene stuff if in edit mode.
+    if (!Game.Instance)
+      return;
 
-    Game.Camera.JumpToPosition();
+    if (Game.Instance.Entrance) {
+      Position = Game.Instance.Entrance.StartPosition();
+      Sprite.SetLayer(-z + 10);
+    }
 
     y = y + Mask.LocalBottom;
 
+    if (Game.Camera) {
+      Game.Camera.ViewObj = this;
+      Game.Camera.JumpToPosition();
+    }
+  }
+
+  protected override void Init() {
     AirKickTimer.Interval = 300;
     GroundKickTimer.Interval = 400;
     DodgeTimer.Interval = 300;
