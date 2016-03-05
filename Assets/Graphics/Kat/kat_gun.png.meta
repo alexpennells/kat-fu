@@ -103,7 +103,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -115,7 +115,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -128,7 +128,7 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 1
   alphaIsTransparency: 1
@@ -144,8 +144,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: kat_gun_1
       rect:
         serializedVersion: 2
@@ -154,8 +161,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 41}
+        - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 10}
+        - {x: -11, y: 8}
+        - {x: 7, y: 8}
+        - {x: 7, y: 37}
     - name: kat_gun_2
       rect:
         serializedVersion: 2
@@ -164,8 +179,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 40}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 10, y: 8}
+        - {x: 13, y: 17}
+        - {x: 13, y: 34}
+        - {x: 7, y: 40}
     - name: kat_gun_3
       rect:
         serializedVersion: 2
@@ -174,8 +198,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 13}
+        - {x: -10, y: 9}
+        - {x: -9, y: 8}
+        - {x: 11, y: 8}
+        - {x: 16, y: 22}
+        - {x: 16, y: 28}
+        - {x: 7, y: 41}
     - name: kat_gun_4
       rect:
         serializedVersion: 2
@@ -184,8 +218,28 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 42}
+        - {x: -27, y: 27}
+        - {x: -8, y: 27}
+        - {x: 1, y: 29}
+        - {x: 1, y: 39}
+        - {x: -5, y: 42}
+      - - {x: 7, y: 39}
+        - {x: 4, y: 36}
+        - {x: 4, y: 29}
+        - {x: 10, y: 27}
+        - {x: 24, y: 27}
+        - {x: 24, y: 33}
+        - {x: 20, y: 39}
+      - - {x: 26, y: 36}
+        - {x: 26, y: 32}
+        - {x: 29, y: 29}
+        - {x: 32, y: 29}
+        - {x: 32, y: 39}
+        - {x: 29, y: 39}
     - name: kat_gun_5
       rect:
         serializedVersion: 2
@@ -194,8 +248,33 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 30}
+        - {x: -29, y: 28}
+        - {x: -16, y: 28}
+        - {x: -16, y: 42}
+        - {x: -29, y: 42}
+        - {x: -32, y: 38}
+      - - {x: 28, y: 30}
+        - {x: 30, y: 28}
+        - {x: 32, y: 29}
+        - {x: 32, y: 37}
+        - {x: 29, y: 36}
+      - - {x: -12, y: 39}
+        - {x: -13, y: 38}
+        - {x: -13, y: 29}
+        - {x: 3, y: 29}
+        - {x: 3, y: 36}
+        - {x: 1, y: 39}
+      - - {x: 11, y: 41}
+        - {x: 6, y: 40}
+        - {x: 6, y: 35}
+        - {x: 9, y: 29}
+        - {x: 25, y: 29}
+        - {x: 27, y: 32}
+        - {x: 27, y: 41}
     - name: kat_gun_6
       rect:
         serializedVersion: 2
@@ -204,8 +283,27 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 41}
+        - {x: -26, y: 36}
+        - {x: -26, y: 32}
+        - {x: -23, y: 29}
+        - {x: -9, y: 29}
+        - {x: -8, y: 35}
+        - {x: -8, y: 41}
+      - - {x: -6, y: 41}
+        - {x: -6, y: 29}
+        - {x: 13, y: 29}
+        - {x: 14, y: 30}
+        - {x: 14, y: 41}
+      - - {x: -32, y: 41}
+        - {x: -32, y: 33}
+        - {x: -29, y: 34}
+        - {x: -28, y: 37}
+        - {x: -28, y: 40}
+        - {x: -30, y: 42}
     - name: kat_gun_7
       rect:
         serializedVersion: 2
@@ -214,8 +312,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 13}
+        - {x: -10, y: 9}
+        - {x: -9, y: 8}
+        - {x: 11, y: 8}
+        - {x: 16, y: 22}
+        - {x: 16, y: 28}
+        - {x: 7, y: 41}
     - name: kat_gun_8
       rect:
         serializedVersion: 2
@@ -224,8 +332,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 40}
+        - {x: -13, y: 40}
+        - {x: -13, y: 11}
+        - {x: -10, y: 8}
+        - {x: 8, y: 8}
+        - {x: 16, y: 21}
+        - {x: 16, y: 34}
     - name: kat_gun_9
       rect:
         serializedVersion: 2
@@ -234,8 +350,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 13}
+        - {x: -10, y: 9}
+        - {x: -9, y: 8}
+        - {x: 11, y: 8}
+        - {x: 16, y: 22}
+        - {x: 16, y: 28}
+        - {x: 7, y: 41}
     - name: kat_gun_10
       rect:
         serializedVersion: 2
@@ -244,8 +370,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 42}
+        - {x: -13, y: 8}
+        - {x: 6, y: 8}
+        - {x: 16, y: 17}
+        - {x: 16, y: 28}
+        - {x: 7, y: 42}
     - name: kat_gun_11
       rect:
         serializedVersion: 2
@@ -254,8 +387,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 13}
+        - {x: -10, y: 9}
+        - {x: -9, y: 8}
+        - {x: 11, y: 8}
+        - {x: 16, y: 22}
+        - {x: 16, y: 28}
+        - {x: 7, y: 41}
     - name: kat_gun_12
       rect:
         serializedVersion: 2
@@ -264,8 +407,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 40}
+        - {x: -13, y: 40}
+        - {x: -13, y: 11}
+        - {x: -10, y: 8}
+        - {x: 8, y: 8}
+        - {x: 16, y: 21}
+        - {x: 16, y: 34}
     - name: kat_gun_13
       rect:
         serializedVersion: 2
@@ -274,8 +425,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 13}
+        - {x: -10, y: 9}
+        - {x: -9, y: 8}
+        - {x: 11, y: 8}
+        - {x: 16, y: 22}
+        - {x: 16, y: 28}
+        - {x: 7, y: 41}
     - name: kat_gun_14
       rect:
         serializedVersion: 2
@@ -284,8 +445,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 42}
+        - {x: -13, y: 8}
+        - {x: 6, y: 8}
+        - {x: 16, y: 17}
+        - {x: 16, y: 28}
+        - {x: 7, y: 42}
     - name: kat_gun_15
       rect:
         serializedVersion: 2
@@ -294,8 +462,24 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 39}
+        - {x: -24, y: 37}
+        - {x: -24, y: 27}
+        - {x: -22, y: 25}
+        - {x: 6, y: 25}
+        - {x: 8, y: 27}
+        - {x: 8, y: 37}
+        - {x: 6, y: 39}
+      - - {x: 13, y: 38}
+        - {x: 10, y: 37}
+        - {x: 10, y: 32}
+        - {x: 11, y: 27}
+        - {x: 13, y: 26}
+        - {x: 32, y: 26}
+        - {x: 32, y: 38}
     - name: kat_gun_16
       rect:
         serializedVersion: 2
@@ -304,8 +488,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 24}
+        - {x: -6, y: 24}
+        - {x: -3, y: 28}
+        - {x: -3, y: 36}
+        - {x: -5, y: 37}
+        - {x: -27, y: 38}
+        - {x: -30, y: 37}
     - name: kat_gun_17
       rect:
         serializedVersion: 2
@@ -314,8 +506,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 42}
+        - {x: -13, y: 8}
+        - {x: 6, y: 8}
+        - {x: 16, y: 17}
+        - {x: 16, y: 28}
+        - {x: 7, y: 42}
     - name: kat_gun_18
       rect:
         serializedVersion: 2
@@ -324,8 +523,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -14, y: 39}
+        - {x: -14, y: 12}
+        - {x: -11, y: 8}
+        - {x: 5, y: 8}
+        - {x: 25, y: 18}
+        - {x: 25, y: 36}
+        - {x: 12, y: 41}
     - name: kat_gun_19
       rect:
         serializedVersion: 2
@@ -334,8 +542,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 13}
+        - {x: -10, y: 9}
+        - {x: -9, y: 8}
+        - {x: 11, y: 8}
+        - {x: 16, y: 22}
+        - {x: 16, y: 28}
+        - {x: 7, y: 41}
     - name: kat_gun_20
       rect:
         serializedVersion: 2
@@ -344,8 +562,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 41}
+        - {x: -14, y: 39}
+        - {x: -14, y: 9}
+        - {x: -13, y: 8}
+        - {x: 16, y: 8}
+        - {x: 24, y: 17}
+        - {x: 24, y: 39}
+        - {x: 21, y: 41}
     - name: kat_gun_21
       rect:
         serializedVersion: 2
@@ -354,8 +581,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 42}
+        - {x: -13, y: 8}
+        - {x: 6, y: 8}
+        - {x: 16, y: 17}
+        - {x: 16, y: 28}
+        - {x: 7, y: 42}
     - name: kat_gun_22
       rect:
         serializedVersion: 2
@@ -364,8 +598,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -14, y: 39}
+        - {x: -14, y: 12}
+        - {x: -11, y: 8}
+        - {x: 5, y: 8}
+        - {x: 25, y: 18}
+        - {x: 25, y: 36}
+        - {x: 12, y: 41}
     - name: kat_gun_23
       rect:
         serializedVersion: 2
@@ -374,8 +617,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 13}
+        - {x: -10, y: 9}
+        - {x: -9, y: 8}
+        - {x: 11, y: 8}
+        - {x: 16, y: 22}
+        - {x: 16, y: 28}
+        - {x: 7, y: 41}
     - name: kat_gun_24
       rect:
         serializedVersion: 2
@@ -384,8 +637,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 41}
+        - {x: -14, y: 39}
+        - {x: -14, y: 9}
+        - {x: -13, y: 8}
+        - {x: 16, y: 8}
+        - {x: 24, y: 17}
+        - {x: 24, y: 39}
+        - {x: 21, y: 41}
     - name: kat_gun_25
       rect:
         serializedVersion: 2
@@ -394,8 +656,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 34}
+        - {x: -24, y: 20}
+        - {x: 15, y: 20}
+        - {x: 16, y: 21}
+        - {x: 16, y: 31}
+        - {x: 15, y: 34}
+      - - {x: 18, y: 30}
+        - {x: 18, y: 21}
+        - {x: 32, y: 21}
+        - {x: 32, y: 31}
+        - {x: 28, y: 33}
     - name: kat_gun_26
       rect:
         serializedVersion: 2
@@ -404,8 +678,32 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 34}
+        - {x: -29, y: 33}
+        - {x: -32, y: 30}
+        - {x: -32, y: 21}
+        - {x: -26, y: 20}
+        - {x: -13, y: 20}
+        - {x: -13, y: 34}
+      - - {x: -10, y: 33}
+        - {x: -11, y: 32}
+        - {x: -11, y: 27}
+        - {x: -10, y: 22}
+        - {x: -7, y: 21}
+        - {x: -4, y: 22}
+        - {x: 1, y: 21}
+        - {x: 11, y: 21}
+        - {x: 11, y: 33}
+      - - {x: 30, y: 32}
+        - {x: 25, y: 33}
+        - {x: 13, y: 33}
+        - {x: 13, y: 21}
+        - {x: 29, y: 21}
+        - {x: 32, y: 23}
+        - {x: 32, y: 28}
     - name: kat_gun_27
       rect:
         serializedVersion: 2
@@ -414,8 +712,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 31}
+        - {x: -32, y: 30}
+        - {x: -32, y: 19}
+        - {x: -28, y: 19}
+        - {x: -24, y: 24}
+        - {x: -24, y: 28}
+        - {x: -27, y: 31}
     - name: kat_gun_28
       rect:
         serializedVersion: 2
@@ -424,8 +730,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 13}
+        - {x: -10, y: 9}
+        - {x: -9, y: 8}
+        - {x: 11, y: 8}
+        - {x: 16, y: 22}
+        - {x: 16, y: 28}
+        - {x: 7, y: 41}
     - name: kat_gun_29
       rect:
         serializedVersion: 2
@@ -434,8 +750,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -13, y: 34}
+        - {x: -13, y: 14}
+        - {x: -9, y: 8}
+        - {x: 9, y: 8}
+        - {x: 16, y: 17}
+        - {x: 16, y: 35}
+        - {x: 4, y: 41}
     - name: kat_gun_30
       rect:
         serializedVersion: 2
@@ -444,8 +769,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 42}
+        - {x: -10, y: 42}
+        - {x: -12, y: 40}
+        - {x: -12, y: 16}
+        - {x: -6, y: 8}
+        - {x: 0, y: 8}
+        - {x: 9, y: 10}
+        - {x: 16, y: 23}
+        - {x: 16, y: 31}
     - name: kat_gun_31
       rect:
         serializedVersion: 2
@@ -454,8 +789,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 28}
+        - {x: 7, y: 42}
+        - {x: -12, y: 42}
+        - {x: -12, y: 10}
+        - {x: -4, y: 8}
+        - {x: 1, y: 8}
+        - {x: 16, y: 21}
+        - {x: 16, y: 26}
     - name: kat_gun_32
       rect:
         serializedVersion: 2
@@ -464,8 +808,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 8, y: 8}
+        - {x: 16, y: 20}
+        - {x: 16, y: 32}
+        - {x: 8, y: 41}
     - name: kat_gun_33
       rect:
         serializedVersion: 2
@@ -474,8 +827,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 41}
+        - {x: -10, y: 41}
+        - {x: -12, y: 39}
+        - {x: -12, y: 11}
+        - {x: -7, y: 8}
+        - {x: 7, y: 8}
+        - {x: 12, y: 12}
+        - {x: 16, y: 22}
+        - {x: 16, y: 29}
     - name: kat_gun_34
       rect:
         serializedVersion: 2
@@ -484,8 +847,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 42}
+        - {x: -10, y: 42}
+        - {x: -12, y: 40}
+        - {x: -12, y: 16}
+        - {x: -6, y: 8}
+        - {x: 0, y: 8}
+        - {x: 9, y: 10}
+        - {x: 16, y: 23}
+        - {x: 16, y: 31}
     - name: kat_gun_35
       rect:
         serializedVersion: 2
@@ -494,8 +867,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -13, y: 34}
+        - {x: -13, y: 14}
+        - {x: -9, y: 8}
+        - {x: 9, y: 8}
+        - {x: 16, y: 17}
+        - {x: 16, y: 35}
+        - {x: 4, y: 41}
     - name: kat_gun_36
       rect:
         serializedVersion: 2
@@ -504,8 +886,27 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 37}
+        - {x: 9, y: 37}
+        - {x: 7, y: 35}
+        - {x: 8, y: 33}
+        - {x: 4, y: 37}
+        - {x: -24, y: 37}
+        - {x: -24, y: 23}
+        - {x: 13, y: 23}
+        - {x: 13, y: 35}
+      - - {x: 18, y: 36}
+        - {x: 15, y: 35}
+        - {x: 15, y: 30}
+        - {x: 16, y: 25}
+        - {x: 19, y: 24}
+        - {x: 22, y: 25}
+        - {x: 31, y: 24}
+        - {x: 32, y: 24}
+        - {x: 32, y: 36}
     - name: kat_gun_37
       rect:
         serializedVersion: 2
@@ -514,8 +915,22 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 36}
+        - {x: -25, y: 26}
+        - {x: -24, y: 22}
+        - {x: -4, y: 22}
+        - {x: 2, y: 27}
+        - {x: 2, y: 31}
+        - {x: 1, y: 36}
+      - - {x: -32, y: 36}
+        - {x: -32, y: 24}
+        - {x: -30, y: 24}
+        - {x: -27, y: 27}
+        - {x: -27, y: 33}
+        - {x: -30, y: 36}
     - name: kat_gun_38
       rect:
         serializedVersion: 2
@@ -524,8 +939,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 13}
+        - {x: -10, y: 9}
+        - {x: -9, y: 8}
+        - {x: 11, y: 8}
+        - {x: 16, y: 22}
+        - {x: 16, y: 28}
+        - {x: 7, y: 41}
     - name: kat_gun_39
       rect:
         serializedVersion: 2
@@ -534,8 +959,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 41}
+        - {x: -13, y: 37}
+        - {x: -13, y: 11}
+        - {x: -12, y: 8}
+        - {x: 16, y: 8}
+        - {x: 23, y: 10}
+        - {x: 25, y: 14}
+        - {x: 25, y: 30}
+        - {x: 9, y: 41}
     - name: kat_gun_40
       rect:
         serializedVersion: 2
@@ -544,8 +979,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 42}
+        - {x: -10, y: 42}
+        - {x: -12, y: 40}
+        - {x: -12, y: 16}
+        - {x: -6, y: 8}
+        - {x: 0, y: 8}
+        - {x: 9, y: 10}
+        - {x: 16, y: 23}
+        - {x: 16, y: 31}
     - name: kat_gun_41
       rect:
         serializedVersion: 2
@@ -554,8 +999,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 42}
+        - {x: -12, y: 40}
+        - {x: -12, y: 11}
+        - {x: -7, y: 8}
+        - {x: 9, y: 8}
+        - {x: 24, y: 15}
+        - {x: 24, y: 33}
+        - {x: 17, y: 42}
     - name: kat_gun_42
       rect:
         serializedVersion: 2
@@ -564,8 +1018,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 8, y: 8}
+        - {x: 16, y: 20}
+        - {x: 16, y: 32}
+        - {x: 8, y: 41}
     - name: kat_gun_43
       rect:
         serializedVersion: 2
@@ -574,8 +1037,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -12, y: 12}
+        - {x: -10, y: 8}
+        - {x: 8, y: 8}
+        - {x: 24, y: 13}
+        - {x: 24, y: 27}
+        - {x: 17, y: 39}
+        - {x: 12, y: 41}
     - name: kat_gun_44
       rect:
         serializedVersion: 2
@@ -584,8 +1056,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 42}
+        - {x: -10, y: 42}
+        - {x: -12, y: 40}
+        - {x: -12, y: 16}
+        - {x: -6, y: 8}
+        - {x: 0, y: 8}
+        - {x: 9, y: 10}
+        - {x: 16, y: 23}
+        - {x: 16, y: 31}
     - name: kat_gun_45
       rect:
         serializedVersion: 2
@@ -594,8 +1076,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 41}
+        - {x: -13, y: 36}
+        - {x: -13, y: 8}
+        - {x: 23, y: 8}
+        - {x: 23, y: 37}
+        - {x: 19, y: 41}
     - name: kat_gun_46
       rect:
         serializedVersion: 2
@@ -604,8 +1093,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 37}
+        - {x: -24, y: 36}
+        - {x: -24, y: 25}
+        - {x: -23, y: 23}
+        - {x: 8, y: 23}
+        - {x: 8, y: 35}
+        - {x: 4, y: 37}
+      - - {x: 11, y: 36}
+        - {x: 11, y: 25}
+        - {x: 12, y: 24}
+        - {x: 32, y: 24}
+        - {x: 32, y: 36}
     - name: kat_gun_47
       rect:
         serializedVersion: 2
@@ -614,8 +1116,33 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 24}
+        - {x: 14, y: 22}
+        - {x: 27, y: 22}
+        - {x: 32, y: 25}
+        - {x: 32, y: 31}
+        - {x: 31, y: 36}
+        - {x: 7, y: 36}
+        - {x: 5, y: 35}
+      - - {x: -23, y: 37}
+        - {x: -28, y: 37}
+        - {x: -32, y: 34}
+        - {x: -32, y: 24}
+        - {x: -27, y: 23}
+        - {x: -22, y: 23}
+        - {x: -21, y: 25}
+        - {x: -21, y: 36}
+      - - {x: -14, y: 36}
+        - {x: -18, y: 34}
+        - {x: -18, y: 30}
+        - {x: -15, y: 24}
+        - {x: 1, y: 24}
+        - {x: 4, y: 27}
+        - {x: 4, y: 33}
+        - {x: 3, y: 36}
     - name: kat_gun_48
       rect:
         serializedVersion: 2
@@ -624,8 +1151,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 41}
+        - {x: -13, y: 34}
+        - {x: -13, y: 8}
+        - {x: 13, y: 8}
+        - {x: 16, y: 19}
+        - {x: 16, y: 29}
+        - {x: 4, y: 41}
     - name: kat_gun_49
       rect:
         serializedVersion: 2
@@ -634,8 +1169,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 39}
+        - {x: -13, y: 11}
+        - {x: -12, y: 8}
+        - {x: 9, y: 8}
+        - {x: 15, y: 12}
+        - {x: 15, y: 31}
+        - {x: 11, y: 39}
     - name: kat_gun_50
       rect:
         serializedVersion: 2
@@ -644,8 +1187,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 38}
+        - {x: -13, y: 37}
+        - {x: -13, y: 12}
+        - {x: -9, y: 8}
+        - {x: 5, y: 8}
+        - {x: 14, y: 19}
+        - {x: 14, y: 22}
+        - {x: 4, y: 38}
     - name: kat_gun_51
       rect:
         serializedVersion: 2
@@ -654,8 +1206,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 39}
+        - {x: -13, y: 11}
+        - {x: -12, y: 8}
+        - {x: 9, y: 8}
+        - {x: 15, y: 12}
+        - {x: 15, y: 31}
+        - {x: 11, y: 39}
     - name: kat_gun_52
       rect:
         serializedVersion: 2
@@ -664,8 +1224,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 43}
+        - {x: -12, y: 41}
+        - {x: -13, y: 36}
+        - {x: -13, y: 15}
+        - {x: -10, y: 10}
+        - {x: -8, y: 9}
+        - {x: 3, y: 9}
+        - {x: 16, y: 17}
+        - {x: 16, y: 31}
+        - {x: 8, y: 43}
     - name: kat_gun_53
       rect:
         serializedVersion: 2
@@ -674,8 +1245,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 43}
+        - {x: -7, y: 43}
+        - {x: -11, y: 39}
+        - {x: -11, y: 15}
+        - {x: -6, y: 9}
+        - {x: 7, y: 9}
+        - {x: 8, y: 10}
+        - {x: 16, y: 24}
+        - {x: 16, y: 31}
     - name: kat_gun_54
       rect:
         serializedVersion: 2
@@ -684,8 +1265,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -13, y: 38}
+        - {x: -13, y: 12}
+        - {x: -9, y: 10}
+        - {x: 6, y: 10}
+        - {x: 15, y: 21}
+        - {x: 15, y: 28}
+        - {x: 5, y: 41}
     - name: kat_gun_55
       rect:
         serializedVersion: 2
@@ -694,8 +1284,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 39}
+        - {x: -13, y: 11}
+        - {x: -12, y: 8}
+        - {x: 9, y: 8}
+        - {x: 15, y: 12}
+        - {x: 15, y: 31}
+        - {x: 11, y: 39}
     - name: kat_gun_56
       rect:
         serializedVersion: 2
@@ -704,8 +1302,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 38}
+        - {x: -13, y: 37}
+        - {x: -13, y: 12}
+        - {x: -9, y: 8}
+        - {x: 5, y: 8}
+        - {x: 14, y: 19}
+        - {x: 14, y: 22}
+        - {x: 4, y: 38}
     - name: kat_gun_57
       rect:
         serializedVersion: 2
@@ -714,8 +1321,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 39}
+        - {x: -13, y: 11}
+        - {x: -12, y: 8}
+        - {x: 9, y: 8}
+        - {x: 15, y: 12}
+        - {x: 15, y: 31}
+        - {x: 11, y: 39}
     - name: kat_gun_58
       rect:
         serializedVersion: 2
@@ -724,8 +1339,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 43}
+        - {x: 0, y: 16}
+        - {x: 8, y: 16}
+        - {x: 29, y: 27}
+        - {x: 32, y: 30}
+        - {x: 32, y: 42}
+        - {x: 28, y: 43}
+      - - {x: 10, y: 29}
+        - {x: 10, y: 17}
+        - {x: 32, y: 17}
+        - {x: 32, y: 29}
     - name: kat_gun_59
       rect:
         serializedVersion: 2
@@ -734,8 +1361,45 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 29}
+        - {x: -28, y: 21}
+        - {x: -27, y: 18}
+        - {x: -24, y: 17}
+        - {x: -3, y: 17}
+        - {x: 0, y: 18}
+        - {x: 0, y: 29}
+      - - {x: -29, y: 43}
+        - {x: -31, y: 41}
+        - {x: -31, y: 32}
+        - {x: -30, y: 29}
+        - {x: -27, y: 29}
+        - {x: -25, y: 31}
+        - {x: -25, y: 41}
+        - {x: -27, y: 43}
+      - - {x: 8, y: 30}
+        - {x: 8, y: 42}
+        - {x: -21, y: 42}
+        - {x: -23, y: 39}
+        - {x: -23, y: 32}
+        - {x: -20, y: 30}
+        - {x: -17, y: 30}
+        - {x: -14, y: 33}
+        - {x: -14, y: 32}
+        - {x: -13, y: 30}
+      - - {x: 31, y: 39}
+        - {x: 30, y: 42}
+        - {x: 14, y: 42}
+        - {x: 9, y: 40}
+        - {x: 9, y: 36}
+        - {x: 10, y: 31}
+        - {x: 13, y: 30}
+        - {x: 16, y: 31}
+        - {x: 27, y: 30}
+        - {x: 29, y: 30}
+        - {x: 31, y: 34}
     - name: kat_gun_60
       rect:
         serializedVersion: 2
@@ -744,8 +1408,29 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 42}
+        - {x: -20, y: 40}
+        - {x: -23, y: 38}
+        - {x: -23, y: 28}
+        - {x: 12, y: 28}
+        - {x: 12, y: 39}
+        - {x: 11, y: 42}
+      - - {x: -29, y: 42}
+        - {x: -31, y: 36}
+        - {x: -32, y: 31}
+        - {x: -30, y: 29}
+        - {x: -26, y: 30}
+        - {x: -24, y: 38}
+        - {x: -24, y: 42}
+        - {x: -26, y: 43}
+      - - {x: 14, y: 42}
+        - {x: 14, y: 31}
+        - {x: 17, y: 30}
+        - {x: 32, y: 30}
+        - {x: 32, y: 42}
     - name: kat_gun_61
       rect:
         serializedVersion: 2
@@ -754,8 +1439,24 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 42}
+        - {x: -25, y: 42}
+        - {x: -26, y: 39}
+        - {x: -26, y: 30}
+        - {x: -16, y: 28}
+        - {x: -3, y: 28}
+        - {x: 12, y: 30}
+        - {x: 14, y: 31}
+        - {x: 14, y: 38}
+      - - {x: -32, y: 42}
+        - {x: -32, y: 30}
+        - {x: -31, y: 30}
+        - {x: -28, y: 32}
+        - {x: -28, y: 40}
+        - {x: -31, y: 42}
     - name: kat_gun_62
       rect:
         serializedVersion: 2
@@ -764,8 +1465,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 43}
+        - {x: -13, y: 18}
+        - {x: -7, y: 9}
+        - {x: -2, y: 9}
+        - {x: 7, y: 11}
+        - {x: 16, y: 23}
+        - {x: 16, y: 30}
+        - {x: 6, y: 43}
     - name: kat_gun_63
       rect:
         serializedVersion: 2
@@ -774,8 +1484,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 43}
+        - {x: -12, y: 15}
+        - {x: -5, y: 9}
+        - {x: 8, y: 9}
+        - {x: 24, y: 18}
+        - {x: 24, y: 38}
+        - {x: 8, y: 43}
     - name: kat_gun_64
       rect:
         serializedVersion: 2
@@ -784,8 +1502,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 36}
+        - {x: 4, y: 34}
+        - {x: 4, y: 23}
+        - {x: 7, y: 21}
+        - {x: 32, y: 21}
+        - {x: 32, y: 34}
+        - {x: 12, y: 36}
     - name: kat_gun_65
       rect:
         serializedVersion: 2
@@ -794,8 +1520,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 33}
+        - {x: 7, y: 25}
+        - {x: 8, y: 21}
+        - {x: 21, y: 21}
+        - {x: 32, y: 23}
+        - {x: 32, y: 33}
+      - - {x: -24, y: 22}
+        - {x: 4, y: 22}
+        - {x: 4, y: 36}
+        - {x: -12, y: 36}
+        - {x: -32, y: 33}
+        - {x: -32, y: 23}
     - name: kat_gun_66
       rect:
         serializedVersion: 2
@@ -804,8 +1543,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 35}
+        - {x: -32, y: 33}
+        - {x: -32, y: 23}
+        - {x: -17, y: 23}
+        - {x: -17, y: 35}
     - name: kat_gun_67
       rect:
         serializedVersion: 2
@@ -814,8 +1559,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 39}
+        - {x: -14, y: 37}
+        - {x: -14, y: 15}
+        - {x: -8, y: 10}
+        - {x: -6, y: 9}
+        - {x: 12, y: 9}
+        - {x: 12, y: 39}
     - name: kat_gun_68
       rect:
         serializedVersion: 2
@@ -824,8 +1577,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 40}
+        - {x: -16, y: 12}
+        - {x: 13, y: 12}
+        - {x: 15, y: 13}
+        - {x: 15, y: 40}
     - name: kat_gun_69
       rect:
         serializedVersion: 2
@@ -834,8 +1593,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 40}
+        - {x: -14, y: 14}
+        - {x: -10, y: 10}
+        - {x: 3, y: 10}
+        - {x: 13, y: 19}
+        - {x: 13, y: 31}
+        - {x: 8, y: 40}
     - name: kat_gun_70
       rect:
         serializedVersion: 2
@@ -844,8 +1611,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 38}
+        - {x: -17, y: 33}
+        - {x: -17, y: 11}
+        - {x: 12, y: 11}
+        - {x: 15, y: 16}
+        - {x: 15, y: 38}
     - name: kat_gun_71
       rect:
         serializedVersion: 2
@@ -854,8 +1628,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 43}
+        - {x: 4, y: 28}
+        - {x: 18, y: 28}
+        - {x: 32, y: 30}
+        - {x: 32, y: 41}
+        - {x: 28, y: 43}
     - name: kat_gun_72
       rect:
         serializedVersion: 2
@@ -864,8 +1645,25 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 30}
+        - {x: -13, y: 28}
+        - {x: 0, y: 28}
+        - {x: 5, y: 31}
+        - {x: 5, y: 37}
+        - {x: 4, y: 42}
+        - {x: -20, y: 42}
+        - {x: -22, y: 41}
+      - - {x: -26, y: 43}
+        - {x: -31, y: 43}
+        - {x: -32, y: 42}
+        - {x: -32, y: 30}
+        - {x: -28, y: 29}
+        - {x: -25, y: 29}
+        - {x: -24, y: 31}
+        - {x: -24, y: 42}
     - name: kat_gun_73
       rect:
         serializedVersion: 2
@@ -874,8 +1672,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 41}
+        - {x: -13, y: 34}
+        - {x: -13, y: 8}
+        - {x: 13, y: 8}
+        - {x: 16, y: 19}
+        - {x: 16, y: 29}
+        - {x: 4, y: 41}
     - name: kat_gun_74
       rect:
         serializedVersion: 2
@@ -884,8 +1690,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 13}
+        - {x: -8, y: 8}
+        - {x: 4, y: 8}
+        - {x: 14, y: 16}
+        - {x: 14, y: 32}
+        - {x: 9, y: 41}
     - name: kat_gun_75
       rect:
         serializedVersion: 2
@@ -894,8 +1709,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 10}
+        - {x: -13, y: 8}
+        - {x: 4, y: 8}
+        - {x: 15, y: 16}
+        - {x: 15, y: 27}
+        - {x: 0, y: 41}
+        - {x: -10, y: 41}
+        - {x: -14, y: 38}
     - name: kat_gun_76
       rect:
         serializedVersion: 2
@@ -904,8 +1728,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 37}
+        - {x: -21, y: 21}
+        - {x: -15, y: 8}
+        - {x: 12, y: 8}
+        - {x: 12, y: 37}
     - name: kat_gun_77
       rect:
         serializedVersion: 2
@@ -914,8 +1744,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 35}
+        - {x: -22, y: 26}
+        - {x: -22, y: 8}
+        - {x: 11, y: 8}
+        - {x: 11, y: 28}
+        - {x: 4, y: 35}
     - name: kat_gun_78
       rect:
         serializedVersion: 2
@@ -924,8 +1761,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 39}
+        - {x: -12, y: 39}
+        - {x: -22, y: 29}
+        - {x: -22, y: 11}
+        - {x: -20, y: 9}
+        - {x: 8, y: 9}
+        - {x: 11, y: 15}
+        - {x: 11, y: 21}
+        - {x: 8, y: 35}
     - name: kat_gun_79
       rect:
         serializedVersion: 2
@@ -934,8 +1781,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 35}
+        - {x: -22, y: 26}
+        - {x: -22, y: 8}
+        - {x: 11, y: 8}
+        - {x: 11, y: 28}
+        - {x: 4, y: 35}
     - name: kat_gun_80
       rect:
         serializedVersion: 2
@@ -944,8 +1798,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 34}
+        - {x: -22, y: 29}
+        - {x: -22, y: 23}
+        - {x: -16, y: 11}
+        - {x: -6, y: 8}
+        - {x: 11, y: 8}
+        - {x: 11, y: 34}
     - name: kat_gun_81
       rect:
         serializedVersion: 2
@@ -954,8 +1816,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 39}
+        - {x: -11, y: 38}
+        - {x: -11, y: 11}
+        - {x: -10, y: 8}
+        - {x: 8, y: 8}
+        - {x: 12, y: 9}
+        - {x: 16, y: 19}
+        - {x: 16, y: 28}
+        - {x: 7, y: 39}
     - name: kat_gun_82
       rect:
         serializedVersion: 2
@@ -964,8 +1836,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: 37}
+        - {x: 4, y: 37}
+        - {x: 4, y: 23}
+        - {x: 32, y: 23}
+        - {x: 32, y: 31}
+        - {x: 30, y: 36}
     - name: kat_gun_83
       rect:
         serializedVersion: 2
@@ -974,8 +1853,30 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 37}
+        - {x: -32, y: 35}
+        - {x: -32, y: 23}
+        - {x: -20, y: 23}
+        - {x: -20, y: 37}
+      - - {x: -16, y: 36}
+        - {x: -18, y: 31}
+        - {x: -18, y: 24}
+        - {x: 15, y: 24}
+        - {x: 15, y: 34}
+        - {x: 7, y: 36}
+      - - {x: 18, y: 30}
+        - {x: 19, y: 25}
+        - {x: 20, y: 24}
+        - {x: 26, y: 24}
+        - {x: 32, y: 27}
+        - {x: 32, y: 34}
+        - {x: 31, y: 35}
+        - {x: 27, y: 36}
+        - {x: 22, y: 36}
+        - {x: 18, y: 35}
     - name: kat_gun_84
       rect:
         serializedVersion: 2
@@ -984,8 +1885,39 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 35}
+        - {x: 15, y: 36}
+        - {x: -6, y: 36}
+        - {x: -14, y: 34}
+        - {x: -14, y: 22}
+        - {x: 18, y: 22}
+        - {x: 21, y: 26}
+        - {x: 21, y: 31}
+      - - {x: -21, y: 36}
+        - {x: -23, y: 30}
+        - {x: -24, y: 25}
+        - {x: -22, y: 23}
+        - {x: -18, y: 24}
+        - {x: -16, y: 32}
+        - {x: -16, y: 36}
+        - {x: -18, y: 37}
+      - - {x: -32, y: 36}
+        - {x: -32, y: 25}
+        - {x: -29, y: 24}
+        - {x: -26, y: 25}
+        - {x: -24, y: 34}
+        - {x: -26, y: 36}
+      - - {x: 27, y: 36}
+        - {x: 24, y: 33}
+        - {x: 24, y: 27}
+        - {x: 27, y: 24}
+        - {x: 30, y: 24}
+        - {x: 32, y: 26}
+        - {x: 32, y: 34}
+        - {x: 30, y: 36}
     - name: kat_gun_85
       rect:
         serializedVersion: 2
@@ -994,8 +1926,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 36}
+        - {x: -32, y: 34}
+        - {x: -32, y: 27}
+        - {x: -27, y: 24}
+        - {x: -19, y: 24}
+        - {x: -18, y: 27}
+        - {x: -18, y: 36}
+    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

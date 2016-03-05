@@ -211,7 +211,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -223,7 +223,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -236,7 +236,7 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 1
   alphaIsTransparency: 1
@@ -252,8 +252,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_1
       rect:
         serializedVersion: 2
@@ -262,8 +269,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 40}
+        - {x: -12, y: 40}
+        - {x: -13, y: 33}
+        - {x: -13, y: 11}
+        - {x: -7, y: 8}
+        - {x: 6, y: 8}
+        - {x: 9, y: 13}
+        - {x: 9, y: 39}
     - name: sprite_base_addon_2012_12_14_2
       rect:
         serializedVersion: 2
@@ -272,8 +288,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_3
       rect:
         serializedVersion: 2
@@ -282,8 +305,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 42}
+        - {x: -12, y: 42}
+        - {x: -13, y: 40}
+        - {x: -13, y: 9}
+        - {x: -12, y: 8}
+        - {x: 7, y: 8}
+        - {x: 9, y: 19}
+        - {x: 9, y: 29}
+        - {x: 7, y: 38}
     - name: sprite_base_addon_2012_12_14_4
       rect:
         serializedVersion: 2
@@ -292,8 +325,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 32}
+        - {x: 31, y: 30}
+        - {x: 32, y: 30}
+        - {x: 32, y: 44}
+        - {x: 29, y: 43}
     - name: sprite_base_addon_2012_12_14_5
       rect:
         serializedVersion: 2
@@ -302,8 +341,73 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 31}
+        - {x: -29, y: 34}
+        - {x: -32, y: 35}
+        - {x: -32, y: 30}
+      - - {x: 2, y: 44}
+        - {x: 0, y: 42}
+        - {x: 0, y: 33}
+        - {x: 1, y: 30}
+        - {x: 4, y: 30}
+        - {x: 6, y: 32}
+        - {x: 6, y: 42}
+        - {x: 4, y: 44}
+      - - {x: -29, y: 33}
+        - {x: -27, y: 31}
+        - {x: -24, y: 32}
+        - {x: -24, y: 41}
+        - {x: -26, y: 43}
+        - {x: -29, y: 42}
+      - - {x: -17, y: 43}
+        - {x: -20, y: 43}
+        - {x: -24, y: 38}
+        - {x: -24, y: 34}
+        - {x: -21, y: 31}
+        - {x: -17, y: 31}
+        - {x: -15, y: 33}
+        - {x: -15, y: 42}
+      - - {x: -14, y: 33}
+        - {x: -12, y: 31}
+        - {x: -9, y: 32}
+        - {x: -9, y: 41}
+        - {x: -11, y: 43}
+        - {x: -14, y: 42}
+      - - {x: -6, y: 41}
+        - {x: -9, y: 38}
+        - {x: -9, y: 34}
+        - {x: -6, y: 31}
+        - {x: -3, y: 31}
+        - {x: 0, y: 34}
+        - {x: 0, y: 38}
+        - {x: -3, y: 41}
+      - - {x: 12, y: 33}
+        - {x: 14, y: 31}
+        - {x: 17, y: 32}
+        - {x: 17, y: 41}
+        - {x: 15, y: 43}
+        - {x: 12, y: 42}
+      - - {x: 21, y: 41}
+        - {x: 18, y: 38}
+        - {x: 18, y: 34}
+        - {x: 21, y: 31}
+        - {x: 24, y: 31}
+        - {x: 27, y: 34}
+        - {x: 27, y: 38}
+        - {x: 24, y: 41}
+      - - {x: 27, y: 38}
+        - {x: 27, y: 34}
+        - {x: 30, y: 31}
+        - {x: 32, y: 31}
+        - {x: 32, y: 41}
+        - {x: 30, y: 41}
+      - - {x: -29, y: 40}
+        - {x: -29, y: 43}
+        - {x: -32, y: 44}
+        - {x: -32, y: 39}
     - name: sprite_base_addon_2012_12_14_6
       rect:
         serializedVersion: 2
@@ -312,8 +416,39 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 41}
+        - {x: -28, y: 30}
+        - {x: -26, y: 29}
+        - {x: -23, y: 29}
+        - {x: -19, y: 32}
+        - {x: -19, y: 38}
+        - {x: -20, y: 41}
+      - - {x: -32, y: 41}
+        - {x: -32, y: 31}
+        - {x: -31, y: 31}
+        - {x: -28, y: 34}
+        - {x: -28, y: 38}
+        - {x: -31, y: 41}
+      - - {x: -13, y: 37}
+        - {x: -12, y: 32}
+        - {x: -9, y: 31}
+        - {x: -6, y: 32}
+        - {x: -6, y: 41}
+        - {x: -8, y: 43}
+        - {x: -13, y: 41}
+      - - {x: -5, y: 34}
+        - {x: -3, y: 32}
+        - {x: 1, y: 31}
+        - {x: 11, y: 31}
+        - {x: 13, y: 34}
+        - {x: 13, y: 40}
+        - {x: 12, y: 43}
+        - {x: 1, y: 43}
+        - {x: -4, y: 42}
+        - {x: -5, y: 38}
     - name: sprite_base_addon_2012_12_14_7
       rect:
         serializedVersion: 2
@@ -322,8 +457,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -13, y: 39}
+        - {x: -13, y: 9}
+        - {x: -11, y: 8}
+        - {x: 9, y: 8}
+        - {x: 9, y: 41}
     - name: sprite_base_addon_2012_12_14_8
       rect:
         serializedVersion: 2
@@ -332,8 +474,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 11}
+        - {x: -9, y: 8}
+        - {x: 5, y: 8}
+        - {x: 8, y: 9}
+        - {x: 9, y: 14}
+        - {x: 9, y: 41}
     - name: sprite_base_addon_2012_12_14_9
       rect:
         serializedVersion: 2
@@ -342,8 +492,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 42}
+        - {x: -12, y: 11}
+        - {x: -11, y: 8}
+        - {x: 2, y: 8}
+        - {x: 9, y: 17}
+        - {x: 9, y: 41}
+        - {x: 7, y: 42}
     - name: sprite_base_addon_2012_12_14_10
       rect:
         serializedVersion: 2
@@ -352,8 +510,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 42}
+        - {x: -12, y: 42}
+        - {x: -12, y: 10}
+        - {x: -4, y: 8}
+        - {x: 1, y: 8}
+        - {x: 9, y: 19}
+        - {x: 9, y: 32}
+        - {x: 8, y: 38}
     - name: sprite_base_addon_2012_12_14_11
       rect:
         serializedVersion: 2
@@ -362,8 +529,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 41}
+        - {x: -10, y: 41}
+        - {x: -13, y: 38}
+        - {x: -13, y: 13}
+        - {x: -6, y: 8}
+        - {x: 1, y: 8}
+        - {x: 5, y: 10}
+        - {x: 9, y: 18}
+        - {x: 9, y: 40}
     - name: sprite_base_addon_2012_12_14_12
       rect:
         serializedVersion: 2
@@ -372,8 +549,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 41}
+        - {x: -12, y: 39}
+        - {x: -12, y: 14}
+        - {x: -6, y: 8}
+        - {x: 2, y: 8}
+        - {x: 9, y: 14}
+        - {x: 9, y: 34}
+        - {x: 7, y: 41}
     - name: sprite_base_addon_2012_12_14_13
       rect:
         serializedVersion: 2
@@ -382,8 +568,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 42}
+        - {x: -12, y: 11}
+        - {x: -11, y: 8}
+        - {x: 2, y: 8}
+        - {x: 9, y: 17}
+        - {x: 9, y: 41}
+        - {x: 7, y: 42}
     - name: sprite_base_addon_2012_12_14_14
       rect:
         serializedVersion: 2
@@ -392,8 +586,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 11}
+        - {x: -9, y: 8}
+        - {x: 5, y: 8}
+        - {x: 8, y: 9}
+        - {x: 9, y: 14}
+        - {x: 9, y: 41}
     - name: sprite_base_addon_2012_12_14_15
       rect:
         serializedVersion: 2
@@ -402,8 +604,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 27}
+        - {x: 31, y: 25}
+        - {x: 32, y: 25}
+        - {x: 32, y: 39}
+        - {x: 29, y: 38}
     - name: sprite_base_addon_2012_12_14_16
       rect:
         serializedVersion: 2
@@ -412,8 +620,65 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 26}
+        - {x: -29, y: 29}
+        - {x: -32, y: 30}
+        - {x: -32, y: 25}
+      - - {x: 7, y: 39}
+        - {x: 5, y: 37}
+        - {x: 5, y: 28}
+        - {x: 6, y: 25}
+        - {x: 9, y: 25}
+        - {x: 11, y: 27}
+        - {x: 11, y: 37}
+        - {x: 9, y: 39}
+      - - {x: -29, y: 36}
+        - {x: -29, y: 30}
+        - {x: -27, y: 26}
+        - {x: -18, y: 26}
+        - {x: -18, y: 36}
+      - - {x: -11, y: 36}
+        - {x: -17, y: 36}
+        - {x: -18, y: 33}
+        - {x: -18, y: 29}
+        - {x: -15, y: 26}
+        - {x: -10, y: 26}
+        - {x: -8, y: 28}
+        - {x: -8, y: 35}
+      - - {x: -8, y: 28}
+        - {x: -6, y: 26}
+        - {x: -3, y: 27}
+        - {x: -3, y: 36}
+        - {x: -5, y: 38}
+        - {x: -8, y: 37}
+      - - {x: -2, y: 38}
+        - {x: -3, y: 36}
+        - {x: -3, y: 28}
+        - {x: -2, y: 26}
+        - {x: 5, y: 26}
+        - {x: 5, y: 36}
+        - {x: 1, y: 38}
+      - - {x: 17, y: 28}
+        - {x: 19, y: 26}
+        - {x: 22, y: 27}
+        - {x: 22, y: 36}
+        - {x: 20, y: 38}
+        - {x: 17, y: 37}
+      - - {x: 26, y: 36}
+        - {x: 23, y: 33}
+        - {x: 23, y: 29}
+        - {x: 26, y: 26}
+        - {x: 29, y: 26}
+        - {x: 32, y: 29}
+        - {x: 32, y: 33}
+        - {x: 29, y: 36}
+      - - {x: -29, y: 35}
+        - {x: -29, y: 38}
+        - {x: -32, y: 39}
+        - {x: -32, y: 34}
     - name: sprite_base_addon_2012_12_14_17
       rect:
         serializedVersion: 2
@@ -422,8 +687,40 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 36}
+        - {x: -23, y: 25}
+        - {x: -21, y: 24}
+        - {x: -18, y: 24}
+        - {x: -14, y: 27}
+        - {x: -14, y: 33}
+        - {x: -15, y: 36}
+      - - {x: -29, y: 36}
+        - {x: -32, y: 33}
+        - {x: -32, y: 29}
+        - {x: -29, y: 26}
+        - {x: -26, y: 26}
+        - {x: -23, y: 29}
+        - {x: -23, y: 33}
+        - {x: -26, y: 36}
+      - - {x: -8, y: 32}
+        - {x: -7, y: 27}
+        - {x: -4, y: 26}
+        - {x: -1, y: 27}
+        - {x: -1, y: 36}
+        - {x: -3, y: 38}
+        - {x: -8, y: 36}
+      - - {x: 15, y: 38}
+        - {x: 7, y: 38}
+        - {x: 2, y: 36}
+        - {x: 0, y: 32}
+        - {x: 0, y: 29}
+        - {x: 12, y: 26}
+        - {x: 16, y: 26}
+        - {x: 18, y: 29}
+        - {x: 18, y: 37}
     - name: sprite_base_addon_2012_12_14_18
       rect:
         serializedVersion: 2
@@ -432,8 +729,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_19
       rect:
         serializedVersion: 2
@@ -442,8 +746,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 11}
+        - {x: -12, y: 10}
+        - {x: 7, y: 10}
+        - {x: 7, y: 38}
+        - {x: 5, y: 41}
     - name: sprite_base_addon_2012_12_14_20
       rect:
         serializedVersion: 2
@@ -452,8 +764,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 43}
+        - {x: -13, y: 9}
+        - {x: 7, y: 9}
+        - {x: 8, y: 11}
+        - {x: 8, y: 38}
+        - {x: 4, y: 43}
     - name: sprite_base_addon_2012_12_14_21
       rect:
         serializedVersion: 2
@@ -462,8 +781,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 43}
+        - {x: -11, y: 13}
+        - {x: -6, y: 9}
+        - {x: 5, y: 9}
+        - {x: 8, y: 13}
+        - {x: 8, y: 42}
+        - {x: 5, y: 43}
     - name: sprite_base_addon_2012_12_14_22
       rect:
         serializedVersion: 2
@@ -472,8 +799,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 11}
+        - {x: -12, y: 10}
+        - {x: 7, y: 10}
+        - {x: 7, y: 38}
+        - {x: 5, y: 41}
     - name: sprite_base_addon_2012_12_14_23
       rect:
         serializedVersion: 2
@@ -482,8 +817,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 39}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 31}
     - name: sprite_base_addon_2012_12_14_24
       rect:
         serializedVersion: 2
@@ -492,8 +835,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 38}
+        - {x: -13, y: 36}
+        - {x: -13, y: 11}
+        - {x: -10, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 32}
+        - {x: 4, y: 38}
     - name: sprite_base_addon_2012_12_14_25
       rect:
         serializedVersion: 2
@@ -502,8 +853,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 39}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 31}
     - name: sprite_base_addon_2012_12_14_26
       rect:
         serializedVersion: 2
@@ -512,8 +871,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 27}
+        - {x: 31, y: 25}
+        - {x: 32, y: 25}
+        - {x: 32, y: 39}
+        - {x: 29, y: 38}
     - name: sprite_base_addon_2012_12_14_27
       rect:
         serializedVersion: 2
@@ -522,8 +887,63 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 38}
+        - {x: -32, y: 33}
+        - {x: -32, y: 24}
+        - {x: -27, y: 24}
+        - {x: -24, y: 27}
+        - {x: -24, y: 36}
+        - {x: -26, y: 38}
+      - - {x: -3, y: 34}
+        - {x: -3, y: 26}
+        - {x: -2, y: 24}
+        - {x: 0, y: 24}
+        - {x: 6, y: 27}
+        - {x: 6, y: 33}
+        - {x: 3, y: 36}
+        - {x: -1, y: 36}
+      - - {x: 8, y: 39}
+        - {x: 6, y: 37}
+        - {x: 6, y: 28}
+        - {x: 7, y: 25}
+        - {x: 10, y: 25}
+        - {x: 12, y: 27}
+        - {x: 12, y: 37}
+        - {x: 10, y: 39}
+      - - {x: -23, y: 36}
+        - {x: -24, y: 35}
+        - {x: -24, y: 29}
+        - {x: -21, y: 26}
+        - {x: -18, y: 26}
+        - {x: -15, y: 29}
+        - {x: -15, y: 36}
+      - - {x: -14, y: 36}
+        - {x: -14, y: 26}
+        - {x: -5, y: 26}
+        - {x: -3, y: 27}
+        - {x: -3, y: 33}
+        - {x: -6, y: 36}
+      - - {x: 21, y: 36}
+        - {x: 18, y: 33}
+        - {x: 18, y: 29}
+        - {x: 21, y: 26}
+        - {x: 24, y: 26}
+        - {x: 27, y: 29}
+        - {x: 27, y: 33}
+        - {x: 24, y: 36}
+      - - {x: 28, y: 33}
+        - {x: 29, y: 28}
+        - {x: 31, y: 26}
+        - {x: 32, y: 26}
+        - {x: 32, y: 38}
+        - {x: 29, y: 37}
+      - - {x: -29, y: 35}
+        - {x: -29, y: 38}
+        - {x: -32, y: 39}
+        - {x: -32, y: 34}
     - name: sprite_base_addon_2012_12_14_28
       rect:
         serializedVersion: 2
@@ -532,8 +952,61 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 23}
+        - {x: -27, y: 20}
+        - {x: -27, y: 14}
+        - {x: -24, y: 13}
+        - {x: -19, y: 13}
+        - {x: -18, y: 15}
+        - {x: -18, y: 23}
+      - - {x: -16, y: 23}
+        - {x: -18, y: 21}
+        - {x: -18, y: 13}
+        - {x: -10, y: 13}
+        - {x: -9, y: 14}
+        - {x: -9, y: 20}
+        - {x: -12, y: 23}
+      - - {x: -3, y: 25}
+        - {x: -9, y: 22}
+        - {x: -9, y: 16}
+        - {x: -6, y: 13}
+        - {x: -2, y: 13}
+        - {x: 0, y: 15}
+        - {x: 0, y: 23}
+        - {x: -1, y: 25}
+      - - {x: 7, y: 25}
+        - {x: 7, y: 13}
+        - {x: 32, y: 13}
+        - {x: 32, y: 25}
+      - - {x: 27, y: 29}
+        - {x: 27, y: 27}
+        - {x: 29, y: 25}
+        - {x: 32, y: 26}
+        - {x: 32, y: 36}
+        - {x: 29, y: 35}
+      - - {x: -8, y: 34}
+        - {x: -9, y: 38}
+        - {x: -20, y: 38}
+        - {x: -32, y: 36}
+        - {x: -32, y: 26}
+        - {x: -8, y: 26}
+      - - {x: -2, y: 32}
+        - {x: -1, y: 27}
+        - {x: 2, y: 26}
+        - {x: 5, y: 27}
+        - {x: 5, y: 36}
+        - {x: 3, y: 38}
+        - {x: -2, y: 36}
+      - - {x: 12, y: 38}
+        - {x: 5, y: 33}
+        - {x: 5, y: 27}
+        - {x: 10, y: 26}
+        - {x: 23, y: 26}
+        - {x: 23, y: 37}
+        - {x: 22, y: 38}
     - name: sprite_base_addon_2012_12_14_29
       rect:
         serializedVersion: 2
@@ -542,8 +1015,55 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 28}
+        - {x: -21, y: 26}
+        - {x: -18, y: 27}
+        - {x: -18, y: 36}
+        - {x: -20, y: 38}
+        - {x: -23, y: 37}
+      - - {x: -18, y: 36}
+        - {x: -18, y: 26}
+        - {x: -9, y: 26}
+        - {x: -9, y: 33}
+        - {x: -10, y: 36}
+      - - {x: 4, y: 36}
+        - {x: -2, y: 36}
+        - {x: -3, y: 33}
+        - {x: -3, y: 29}
+        - {x: 0, y: 26}
+        - {x: 5, y: 26}
+        - {x: 7, y: 28}
+        - {x: 7, y: 35}
+      - - {x: 7, y: 28}
+        - {x: 9, y: 26}
+        - {x: 12, y: 27}
+        - {x: 12, y: 36}
+        - {x: 10, y: 38}
+        - {x: 7, y: 37}
+      - - {x: 14, y: 36}
+        - {x: 12, y: 34}
+        - {x: 12, y: 28}
+        - {x: 14, y: 26}
+        - {x: 17, y: 27}
+        - {x: 19, y: 33}
+        - {x: 19, y: 34}
+        - {x: 17, y: 36}
+      - - {x: 27, y: 38}
+        - {x: 24, y: 37}
+        - {x: 24, y: 29}
+        - {x: 25, y: 26}
+        - {x: 30, y: 26}
+        - {x: 32, y: 28}
+        - {x: 32, y: 36}
+        - {x: 30, y: 38}
+      - - {x: -32, y: 32}
+        - {x: -29, y: 33}
+        - {x: -29, y: 37}
+        - {x: -31, y: 39}
+        - {x: -32, y: 39}
     - name: sprite_base_addon_2012_12_14_30
       rect:
         serializedVersion: 2
@@ -552,8 +1072,49 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 36}
+        - {x: 6, y: 24}
+        - {x: 9, y: 24}
+        - {x: 15, y: 27}
+        - {x: 15, y: 35}
+        - {x: 12, y: 36}
+      - - {x: -21, y: 38}
+        - {x: -23, y: 33}
+        - {x: -23, y: 30}
+        - {x: -18, y: 26}
+        - {x: -15, y: 27}
+        - {x: -14, y: 31}
+        - {x: -14, y: 38}
+      - - {x: -9, y: 36}
+        - {x: -9, y: 26}
+        - {x: 5, y: 26}
+        - {x: 6, y: 28}
+        - {x: 6, y: 36}
+      - - {x: 19, y: 36}
+        - {x: 16, y: 33}
+        - {x: 16, y: 29}
+        - {x: 19, y: 26}
+        - {x: 22, y: 26}
+        - {x: 25, y: 29}
+        - {x: 25, y: 33}
+        - {x: 22, y: 36}
+      - - {x: 28, y: 36}
+        - {x: 25, y: 33}
+        - {x: 25, y: 29}
+        - {x: 28, y: 26}
+        - {x: 31, y: 26}
+        - {x: 32, y: 27}
+        - {x: 32, y: 35}
+        - {x: 31, y: 36}
+      - - {x: -32, y: 35}
+        - {x: -32, y: 29}
+        - {x: -25, y: 29}
+        - {x: -23, y: 30}
+        - {x: -23, y: 34}
+        - {x: -26, y: 35}
     - name: sprite_base_addon_2012_12_14_31
       rect:
         serializedVersion: 2
@@ -562,8 +1123,28 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 38}
+        - {x: -18, y: 32}
+        - {x: -19, y: 27}
+        - {x: -17, y: 25}
+        - {x: -13, y: 26}
+        - {x: -11, y: 34}
+        - {x: -11, y: 38}
+        - {x: -13, y: 39}
+      - - {x: -29, y: 27}
+        - {x: -29, y: 30}
+        - {x: -32, y: 31}
+        - {x: -32, y: 26}
+      - - {x: -29, y: 37}
+        - {x: -30, y: 33}
+        - {x: -29, y: 28}
+        - {x: -27, y: 26}
+        - {x: -23, y: 26}
+        - {x: -23, y: 36}
+        - {x: -26, y: 38}
     - name: sprite_base_addon_2012_12_14_32
       rect:
         serializedVersion: 2
@@ -572,8 +1153,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_33
       rect:
         serializedVersion: 2
@@ -582,8 +1170,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 39}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 31}
     - name: sprite_base_addon_2012_12_14_34
       rect:
         serializedVersion: 2
@@ -592,8 +1188,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 38}
+        - {x: -13, y: 36}
+        - {x: -13, y: 11}
+        - {x: -10, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 32}
+        - {x: 4, y: 38}
     - name: sprite_base_addon_2012_12_14_35
       rect:
         serializedVersion: 2
@@ -602,8 +1206,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 39}
+        - {x: -14, y: 37}
+        - {x: -14, y: 15}
+        - {x: -9, y: 11}
+        - {x: 3, y: 11}
+        - {x: 12, y: 26}
+        - {x: 12, y: 37}
+        - {x: 10, y: 39}
     - name: sprite_base_addon_2012_12_14_36
       rect:
         serializedVersion: 2
@@ -612,8 +1225,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 40}
+        - {x: -7, y: 40}
+        - {x: -10, y: 38}
+        - {x: -15, y: 33}
+        - {x: -15, y: 28}
+        - {x: -14, y: 24}
+        - {x: 1, y: 13}
+        - {x: 9, y: 13}
+        - {x: 15, y: 19}
+        - {x: 15, y: 39}
     - name: sprite_base_addon_2012_12_14_37
       rect:
         serializedVersion: 2
@@ -622,8 +1246,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 40}
+        - {x: -5, y: 35}
+        - {x: -13, y: 26}
+        - {x: -13, y: 17}
+        - {x: -9, y: 10}
+        - {x: 3, y: 10}
+        - {x: 13, y: 19}
+        - {x: 13, y: 31}
+        - {x: 8, y: 40}
     - name: sprite_base_addon_2012_12_14_38
       rect:
         serializedVersion: 2
@@ -632,8 +1266,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 38}
+        - {x: -17, y: 35}
+        - {x: -17, y: 19}
+        - {x: -16, y: 14}
+        - {x: -10, y: 11}
+        - {x: 10, y: 11}
+        - {x: 13, y: 16}
+        - {x: 13, y: 30}
+        - {x: -1, y: 38}
     - name: sprite_base_addon_2012_12_14_39
       rect:
         serializedVersion: 2
@@ -642,8 +1286,22 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 40}
+        - {x: 0, y: 38}
+        - {x: -3, y: 38}
+        - {x: -9, y: 39}
+        - {x: -16, y: 31}
+        - {x: -17, y: 25}
+        - {x: -17, y: 21}
+        - {x: -14, y: 16}
+        - {x: -6, y: 11}
+        - {x: 5, y: 11}
+        - {x: 16, y: 15}
+        - {x: 16, y: 29}
+        - {x: 8, y: 40}
     - name: sprite_base_addon_2012_12_14_40
       rect:
         serializedVersion: 2
@@ -652,8 +1310,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 38}
+        - {x: -13, y: 37}
+        - {x: -13, y: 11}
+        - {x: -11, y: 8}
+        - {x: 10, y: 8}
+        - {x: 10, y: 37}
+        - {x: 2, y: 38}
     - name: sprite_base_addon_2012_12_14_41
       rect:
         serializedVersion: 2
@@ -662,8 +1328,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 39}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 31}
     - name: sprite_base_addon_2012_12_14_42
       rect:
         serializedVersion: 2
@@ -672,8 +1346,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 33}
+        - {x: 31, y: 31}
+        - {x: 32, y: 31}
+        - {x: 32, y: 45}
+        - {x: 29, y: 44}
     - name: sprite_base_addon_2012_12_14_43
       rect:
         serializedVersion: 2
@@ -682,8 +1362,93 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 29}
+        - {x: 1, y: 26}
+        - {x: 1, y: 22}
+        - {x: 4, y: 19}
+        - {x: 7, y: 19}
+        - {x: 10, y: 22}
+        - {x: 10, y: 26}
+        - {x: 7, y: 29}
+      - - {x: 12, y: 29}
+        - {x: 10, y: 27}
+        - {x: 10, y: 19}
+        - {x: 18, y: 19}
+        - {x: 19, y: 20}
+        - {x: 19, y: 26}
+        - {x: 16, y: 29}
+      - - {x: 25, y: 31}
+        - {x: 19, y: 28}
+        - {x: 19, y: 22}
+        - {x: 22, y: 19}
+        - {x: 28, y: 19}
+        - {x: 28, y: 31}
+      - - {x: 28, y: 27}
+        - {x: 28, y: 23}
+        - {x: 31, y: 19}
+        - {x: 32, y: 19}
+        - {x: 32, y: 31}
+        - {x: 31, y: 31}
+      - - {x: -20, y: 42}
+        - {x: -20, y: 31}
+        - {x: -18, y: 30}
+        - {x: -15, y: 30}
+        - {x: -11, y: 35}
+        - {x: -11, y: 39}
+        - {x: -12, y: 42}
+      - - {x: -29, y: 32}
+        - {x: -29, y: 35}
+        - {x: -32, y: 36}
+        - {x: -32, y: 31}
+      - - {x: 6, y: 45}
+        - {x: 4, y: 43}
+        - {x: 4, y: 34}
+        - {x: 5, y: 31}
+        - {x: 8, y: 31}
+        - {x: 10, y: 33}
+        - {x: 10, y: 43}
+        - {x: 8, y: 45}
+      - - {x: -26, y: 42}
+        - {x: -29, y: 39}
+        - {x: -29, y: 35}
+        - {x: -26, y: 32}
+        - {x: -23, y: 32}
+        - {x: -20, y: 35}
+        - {x: -20, y: 39}
+        - {x: -23, y: 42}
+      - - {x: -10, y: 34}
+        - {x: -8, y: 32}
+        - {x: -5, y: 33}
+        - {x: -5, y: 42}
+        - {x: -7, y: 44}
+        - {x: -10, y: 43}
+      - - {x: -5, y: 42}
+        - {x: -5, y: 32}
+        - {x: 4, y: 32}
+        - {x: 4, y: 39}
+        - {x: 3, y: 42}
+      - - {x: 19, y: 42}
+        - {x: 16, y: 39}
+        - {x: 16, y: 35}
+        - {x: 19, y: 32}
+        - {x: 22, y: 32}
+        - {x: 25, y: 35}
+        - {x: 25, y: 39}
+        - {x: 22, y: 42}
+      - - {x: 27, y: 43}
+        - {x: 26, y: 40}
+        - {x: 26, y: 36}
+        - {x: 28, y: 32}
+        - {x: 32, y: 32}
+        - {x: 32, y: 43}
+        - {x: 30, y: 44}
+      - - {x: -29, y: 41}
+        - {x: -29, y: 44}
+        - {x: -32, y: 45}
+        - {x: -32, y: 40}
     - name: sprite_base_addon_2012_12_14_44
       rect:
         serializedVersion: 2
@@ -692,8 +1457,89 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 19}
+        - {x: -29, y: 22}
+        - {x: -32, y: 23}
+        - {x: -32, y: 18}
+      - - {x: 2, y: 32}
+        - {x: 2, y: 18}
+        - {x: 5, y: 18}
+        - {x: 9, y: 21}
+        - {x: 9, y: 28}
+        - {x: 7, y: 32}
+      - - {x: -27, y: 31}
+        - {x: -29, y: 30}
+        - {x: -29, y: 19}
+        - {x: -22, y: 19}
+        - {x: -21, y: 20}
+        - {x: -21, y: 28}
+        - {x: -24, y: 31}
+      - - {x: -21, y: 21}
+        - {x: -19, y: 19}
+        - {x: -16, y: 20}
+        - {x: -16, y: 29}
+        - {x: -18, y: 31}
+        - {x: -21, y: 30}
+      - - {x: -13, y: 29}
+        - {x: -16, y: 26}
+        - {x: -16, y: 22}
+        - {x: -13, y: 19}
+        - {x: -10, y: 19}
+        - {x: -7, y: 22}
+        - {x: -7, y: 26}
+        - {x: -10, y: 29}
+      - - {x: -6, y: 31}
+        - {x: -7, y: 29}
+        - {x: -7, y: 21}
+        - {x: -6, y: 19}
+        - {x: 1, y: 19}
+        - {x: 1, y: 29}
+        - {x: -3, y: 31}
+      - - {x: 27, y: 31}
+        - {x: 17, y: 31}
+        - {x: 14, y: 30}
+        - {x: 14, y: 20}
+        - {x: 16, y: 19}
+        - {x: 24, y: 19}
+        - {x: 31, y: 23}
+        - {x: 31, y: 26}
+        - {x: 28, y: 30}
+      - - {x: -29, y: 28}
+        - {x: -29, y: 31}
+        - {x: -32, y: 32}
+        - {x: -32, y: 27}
+      - - {x: 28, y: 44}
+        - {x: 25, y: 35}
+        - {x: 25, y: 32}
+        - {x: 27, y: 31}
+        - {x: 31, y: 32}
+        - {x: 32, y: 36}
+        - {x: 32, y: 45}
+        - {x: 31, y: 45}
+      - - {x: -30, y: 44}
+        - {x: -32, y: 42}
+        - {x: -32, y: 35}
+        - {x: -31, y: 32}
+        - {x: -10, y: 32}
+        - {x: -10, y: 44}
+      - - {x: -4, y: 38}
+        - {x: -3, y: 33}
+        - {x: 0, y: 32}
+        - {x: 3, y: 33}
+        - {x: 3, y: 42}
+        - {x: 1, y: 44}
+        - {x: -4, y: 42}
+      - - {x: 9, y: 44}
+        - {x: 5, y: 42}
+        - {x: 3, y: 38}
+        - {x: 3, y: 34}
+        - {x: 6, y: 32}
+        - {x: 21, y: 32}
+        - {x: 21, y: 43}
+        - {x: 18, y: 44}
     - name: sprite_base_addon_2012_12_14_45
       rect:
         serializedVersion: 2
@@ -702,8 +1548,89 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 21}
+        - {x: -30, y: 19}
+        - {x: -27, y: 20}
+        - {x: -27, y: 29}
+        - {x: -29, y: 31}
+        - {x: -32, y: 30}
+      - - {x: -24, y: 19}
+        - {x: -18, y: 19}
+        - {x: -16, y: 20}
+        - {x: -16, y: 28}
+        - {x: -17, y: 31}
+        - {x: -25, y: 31}
+        - {x: -25, y: 21}
+      - - {x: -8, y: 29}
+        - {x: -11, y: 26}
+        - {x: -11, y: 22}
+        - {x: -8, y: 19}
+        - {x: -5, y: 19}
+        - {x: -2, y: 22}
+        - {x: -2, y: 26}
+        - {x: -5, y: 29}
+      - - {x: 0, y: 29}
+        - {x: -2, y: 27}
+        - {x: -2, y: 21}
+        - {x: 0, y: 19}
+        - {x: 3, y: 20}
+        - {x: 5, y: 24}
+        - {x: 5, y: 28}
+        - {x: 4, y: 29}
+      - - {x: 24, y: 30}
+        - {x: 21, y: 31}
+        - {x: 14, y: 31}
+        - {x: 12, y: 30}
+        - {x: 11, y: 27}
+        - {x: 11, y: 24}
+        - {x: 12, y: 19}
+        - {x: 23, y: 19}
+        - {x: 26, y: 21}
+        - {x: 26, y: 26}
+      - - {x: -25, y: 34}
+        - {x: -23, y: 32}
+        - {x: -20, y: 33}
+        - {x: -20, y: 42}
+        - {x: -22, y: 44}
+        - {x: -25, y: 43}
+      - - {x: -20, y: 42}
+        - {x: -20, y: 32}
+        - {x: -11, y: 32}
+        - {x: -11, y: 39}
+        - {x: -12, y: 42}
+      - - {x: 2, y: 42}
+        - {x: -4, y: 42}
+        - {x: -5, y: 39}
+        - {x: -5, y: 35}
+        - {x: -2, y: 32}
+        - {x: 3, y: 32}
+        - {x: 5, y: 34}
+        - {x: 5, y: 41}
+      - - {x: 5, y: 34}
+        - {x: 7, y: 32}
+        - {x: 10, y: 33}
+        - {x: 10, y: 42}
+        - {x: 8, y: 44}
+        - {x: 5, y: 43}
+      - - {x: 12, y: 42}
+        - {x: 10, y: 40}
+        - {x: 10, y: 34}
+        - {x: 12, y: 32}
+        - {x: 15, y: 33}
+        - {x: 17, y: 39}
+        - {x: 17, y: 40}
+        - {x: 15, y: 42}
+      - - {x: 25, y: 44}
+        - {x: 22, y: 39}
+        - {x: 22, y: 36}
+        - {x: 26, y: 32}
+        - {x: 29, y: 32}
+        - {x: 32, y: 34}
+        - {x: 32, y: 40}
+        - {x: 28, y: 44}
     - name: sprite_base_addon_2012_12_14_46
       rect:
         serializedVersion: 2
@@ -712,8 +1639,96 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 30}
+        - {x: -32, y: 18}
+        - {x: -31, y: 17}
+        - {x: -30, y: 17}
+        - {x: -27, y: 20}
+        - {x: -27, y: 29}
+        - {x: -29, y: 31}
+      - - {x: -6, y: 29}
+        - {x: -6, y: 17}
+        - {x: -3, y: 17}
+        - {x: 3, y: 22}
+        - {x: 3, y: 26}
+        - {x: 0, y: 29}
+      - - {x: -26, y: 29}
+        - {x: -27, y: 28}
+        - {x: -27, y: 22}
+        - {x: -24, y: 19}
+        - {x: -21, y: 19}
+        - {x: -18, y: 22}
+        - {x: -18, y: 29}
+      - - {x: -17, y: 29}
+        - {x: -17, y: 19}
+        - {x: -8, y: 19}
+        - {x: -6, y: 20}
+        - {x: -6, y: 26}
+        - {x: -8, y: 29}
+      - - {x: 12, y: 29}
+        - {x: 9, y: 26}
+        - {x: 9, y: 22}
+        - {x: 12, y: 19}
+        - {x: 15, y: 19}
+        - {x: 18, y: 22}
+        - {x: 18, y: 26}
+        - {x: 15, y: 29}
+      - - {x: 20, y: 29}
+        - {x: 18, y: 27}
+        - {x: 18, y: 19}
+        - {x: 26, y: 19}
+        - {x: 27, y: 20}
+        - {x: 27, y: 26}
+        - {x: 24, y: 29}
+      - - {x: 28, y: 26}
+        - {x: 28, y: 22}
+        - {x: 31, y: 19}
+        - {x: 32, y: 19}
+        - {x: 32, y: 29}
+        - {x: 31, y: 29}
+      - - {x: 4, y: 42}
+        - {x: 4, y: 30}
+        - {x: 7, y: 30}
+        - {x: 13, y: 33}
+        - {x: 13, y: 41}
+        - {x: 10, y: 42}
+      - - {x: -25, y: 43}
+        - {x: -25, y: 36}
+        - {x: -24, y: 33}
+        - {x: -21, y: 32}
+        - {x: -18, y: 33}
+        - {x: -16, y: 42}
+        - {x: -18, y: 44}
+        - {x: -23, y: 44}
+      - - {x: -11, y: 32}
+        - {x: 4, y: 32}
+        - {x: 4, y: 40}
+        - {x: 3, y: 42}
+        - {x: -11, y: 42}
+      - - {x: 17, y: 42}
+        - {x: 14, y: 39}
+        - {x: 14, y: 35}
+        - {x: 17, y: 32}
+        - {x: 20, y: 32}
+        - {x: 23, y: 35}
+        - {x: 23, y: 39}
+        - {x: 20, y: 42}
+      - - {x: 23, y: 42}
+        - {x: 23, y: 33}
+        - {x: 26, y: 32}
+        - {x: 32, y: 32}
+        - {x: 32, y: 41}
+        - {x: 30, y: 42}
+      - - {x: -32, y: 41}
+        - {x: -32, y: 36}
+        - {x: -30, y: 35}
+        - {x: -27, y: 35}
+        - {x: -25, y: 38}
+        - {x: -25, y: 40}
+        - {x: -28, y: 41}
     - name: sprite_base_addon_2012_12_14_47
       rect:
         serializedVersion: 2
@@ -722,8 +1737,31 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 31}
+        - {x: -32, y: 30}
+        - {x: -32, y: 19}
+        - {x: -29, y: 19}
+        - {x: -27, y: 21}
+        - {x: -27, y: 29}
+        - {x: -28, y: 31}
+      - - {x: -18, y: 44}
+        - {x: -20, y: 38}
+        - {x: -21, y: 33}
+        - {x: -19, y: 31}
+        - {x: -16, y: 32}
+        - {x: -13, y: 40}
+        - {x: -13, y: 43}
+        - {x: -15, y: 45}
+      - - {x: -31, y: 43}
+        - {x: -32, y: 39}
+        - {x: -31, y: 34}
+        - {x: -29, y: 32}
+        - {x: -25, y: 32}
+        - {x: -25, y: 42}
+        - {x: -28, y: 44}
     - name: sprite_base_addon_2012_12_14_48
       rect:
         serializedVersion: 2
@@ -732,8 +1770,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_49
       rect:
         serializedVersion: 2
@@ -742,8 +1787,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 13}
+        - {x: -8, y: 8}
+        - {x: 7, y: 8}
+        - {x: 7, y: 35}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_50
       rect:
         serializedVersion: 2
@@ -752,8 +1805,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 41}
+        - {x: -14, y: 38}
+        - {x: -14, y: 11}
+        - {x: -9, y: 8}
+        - {x: -2, y: 8}
+        - {x: 7, y: 11}
+        - {x: 7, y: 31}
+        - {x: 2, y: 41}
     - name: sprite_base_addon_2012_12_14_51
       rect:
         serializedVersion: 2
@@ -762,8 +1824,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 37}
+        - {x: -21, y: 21}
+        - {x: -15, y: 8}
+        - {x: 11, y: 8}
+        - {x: 12, y: 11}
+        - {x: 12, y: 26}
+        - {x: -5, y: 37}
     - name: sprite_base_addon_2012_12_14_52
       rect:
         serializedVersion: 2
@@ -772,8 +1842,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 26}
+        - {x: -22, y: 23}
+        - {x: -22, y: 9}
+        - {x: -19, y: 8}
+        - {x: 11, y: 8}
+        - {x: 11, y: 19}
+        - {x: 9, y: 26}
     - name: sprite_base_addon_2012_12_14_53
       rect:
         serializedVersion: 2
@@ -782,8 +1860,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 30}
+        - {x: -19, y: 29}
+        - {x: -22, y: 27}
+        - {x: -22, y: 11}
+        - {x: -20, y: 9}
+        - {x: 8, y: 9}
+        - {x: 11, y: 15}
+        - {x: 11, y: 21}
+        - {x: 9, y: 30}
     - name: sprite_base_addon_2012_12_14_54
       rect:
         serializedVersion: 2
@@ -792,8 +1880,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 26}
+        - {x: -22, y: 23}
+        - {x: -22, y: 9}
+        - {x: -19, y: 8}
+        - {x: 11, y: 8}
+        - {x: 11, y: 19}
+        - {x: 9, y: 26}
     - name: sprite_base_addon_2012_12_14_55
       rect:
         serializedVersion: 2
@@ -802,8 +1898,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 25}
+        - {x: -22, y: 23}
+        - {x: -14, y: 14}
+        - {x: -6, y: 8}
+        - {x: 11, y: 8}
+        - {x: 11, y: 18}
+        - {x: 4, y: 31}
+        - {x: -7, y: 34}
+        - {x: -16, y: 34}
+        - {x: -20, y: 29}
     - name: sprite_base_addon_2012_12_14_56
       rect:
         serializedVersion: 2
@@ -812,8 +1919,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 39}
+        - {x: -11, y: 37}
+        - {x: -11, y: 19}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 10, y: 9}
+        - {x: 10, y: 38}
+        - {x: 4, y: 39}
     - name: sprite_base_addon_2012_12_14_57
       rect:
         serializedVersion: 2
@@ -822,8 +1938,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 31}
+        - {x: 31, y: 29}
+        - {x: 32, y: 29}
+        - {x: 32, y: 43}
+        - {x: 29, y: 42}
     - name: sprite_base_addon_2012_12_14_58
       rect:
         serializedVersion: 2
@@ -832,8 +1954,53 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 30}
+        - {x: -29, y: 33}
+        - {x: -32, y: 34}
+        - {x: -32, y: 29}
+      - - {x: 10, y: 43}
+        - {x: 8, y: 41}
+        - {x: 8, y: 32}
+        - {x: 9, y: 29}
+        - {x: 12, y: 29}
+        - {x: 14, y: 31}
+        - {x: 14, y: 41}
+        - {x: 12, y: 43}
+      - - {x: -22, y: 42}
+        - {x: -25, y: 42}
+        - {x: -29, y: 37}
+        - {x: -29, y: 33}
+        - {x: -26, y: 30}
+        - {x: -22, y: 30}
+        - {x: -20, y: 32}
+        - {x: -20, y: 41}
+      - - {x: -17, y: 40}
+        - {x: -20, y: 37}
+        - {x: -20, y: 33}
+        - {x: -17, y: 30}
+        - {x: -14, y: 30}
+        - {x: -11, y: 33}
+        - {x: -11, y: 37}
+        - {x: -14, y: 40}
+      - - {x: -5, y: 42}
+        - {x: -10, y: 40}
+        - {x: -10, y: 31}
+        - {x: -9, y: 30}
+        - {x: 8, y: 30}
+        - {x: 8, y: 42}
+      - - {x: 25, y: 42}
+        - {x: 20, y: 37}
+        - {x: 20, y: 33}
+        - {x: 23, y: 30}
+        - {x: 29, y: 30}
+        - {x: 29, y: 42}
+      - - {x: -29, y: 39}
+        - {x: -29, y: 42}
+        - {x: -32, y: 43}
+        - {x: -32, y: 38}
     - name: sprite_base_addon_2012_12_14_59
       rect:
         serializedVersion: 2
@@ -842,8 +2009,51 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 40}
+        - {x: -32, y: 31}
+        - {x: -31, y: 30}
+        - {x: -28, y: 30}
+        - {x: -25, y: 33}
+        - {x: -25, y: 37}
+        - {x: -26, y: 40}
+      - - {x: -23, y: 40}
+        - {x: -25, y: 39}
+        - {x: -25, y: 34}
+        - {x: -23, y: 30}
+        - {x: -14, y: 30}
+        - {x: -14, y: 40}
+      - - {x: -14, y: 40}
+        - {x: -14, y: 30}
+        - {x: -6, y: 30}
+        - {x: -5, y: 31}
+        - {x: -5, y: 37}
+        - {x: -6, y: 40}
+      - - {x: 1, y: 36}
+        - {x: 2, y: 31}
+        - {x: 5, y: 30}
+        - {x: 8, y: 31}
+        - {x: 8, y: 40}
+        - {x: 6, y: 42}
+        - {x: 1, y: 40}
+      - - {x: 18, y: 41}
+        - {x: 18, y: 34}
+        - {x: 19, y: 31}
+        - {x: 22, y: 30}
+        - {x: 25, y: 31}
+        - {x: 27, y: 40}
+        - {x: 25, y: 42}
+        - {x: 20, y: 42}
+      - - {x: 10, y: 39}
+        - {x: 9, y: 37}
+        - {x: 9, y: 35}
+        - {x: 10, y: 33}
+        - {x: 17, y: 33}
+        - {x: 19, y: 34}
+        - {x: 19, y: 38}
+        - {x: 16, y: 39}
     - name: sprite_base_addon_2012_12_14_60
       rect:
         serializedVersion: 2
@@ -852,8 +2062,52 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 40}
+        - {x: -19, y: 39}
+        - {x: -19, y: 29}
+        - {x: -17, y: 28}
+        - {x: -11, y: 28}
+        - {x: -10, y: 29}
+        - {x: -10, y: 40}
+      - - {x: 21, y: 40}
+        - {x: 21, y: 28}
+        - {x: 24, y: 28}
+        - {x: 30, y: 31}
+        - {x: 30, y: 39}
+        - {x: 27, y: 40}
+      - - {x: -30, y: 42}
+        - {x: -32, y: 36}
+        - {x: -32, y: 30}
+        - {x: -31, y: 29}
+        - {x: -27, y: 30}
+        - {x: -25, y: 38}
+        - {x: -25, y: 42}
+        - {x: -27, y: 43}
+      - - {x: -7, y: 40}
+        - {x: -10, y: 37}
+        - {x: -10, y: 33}
+        - {x: -7, y: 30}
+        - {x: -4, y: 30}
+        - {x: -1, y: 33}
+        - {x: -1, y: 37}
+        - {x: -4, y: 40}
+      - - {x: 0, y: 41}
+        - {x: -1, y: 38}
+        - {x: -1, y: 34}
+        - {x: 1, y: 30}
+        - {x: 6, y: 30}
+        - {x: 6, y: 40}
+        - {x: 3, y: 42}
+      - - {x: 12, y: 40}
+        - {x: 11, y: 39}
+        - {x: 11, y: 33}
+        - {x: 14, y: 30}
+        - {x: 17, y: 30}
+        - {x: 20, y: 33}
+        - {x: 20, y: 40}
     - name: sprite_base_addon_2012_12_14_61
       rect:
         serializedVersion: 2
@@ -862,8 +2116,13 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 42}
+        - {x: -28, y: 30}
+        - {x: -3, y: 30}
+        - {x: -3, y: 42}
     - name: sprite_base_addon_2012_12_14_62
       rect:
         serializedVersion: 2
@@ -872,8 +2131,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_63
       rect:
         serializedVersion: 2
@@ -882,8 +2148,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 40}
+        - {x: -13, y: 30}
+        - {x: -13, y: 11}
+        - {x: -11, y: 8}
+        - {x: 7, y: 8}
+        - {x: 7, y: 39}
+        - {x: 5, y: 40}
     - name: sprite_base_addon_2012_12_14_64
       rect:
         serializedVersion: 2
@@ -892,8 +2166,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 39}
+        - {x: -13, y: 8}
+        - {x: 5, y: 8}
+        - {x: 7, y: 9}
+        - {x: 7, y: 38}
+        - {x: 4, y: 39}
     - name: sprite_base_addon_2012_12_14_65
       rect:
         serializedVersion: 2
@@ -902,8 +2183,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 39}
+        - {x: -13, y: 8}
+        - {x: 5, y: 8}
+        - {x: 7, y: 9}
+        - {x: 7, y: 38}
+        - {x: 4, y: 39}
     - name: sprite_base_addon_2012_12_14_66
       rect:
         serializedVersion: 2
@@ -912,8 +2200,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 39}
+        - {x: -13, y: 8}
+        - {x: 5, y: 8}
+        - {x: 7, y: 9}
+        - {x: 7, y: 38}
+        - {x: 4, y: 39}
     - name: sprite_base_addon_2012_12_14_67
       rect:
         serializedVersion: 2
@@ -922,8 +2217,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 40}
+        - {x: -13, y: 31}
+        - {x: -13, y: 12}
+        - {x: -9, y: 8}
+        - {x: 10, y: 8}
+        - {x: 12, y: 13}
+        - {x: 12, y: 34}
+        - {x: 8, y: 40}
     - name: sprite_base_addon_2012_12_14_68
       rect:
         serializedVersion: 2
@@ -932,8 +2236,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 40}
+        - {x: -12, y: 38}
+        - {x: -12, y: 8}
+        - {x: 12, y: 8}
+        - {x: 12, y: 40}
     - name: sprite_base_addon_2012_12_14_69
       rect:
         serializedVersion: 2
@@ -942,8 +2252,43 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 30}
+        - {x: -3, y: 22}
+        - {x: -2, y: 20}
+        - {x: 0, y: 20}
+        - {x: 6, y: 23}
+        - {x: 6, y: 29}
+        - {x: 3, y: 32}
+        - {x: -1, y: 32}
+      - - {x: -9, y: 23}
+        - {x: -8, y: 21}
+        - {x: -5, y: 21}
+        - {x: -3, y: 22}
+        - {x: -3, y: 35}
+        - {x: -7, y: 35}
+        - {x: -9, y: 33}
+      - - {x: 9, y: 32}
+        - {x: 6, y: 29}
+        - {x: 6, y: 25}
+        - {x: 9, y: 22}
+        - {x: 12, y: 22}
+        - {x: 15, y: 25}
+        - {x: 15, y: 29}
+        - {x: 12, y: 32}
+      - - {x: 16, y: 32}
+        - {x: 16, y: 26}
+        - {x: 18, y: 22}
+        - {x: 27, y: 22}
+        - {x: 27, y: 32}
+      - - {x: 27, y: 29}
+        - {x: 27, y: 25}
+        - {x: 30, y: 22}
+        - {x: 32, y: 22}
+        - {x: 32, y: 32}
+        - {x: 30, y: 32}
     - name: sprite_base_addon_2012_12_14_70
       rect:
         serializedVersion: 2
@@ -952,8 +2297,54 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 35}
+        - {x: 18, y: 33}
+        - {x: 19, y: 31}
+        - {x: 16, y: 34}
+        - {x: 13, y: 33}
+        - {x: 12, y: 29}
+        - {x: 14, y: 21}
+        - {x: 24, y: 21}
+        - {x: 24, y: 35}
+      - - {x: -32, y: 32}
+        - {x: -32, y: 22}
+        - {x: -31, y: 22}
+        - {x: -28, y: 25}
+        - {x: -28, y: 29}
+        - {x: -31, y: 32}
+      - - {x: -26, y: 32}
+        - {x: -28, y: 30}
+        - {x: -28, y: 24}
+        - {x: -26, y: 22}
+        - {x: -23, y: 23}
+        - {x: -21, y: 27}
+        - {x: -21, y: 31}
+        - {x: -22, y: 32}
+      - - {x: -13, y: 32}
+        - {x: -16, y: 29}
+        - {x: -16, y: 25}
+        - {x: -13, y: 22}
+        - {x: -10, y: 22}
+        - {x: -7, y: 25}
+        - {x: -7, y: 29}
+        - {x: -10, y: 32}
+      - - {x: -4, y: 34}
+        - {x: -6, y: 32}
+        - {x: -6, y: 22}
+        - {x: 3, y: 22}
+        - {x: 3, y: 30}
+        - {x: 2, y: 34}
+      - - {x: 6, y: 32}
+        - {x: 3, y: 29}
+        - {x: 3, y: 25}
+        - {x: 6, y: 22}
+        - {x: 9, y: 22}
+        - {x: 12, y: 25}
+        - {x: 12, y: 29}
+        - {x: 9, y: 32}
     - name: sprite_base_addon_2012_12_14_71
       rect:
         serializedVersion: 2
@@ -962,8 +2353,41 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 32}
+        - {x: 3, y: 32}
+        - {x: 0, y: 31}
+        - {x: 0, y: 23}
+        - {x: 1, y: 20}
+        - {x: 5, y: 20}
+        - {x: 9, y: 26}
+        - {x: 9, y: 30}
+      - - {x: -19, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: 22}
+        - {x: -21, y: 22}
+        - {x: -18, y: 24}
+        - {x: -18, y: 29}
+      - - {x: -13, y: 34}
+        - {x: -18, y: 32}
+        - {x: -18, y: 22}
+        - {x: 0, y: 22}
+        - {x: 0, y: 34}
+      - - {x: 16, y: 28}
+        - {x: 17, y: 23}
+        - {x: 20, y: 22}
+        - {x: 23, y: 23}
+        - {x: 23, y: 32}
+        - {x: 21, y: 34}
+        - {x: 16, y: 32}
+      - - {x: 24, y: 31}
+        - {x: 23, y: 29}
+        - {x: 23, y: 27}
+        - {x: 24, y: 25}
+        - {x: 32, y: 25}
+        - {x: 32, y: 31}
     - name: sprite_base_addon_2012_12_14_72
       rect:
         serializedVersion: 2
@@ -972,8 +2396,52 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 34}
+        - {x: -17, y: 28}
+        - {x: -18, y: 23}
+        - {x: -16, y: 21}
+        - {x: -12, y: 22}
+        - {x: -10, y: 30}
+        - {x: -10, y: 34}
+        - {x: -12, y: 35}
+      - - {x: 24, y: 32}
+        - {x: 23, y: 31}
+        - {x: 23, y: 21}
+        - {x: 32, y: 21}
+        - {x: 32, y: 31}
+        - {x: 28, y: 32}
+      - - {x: -29, y: 34}
+        - {x: -32, y: 31}
+        - {x: -32, y: 25}
+        - {x: -29, y: 22}
+        - {x: -26, y: 22}
+        - {x: -23, y: 25}
+        - {x: -23, y: 31}
+        - {x: -26, y: 34}
+      - - {x: -2, y: 32}
+        - {x: -5, y: 29}
+        - {x: -5, y: 25}
+        - {x: -2, y: 22}
+        - {x: 1, y: 22}
+        - {x: 4, y: 25}
+        - {x: 4, y: 29}
+        - {x: 1, y: 32}
+      - - {x: 6, y: 34}
+        - {x: 4, y: 32}
+        - {x: 4, y: 22}
+        - {x: 13, y: 22}
+        - {x: 13, y: 30}
+        - {x: 12, y: 34}
+      - - {x: 20, y: 32}
+        - {x: 13, y: 32}
+        - {x: 13, y: 24}
+        - {x: 14, y: 22}
+        - {x: 21, y: 22}
+        - {x: 23, y: 24}
+        - {x: 23, y: 31}
     - name: sprite_base_addon_2012_12_14_73
       rect:
         serializedVersion: 2
@@ -982,8 +2450,34 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: 20}
+        - {x: -29, y: 20}
+        - {x: -26, y: 23}
+        - {x: -26, y: 30}
+        - {x: -28, y: 32}
+      - - {x: -23, y: 32}
+        - {x: -26, y: 29}
+        - {x: -26, y: 25}
+        - {x: -23, y: 22}
+        - {x: -20, y: 22}
+        - {x: -17, y: 23}
+        - {x: -17, y: 29}
+        - {x: -18, y: 32}
+      - - {x: -11, y: 34}
+        - {x: -11, y: 24}
+        - {x: -10, y: 22}
+        - {x: 15, y: 22}
+        - {x: 15, y: 34}
+      - - {x: 21, y: 32}
+        - {x: 20, y: 30}
+        - {x: 20, y: 24}
+        - {x: 21, y: 22}
+        - {x: 32, y: 22}
+        - {x: 32, y: 32}
     - name: sprite_base_addon_2012_12_14_74
       rect:
         serializedVersion: 2
@@ -992,8 +2486,60 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 32}
+        - {x: -28, y: 30}
+        - {x: -28, y: 21}
+        - {x: -26, y: 20}
+        - {x: -23, y: 20}
+        - {x: -19, y: 25}
+        - {x: -19, y: 29}
+        - {x: -22, y: 32}
+      - - {x: 14, y: 34}
+        - {x: 11, y: 25}
+        - {x: 11, y: 22}
+        - {x: 13, y: 21}
+        - {x: 16, y: 22}
+        - {x: 19, y: 30}
+        - {x: 19, y: 33}
+        - {x: 17, y: 35}
+      - - {x: -16, y: 32}
+        - {x: -19, y: 31}
+        - {x: -19, y: 24}
+        - {x: -18, y: 22}
+        - {x: -13, y: 22}
+        - {x: -10, y: 25}
+        - {x: -10, y: 29}
+        - {x: -12, y: 32}
+      - - {x: -3, y: 32}
+        - {x: -9, y: 32}
+        - {x: -10, y: 29}
+        - {x: -10, y: 25}
+        - {x: -7, y: 22}
+        - {x: -2, y: 22}
+        - {x: 0, y: 24}
+        - {x: 0, y: 31}
+      - - {x: 0, y: 33}
+        - {x: -1, y: 30}
+        - {x: -1, y: 26}
+        - {x: 1, y: 22}
+        - {x: 6, y: 22}
+        - {x: 6, y: 32}
+        - {x: 3, y: 34}
+      - - {x: 27, y: 32}
+        - {x: 24, y: 29}
+        - {x: 24, y: 25}
+        - {x: 27, y: 22}
+        - {x: 30, y: 22}
+        - {x: 32, y: 23}
+        - {x: 32, y: 32}
+      - - {x: -32, y: 23}
+        - {x: -29, y: 24}
+        - {x: -29, y: 29}
+        - {x: -31, y: 31}
+        - {x: -32, y: 31}
     - name: sprite_base_addon_2012_12_14_75
       rect:
         serializedVersion: 2
@@ -1002,8 +2548,49 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 34}
+        - {x: -31, y: 32}
+        - {x: -31, y: 24}
+        - {x: -30, y: 22}
+        - {x: -25, y: 22}
+        - {x: -22, y: 23}
+        - {x: -22, y: 30}
+        - {x: -28, y: 34}
+      - - {x: -19, y: 32}
+        - {x: -22, y: 31}
+        - {x: -22, y: 24}
+        - {x: -21, y: 22}
+        - {x: -16, y: 22}
+        - {x: -13, y: 25}
+        - {x: -13, y: 29}
+        - {x: -15, y: 32}
+      - - {x: -11, y: 33}
+        - {x: -12, y: 30}
+        - {x: -12, y: 26}
+        - {x: -10, y: 22}
+        - {x: -5, y: 22}
+        - {x: -5, y: 32}
+        - {x: -8, y: 34}
+      - - {x: 11, y: 34}
+        - {x: 0, y: 34}
+        - {x: 0, y: 25}
+        - {x: 1, y: 22}
+        - {x: 12, y: 22}
+        - {x: 16, y: 23}
+        - {x: 17, y: 28}
+        - {x: 17, y: 30}
+        - {x: 14, y: 33}
+      - - {x: 16, y: 33}
+        - {x: 16, y: 26}
+        - {x: 17, y: 23}
+        - {x: 20, y: 22}
+        - {x: 23, y: 23}
+        - {x: 25, y: 32}
+        - {x: 23, y: 34}
+        - {x: 18, y: 34}
     - name: sprite_base_addon_2012_12_14_76
       rect:
         serializedVersion: 2
@@ -1012,8 +2599,43 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 20}
+        - {x: -15, y: 20}
+        - {x: -9, y: 24}
+        - {x: -9, y: 29}
+        - {x: -11, y: 32}
+        - {x: -18, y: 32}
+      - - {x: -19, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: 22}
+        - {x: -21, y: 22}
+        - {x: -18, y: 24}
+        - {x: -18, y: 29}
+      - - {x: -6, y: 32}
+        - {x: -9, y: 29}
+        - {x: -9, y: 25}
+        - {x: -6, y: 22}
+        - {x: -3, y: 22}
+        - {x: 0, y: 25}
+        - {x: 0, y: 29}
+        - {x: -3, y: 32}
+      - - {x: 8, y: 32}
+        - {x: 1, y: 32}
+        - {x: 1, y: 24}
+        - {x: 2, y: 22}
+        - {x: 9, y: 22}
+        - {x: 11, y: 24}
+        - {x: 11, y: 31}
+      - - {x: 11, y: 33}
+        - {x: 10, y: 30}
+        - {x: 10, y: 26}
+        - {x: 12, y: 22}
+        - {x: 17, y: 22}
+        - {x: 17, y: 32}
+        - {x: 14, y: 34}
     - name: sprite_base_addon_2012_12_14_77
       rect:
         serializedVersion: 2
@@ -1022,8 +2644,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_78
       rect:
         serializedVersion: 2
@@ -1032,8 +2661,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_79
       rect:
         serializedVersion: 2
@@ -1042,8 +2678,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 15}
+        - {x: -12, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 41}
     - name: sprite_base_addon_2012_12_14_80
       rect:
         serializedVersion: 2
@@ -1052,8 +2695,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_81
       rect:
         serializedVersion: 2
@@ -1062,8 +2712,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 40}
+        - {x: -15, y: 34}
+        - {x: -15, y: 14}
+        - {x: -11, y: 8}
+        - {x: 8, y: 8}
+        - {x: 14, y: 19}
+        - {x: 14, y: 28}
+        - {x: 8, y: 40}
     - name: sprite_base_addon_2012_12_14_82
       rect:
         serializedVersion: 2
@@ -1072,8 +2731,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 40}
+        - {x: -14, y: 27}
+        - {x: -14, y: 10}
+        - {x: -12, y: 8}
+        - {x: 9, y: 8}
+        - {x: 14, y: 19}
+        - {x: 14, y: 30}
+        - {x: 5, y: 40}
     - name: sprite_base_addon_2012_12_14_83
       rect:
         serializedVersion: 2
@@ -1082,8 +2750,36 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 27}
+        - {x: -8, y: 25}
+        - {x: -5, y: 25}
+        - {x: -3, y: 26}
+        - {x: -3, y: 39}
+        - {x: -7, y: 39}
+        - {x: -9, y: 37}
+      - - {x: 11, y: 38}
+        - {x: -3, y: 38}
+        - {x: -3, y: 26}
+        - {x: 13, y: 26}
+        - {x: 13, y: 34}
+      - - {x: 16, y: 36}
+        - {x: 13, y: 33}
+        - {x: 13, y: 29}
+        - {x: 16, y: 26}
+        - {x: 19, y: 26}
+        - {x: 22, y: 29}
+        - {x: 22, y: 33}
+        - {x: 19, y: 36}
+      - - {x: 23, y: 37}
+        - {x: 22, y: 34}
+        - {x: 22, y: 30}
+        - {x: 24, y: 26}
+        - {x: 29, y: 26}
+        - {x: 29, y: 36}
+        - {x: 26, y: 38}
     - name: sprite_base_addon_2012_12_14_84
       rect:
         serializedVersion: 2
@@ -1092,8 +2788,56 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 39}
+        - {x: 4, y: 37}
+        - {x: 5, y: 35}
+        - {x: 2, y: 38}
+        - {x: -1, y: 37}
+        - {x: -2, y: 33}
+        - {x: 0, y: 25}
+        - {x: 10, y: 25}
+        - {x: 10, y: 39}
+      - - {x: -27, y: 36}
+        - {x: -30, y: 33}
+        - {x: -30, y: 29}
+        - {x: -27, y: 26}
+        - {x: -24, y: 26}
+        - {x: -21, y: 29}
+        - {x: -21, y: 33}
+        - {x: -24, y: 36}
+      - - {x: -19, y: 38}
+        - {x: -21, y: 36}
+        - {x: -21, y: 26}
+        - {x: -12, y: 26}
+        - {x: -12, y: 34}
+        - {x: -13, y: 38}
+      - - {x: -8, y: 36}
+        - {x: -11, y: 33}
+        - {x: -11, y: 29}
+        - {x: -8, y: 26}
+        - {x: -5, y: 26}
+        - {x: -2, y: 29}
+        - {x: -2, y: 33}
+        - {x: -5, y: 36}
+      - - {x: 18, y: 36}
+        - {x: 16, y: 34}
+        - {x: 16, y: 28}
+        - {x: 18, y: 26}
+        - {x: 21, y: 27}
+        - {x: 23, y: 33}
+        - {x: 23, y: 34}
+        - {x: 21, y: 36}
+      - - {x: 26, y: 36}
+        - {x: 23, y: 33}
+        - {x: 23, y: 29}
+        - {x: 26, y: 26}
+        - {x: 29, y: 26}
+        - {x: 32, y: 29}
+        - {x: 32, y: 33}
+        - {x: 29, y: 36}
     - name: sprite_base_addon_2012_12_14_85
       rect:
         serializedVersion: 2
@@ -1102,8 +2846,39 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 36}
+        - {x: -14, y: 35}
+        - {x: -14, y: 27}
+        - {x: -13, y: 24}
+        - {x: -10, y: 24}
+        - {x: -6, y: 26}
+        - {x: -5, y: 31}
+        - {x: -5, y: 36}
+      - - {x: -31, y: 38}
+        - {x: -32, y: 36}
+        - {x: -32, y: 26}
+        - {x: -14, y: 26}
+        - {x: -14, y: 38}
+      - - {x: 2, y: 32}
+        - {x: 3, y: 27}
+        - {x: 6, y: 26}
+        - {x: 9, y: 27}
+        - {x: 9, y: 36}
+        - {x: 7, y: 38}
+        - {x: 2, y: 36}
+      - - {x: 9, y: 29}
+        - {x: 11, y: 27}
+        - {x: 15, y: 26}
+        - {x: 25, y: 26}
+        - {x: 27, y: 29}
+        - {x: 27, y: 35}
+        - {x: 26, y: 38}
+        - {x: 15, y: 38}
+        - {x: 10, y: 37}
+        - {x: 9, y: 33}
     - name: sprite_base_addon_2012_12_14_86
       rect:
         serializedVersion: 2
@@ -1112,8 +2887,55 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 38}
+        - {x: -32, y: 32}
+        - {x: -32, y: 26}
+        - {x: -31, y: 25}
+        - {x: -28, y: 26}
+        - {x: -25, y: 34}
+        - {x: -25, y: 37}
+        - {x: -27, y: 39}
+      - - {x: -16, y: 36}
+        - {x: -19, y: 33}
+        - {x: -19, y: 29}
+        - {x: -16, y: 26}
+        - {x: -13, y: 26}
+        - {x: -10, y: 29}
+        - {x: -10, y: 33}
+        - {x: -13, y: 36}
+      - - {x: -9, y: 38}
+        - {x: -10, y: 36}
+        - {x: -10, y: 28}
+        - {x: -9, y: 26}
+        - {x: -4, y: 26}
+        - {x: -1, y: 27}
+        - {x: -1, y: 34}
+        - {x: -7, y: 38}
+      - - {x: 2, y: 36}
+        - {x: -1, y: 33}
+        - {x: -1, y: 29}
+        - {x: 2, y: 26}
+        - {x: 5, y: 26}
+        - {x: 8, y: 29}
+        - {x: 8, y: 33}
+        - {x: 5, y: 36}
+      - - {x: 9, y: 37}
+        - {x: 8, y: 34}
+        - {x: 8, y: 30}
+        - {x: 10, y: 26}
+        - {x: 15, y: 26}
+        - {x: 15, y: 36}
+        - {x: 12, y: 38}
+      - - {x: 21, y: 38}
+        - {x: 21, y: 27}
+        - {x: 24, y: 26}
+        - {x: 29, y: 26}
+        - {x: 32, y: 29}
+        - {x: 32, y: 37}
+        - {x: 31, y: 38}
     - name: sprite_base_addon_2012_12_14_87
       rect:
         serializedVersion: 2
@@ -1122,8 +2944,42 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 36}
+        - {x: 3, y: 24}
+        - {x: 6, y: 24}
+        - {x: 12, y: 27}
+        - {x: 12, y: 35}
+        - {x: 9, y: 36}
+      - - {x: -28, y: 38}
+        - {x: -32, y: 36}
+        - {x: -32, y: 28}
+        - {x: -30, y: 26}
+        - {x: -20, y: 26}
+        - {x: -18, y: 28}
+        - {x: -18, y: 37}
+        - {x: -21, y: 38}
+      - - {x: -12, y: 36}
+        - {x: -12, y: 26}
+        - {x: 2, y: 26}
+        - {x: 3, y: 28}
+        - {x: 3, y: 36}
+      - - {x: 15, y: 36}
+        - {x: 12, y: 33}
+        - {x: 12, y: 29}
+        - {x: 15, y: 26}
+        - {x: 18, y: 26}
+        - {x: 21, y: 29}
+        - {x: 21, y: 33}
+        - {x: 18, y: 36}
+      - - {x: 21, y: 36}
+        - {x: 21, y: 27}
+        - {x: 23, y: 26}
+        - {x: 31, y: 26}
+        - {x: 31, y: 35}
+        - {x: 29, y: 36}
     - name: sprite_base_addon_2012_12_14_88
       rect:
         serializedVersion: 2
@@ -1132,8 +2988,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 37}
+        - {x: -32, y: 28}
+        - {x: -30, y: 26}
+        - {x: -26, y: 26}
+        - {x: -26, y: 36}
+        - {x: -29, y: 38}
     - name: sprite_base_addon_2012_12_14_89
       rect:
         serializedVersion: 2
@@ -1142,8 +3005,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_90
       rect:
         serializedVersion: 2
@@ -1152,8 +3022,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 39}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 31}
     - name: sprite_base_addon_2012_12_14_91
       rect:
         serializedVersion: 2
@@ -1162,8 +3040,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 38}
+        - {x: -13, y: 36}
+        - {x: -13, y: 11}
+        - {x: -10, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 32}
+        - {x: 4, y: 38}
     - name: sprite_base_addon_2012_12_14_92
       rect:
         serializedVersion: 2
@@ -1172,8 +3058,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 39}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 31}
     - name: sprite_base_addon_2012_12_14_93
       rect:
         serializedVersion: 2
@@ -1182,8 +3076,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 11}
+        - {x: -12, y: 10}
+        - {x: 7, y: 10}
+        - {x: 7, y: 38}
+        - {x: 5, y: 41}
     - name: sprite_base_addon_2012_12_14_94
       rect:
         serializedVersion: 2
@@ -1192,8 +3094,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 42}
+        - {x: -14, y: 42}
+        - {x: -15, y: 38}
+        - {x: -15, y: 15}
+        - {x: -11, y: 11}
+        - {x: 0, y: 11}
+        - {x: 9, y: 13}
+        - {x: 11, y: 17}
+        - {x: 11, y: 26}
     - name: sprite_base_addon_2012_12_14_95
       rect:
         serializedVersion: 2
@@ -1202,8 +3114,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 42}
+        - {x: -13, y: 41}
+        - {x: -13, y: 15}
+        - {x: -12, y: 11}
+        - {x: 4, y: 11}
+        - {x: 11, y: 15}
+        - {x: 11, y: 28}
+        - {x: 3, y: 42}
     - name: sprite_base_addon_2012_12_14_96
       rect:
         serializedVersion: 2
@@ -1212,8 +3133,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 11}
+        - {x: -12, y: 10}
+        - {x: 7, y: 10}
+        - {x: 7, y: 38}
+        - {x: 5, y: 41}
     - name: sprite_base_addon_2012_12_14_97
       rect:
         serializedVersion: 2
@@ -1222,8 +3151,25 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: 24}
+        - {x: 19, y: 22}
+        - {x: 19, y: 12}
+        - {x: 21, y: 10}
+        - {x: 23, y: 10}
+        - {x: 25, y: 12}
+        - {x: 25, y: 21}
+        - {x: 24, y: 24}
+      - - {x: 28, y: 21}
+        - {x: 25, y: 18}
+        - {x: 25, y: 14}
+        - {x: 28, y: 11}
+        - {x: 31, y: 11}
+        - {x: 32, y: 12}
+        - {x: 32, y: 20}
+        - {x: 31, y: 21}
     - name: sprite_base_addon_2012_12_14_98
       rect:
         serializedVersion: 2
@@ -1232,8 +3178,102 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 21}
+        - {x: -20, y: 19}
+        - {x: -20, y: 10}
+        - {x: -18, y: 9}
+        - {x: -15, y: 9}
+        - {x: -11, y: 14}
+        - {x: -11, y: 18}
+        - {x: -14, y: 21}
+      - - {x: 22, y: 21}
+        - {x: 20, y: 19}
+        - {x: 20, y: 10}
+        - {x: 22, y: 9}
+        - {x: 25, y: 9}
+        - {x: 29, y: 14}
+        - {x: 29, y: 18}
+        - {x: 26, y: 21}
+      - - {x: 29, y: 11}
+        - {x: 31, y: 9}
+        - {x: 32, y: 9}
+        - {x: 32, y: 21}
+        - {x: 29, y: 20}
+      - - {x: -29, y: 21}
+        - {x: -30, y: 20}
+        - {x: -30, y: 14}
+        - {x: -29, y: 11}
+        - {x: -23, y: 11}
+        - {x: -21, y: 12}
+        - {x: -21, y: 21}
+      - - {x: -11, y: 18}
+        - {x: -11, y: 14}
+        - {x: -10, y: 11}
+        - {x: -5, y: 11}
+        - {x: -2, y: 12}
+        - {x: -2, y: 18}
+        - {x: -5, y: 21}
+        - {x: -8, y: 21}
+      - - {x: 0, y: 21}
+        - {x: -2, y: 19}
+        - {x: -2, y: 13}
+        - {x: 0, y: 11}
+        - {x: 3, y: 12}
+        - {x: 5, y: 16}
+        - {x: 5, y: 20}
+        - {x: 4, y: 21}
+      - - {x: 11, y: 21}
+        - {x: 10, y: 20}
+        - {x: 10, y: 14}
+        - {x: 13, y: 11}
+        - {x: 16, y: 11}
+        - {x: 19, y: 14}
+        - {x: 19, y: 21}
+      - - {x: 11, y: 51}
+        - {x: 6, y: 51}
+        - {x: 3, y: 50}
+        - {x: 3, y: 42}
+        - {x: 4, y: 39}
+        - {x: 8, y: 39}
+        - {x: 12, y: 45}
+        - {x: 12, y: 49}
+      - - {x: 26, y: 49}
+        - {x: 26, y: 41}
+        - {x: 29, y: 39}
+        - {x: 32, y: 39}
+        - {x: 32, y: 51}
+        - {x: 29, y: 51}
+      - - {x: -13, y: 54}
+        - {x: -15, y: 52}
+        - {x: -15, y: 42}
+        - {x: -13, y: 40}
+        - {x: -11, y: 40}
+        - {x: -9, y: 41}
+        - {x: -9, y: 54}
+      - - {x: -7, y: 53}
+        - {x: -9, y: 50}
+        - {x: -9, y: 44}
+        - {x: -7, y: 41}
+        - {x: -1, y: 41}
+        - {x: 2, y: 42}
+        - {x: 2, y: 51}
+        - {x: 0, y: 53}
+      - - {x: 12, y: 43}
+        - {x: 14, y: 41}
+        - {x: 17, y: 42}
+        - {x: 17, y: 51}
+        - {x: 15, y: 53}
+        - {x: 12, y: 52}
+      - - {x: 19, y: 51}
+        - {x: 17, y: 49}
+        - {x: 17, y: 41}
+        - {x: 25, y: 41}
+        - {x: 26, y: 42}
+        - {x: 26, y: 48}
+        - {x: 23, y: 51}
     - name: sprite_base_addon_2012_12_14_99
       rect:
         serializedVersion: 2
@@ -1242,8 +3282,104 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 22}
+        - {x: 15, y: 20}
+        - {x: 12, y: 23}
+        - {x: 9, y: 22}
+        - {x: 8, y: 18}
+        - {x: 9, y: 13}
+        - {x: 10, y: 10}
+        - {x: 18, y: 10}
+        - {x: 20, y: 11}
+        - {x: 20, y: 22}
+        - {x: 18, y: 24}
+        - {x: 16, y: 24}
+      - - {x: -32, y: 21}
+        - {x: -32, y: 11}
+        - {x: -29, y: 11}
+        - {x: -26, y: 14}
+        - {x: -26, y: 18}
+        - {x: -29, y: 21}
+      - - {x: -25, y: 21}
+        - {x: -26, y: 20}
+        - {x: -26, y: 13}
+        - {x: -25, y: 11}
+        - {x: -18, y: 11}
+        - {x: -17, y: 13}
+        - {x: -17, y: 20}
+        - {x: -20, y: 21}
+      - - {x: -3, y: 21}
+        - {x: -17, y: 21}
+        - {x: -17, y: 11}
+        - {x: -5, y: 11}
+        - {x: -2, y: 13}
+        - {x: -2, y: 18}
+      - - {x: 0, y: 21}
+        - {x: -1, y: 20}
+        - {x: -1, y: 14}
+        - {x: 2, y: 11}
+        - {x: 5, y: 11}
+        - {x: 8, y: 14}
+        - {x: 8, y: 21}
+      - - {x: 28, y: 21}
+        - {x: 26, y: 19}
+        - {x: 26, y: 13}
+        - {x: 28, y: 11}
+        - {x: 31, y: 12}
+        - {x: 32, y: 14}
+        - {x: 32, y: 21}
+      - - {x: -32, y: 40}
+        - {x: -29, y: 41}
+        - {x: -29, y: 49}
+        - {x: -31, y: 51}
+        - {x: -32, y: 51}
+      - - {x: 10, y: 54}
+        - {x: 8, y: 52}
+        - {x: 8, y: 43}
+        - {x: 9, y: 40}
+        - {x: 12, y: 40}
+        - {x: 14, y: 42}
+        - {x: 14, y: 52}
+        - {x: 12, y: 54}
+      - - {x: -20, y: 53}
+        - {x: -22, y: 52}
+        - {x: -22, y: 43}
+        - {x: -21, y: 41}
+        - {x: -17, y: 41}
+        - {x: -14, y: 42}
+        - {x: -14, y: 50}
+        - {x: -17, y: 53}
+      - - {x: -14, y: 43}
+        - {x: -12, y: 41}
+        - {x: -9, y: 42}
+        - {x: -9, y: 51}
+        - {x: -11, y: 53}
+        - {x: -14, y: 52}
+      - - {x: -6, y: 51}
+        - {x: -9, y: 48}
+        - {x: -9, y: 44}
+        - {x: -6, y: 41}
+        - {x: -3, y: 41}
+        - {x: 0, y: 44}
+        - {x: 0, y: 48}
+        - {x: -3, y: 51}
+      - - {x: 1, y: 53}
+        - {x: 0, y: 51}
+        - {x: 0, y: 43}
+        - {x: 1, y: 41}
+        - {x: 5, y: 41}
+        - {x: 8, y: 42}
+        - {x: 8, y: 51}
+        - {x: 3, y: 53}
+      - - {x: 22, y: 51}
+        - {x: 21, y: 49}
+        - {x: 21, y: 43}
+        - {x: 23, y: 41}
+        - {x: 32, y: 41}
+        - {x: 32, y: 51}
     - name: sprite_base_addon_2012_12_14_100
       rect:
         serializedVersion: 2
@@ -1252,8 +3388,77 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 21}
+        - {x: -1, y: 21}
+        - {x: -4, y: 20}
+        - {x: -4, y: 12}
+        - {x: -3, y: 9}
+        - {x: 1, y: 9}
+        - {x: 5, y: 15}
+        - {x: 5, y: 19}
+      - - {x: -30, y: 21}
+        - {x: -31, y: 19}
+        - {x: -31, y: 11}
+        - {x: -25, y: 11}
+        - {x: -22, y: 12}
+        - {x: -22, y: 18}
+        - {x: -25, y: 21}
+      - - {x: -5, y: 23}
+        - {x: -17, y: 23}
+        - {x: -22, y: 21}
+        - {x: -22, y: 11}
+        - {x: -4, y: 11}
+        - {x: -4, y: 21}
+      - - {x: 12, y: 17}
+        - {x: 13, y: 12}
+        - {x: 16, y: 11}
+        - {x: 19, y: 12}
+        - {x: 19, y: 21}
+        - {x: 17, y: 23}
+        - {x: 12, y: 21}
+      - - {x: 28, y: 23}
+        - {x: 19, y: 19}
+        - {x: 19, y: 15}
+        - {x: 31, y: 11}
+        - {x: 32, y: 11}
+        - {x: 32, y: 23}
+      - - {x: -1, y: 51}
+        - {x: -9, y: 51}
+        - {x: -9, y: 42}
+        - {x: -8, y: 39}
+        - {x: -4, y: 39}
+        - {x: 0, y: 45}
+        - {x: 0, y: 49}
+      - - {x: -32, y: 51}
+        - {x: -32, y: 41}
+        - {x: -31, y: 41}
+        - {x: -28, y: 44}
+        - {x: -28, y: 48}
+        - {x: -31, y: 51}
+      - - {x: -27, y: 53}
+        - {x: -28, y: 51}
+        - {x: -28, y: 41}
+        - {x: -10, y: 41}
+        - {x: -10, y: 53}
+      - - {x: 6, y: 47}
+        - {x: 7, y: 42}
+        - {x: 10, y: 41}
+        - {x: 13, y: 42}
+        - {x: 13, y: 51}
+        - {x: 11, y: 53}
+        - {x: 6, y: 51}
+      - - {x: 18, y: 53}
+        - {x: 15, y: 51}
+        - {x: 13, y: 48}
+        - {x: 13, y: 44}
+        - {x: 24, y: 41}
+        - {x: 30, y: 41}
+        - {x: 31, y: 43}
+        - {x: 31, y: 52}
+        - {x: 29, y: 53}
     - name: sprite_base_addon_2012_12_14_101
       rect:
         serializedVersion: 2
@@ -1262,8 +3467,92 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 21}
+        - {x: -9, y: 19}
+        - {x: -9, y: 11}
+        - {x: -6, y: 9}
+        - {x: -3, y: 9}
+        - {x: 0, y: 12}
+        - {x: 0, y: 19}
+        - {x: -2, y: 21}
+      - - {x: -20, y: 23}
+        - {x: -22, y: 17}
+        - {x: -23, y: 12}
+        - {x: -21, y: 10}
+        - {x: -17, y: 11}
+        - {x: -15, y: 19}
+        - {x: -15, y: 23}
+        - {x: -17, y: 24}
+      - - {x: -32, y: 23}
+        - {x: -32, y: 11}
+        - {x: -30, y: 11}
+        - {x: -27, y: 13}
+        - {x: -27, y: 21}
+        - {x: -30, y: 23}
+      - - {x: 3, y: 21}
+        - {x: 0, y: 18}
+        - {x: 0, y: 14}
+        - {x: 3, y: 11}
+        - {x: 6, y: 11}
+        - {x: 9, y: 14}
+        - {x: 9, y: 18}
+        - {x: 6, y: 21}
+      - - {x: 15, y: 14}
+        - {x: 16, y: 12}
+        - {x: 19, y: 11}
+        - {x: 22, y: 12}
+        - {x: 24, y: 21}
+        - {x: 23, y: 23}
+        - {x: 15, y: 23}
+      - - {x: 24, y: 20}
+        - {x: 23, y: 18}
+        - {x: 23, y: 16}
+        - {x: 24, y: 14}
+        - {x: 32, y: 14}
+        - {x: 32, y: 20}
+      - - {x: -7, y: 51}
+        - {x: -14, y: 51}
+        - {x: -15, y: 50}
+        - {x: -15, y: 41}
+        - {x: -12, y: 39}
+        - {x: -9, y: 39}
+        - {x: -6, y: 42}
+        - {x: -6, y: 50}
+      - - {x: -25, y: 53}
+        - {x: -27, y: 47}
+        - {x: -28, y: 42}
+        - {x: -26, y: 40}
+        - {x: -23, y: 41}
+        - {x: -20, y: 49}
+        - {x: -20, y: 52}
+        - {x: -22, y: 54}
+      - - {x: -3, y: 51}
+        - {x: -6, y: 48}
+        - {x: -6, y: 44}
+        - {x: -3, y: 41}
+        - {x: 0, y: 41}
+        - {x: 3, y: 44}
+        - {x: 3, y: 48}
+        - {x: 0, y: 51}
+      - - {x: 11, y: 53}
+        - {x: 10, y: 50}
+        - {x: 10, y: 42}
+        - {x: 11, y: 41}
+        - {x: 19, y: 41}
+        - {x: 25, y: 43}
+        - {x: 27, y: 45}
+        - {x: 27, y: 48}
+        - {x: 25, y: 53}
+      - - {x: 26, y: 52}
+        - {x: 26, y: 45}
+        - {x: 27, y: 42}
+        - {x: 30, y: 41}
+        - {x: 32, y: 42}
+        - {x: 32, y: 53}
+        - {x: 28, y: 53}
     - name: sprite_base_addon_2012_12_14_102
       rect:
         serializedVersion: 2
@@ -1272,8 +3561,97 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 21}
+        - {x: -2, y: 19}
+        - {x: -2, y: 10}
+        - {x: 0, y: 9}
+        - {x: 3, y: 9}
+        - {x: 7, y: 14}
+        - {x: 7, y: 18}
+        - {x: 4, y: 21}
+      - - {x: -32, y: 11}
+        - {x: -25, y: 11}
+        - {x: -23, y: 12}
+        - {x: -23, y: 20}
+        - {x: -25, y: 23}
+        - {x: -29, y: 23}
+        - {x: -32, y: 22}
+      - - {x: -4, y: 21}
+        - {x: -17, y: 21}
+        - {x: -18, y: 19}
+        - {x: -18, y: 13}
+        - {x: -16, y: 11}
+        - {x: -5, y: 11}
+        - {x: -3, y: 12}
+        - {x: -3, y: 18}
+      - - {x: 10, y: 21}
+        - {x: 7, y: 18}
+        - {x: 7, y: 14}
+        - {x: 10, y: 11}
+        - {x: 13, y: 11}
+        - {x: 16, y: 14}
+        - {x: 16, y: 18}
+        - {x: 13, y: 21}
+      - - {x: 23, y: 21}
+        - {x: 17, y: 21}
+        - {x: 16, y: 18}
+        - {x: 16, y: 12}
+        - {x: 19, y: 11}
+        - {x: 24, y: 11}
+        - {x: 26, y: 13}
+        - {x: 26, y: 20}
+      - - {x: 26, y: 22}
+        - {x: 25, y: 19}
+        - {x: 25, y: 15}
+        - {x: 27, y: 11}
+        - {x: 32, y: 11}
+        - {x: 32, y: 21}
+        - {x: 29, y: 23}
+      - - {x: -8, y: 49}
+        - {x: -8, y: 41}
+        - {x: -7, y: 39}
+        - {x: -5, y: 39}
+        - {x: 1, y: 42}
+        - {x: 1, y: 48}
+        - {x: -2, y: 51}
+        - {x: -6, y: 51}
+      - - {x: -9, y: 51}
+        - {x: -22, y: 51}
+        - {x: -23, y: 49}
+        - {x: -23, y: 43}
+        - {x: -21, y: 41}
+        - {x: -10, y: 41}
+        - {x: -8, y: 42}
+        - {x: -8, y: 48}
+      - - {x: 4, y: 51}
+        - {x: 1, y: 48}
+        - {x: 1, y: 44}
+        - {x: 4, y: 41}
+        - {x: 7, y: 41}
+        - {x: 10, y: 44}
+        - {x: 10, y: 48}
+        - {x: 7, y: 51}
+      - - {x: 17, y: 51}
+        - {x: 10, y: 51}
+        - {x: 10, y: 42}
+        - {x: 13, y: 41}
+        - {x: 20, y: 41}
+        - {x: 20, y: 50}
+      - - {x: 21, y: 52}
+        - {x: 20, y: 49}
+        - {x: 20, y: 45}
+        - {x: 22, y: 41}
+        - {x: 27, y: 41}
+        - {x: 27, y: 51}
+        - {x: 24, y: 53}
+      - - {x: -32, y: 47}
+        - {x: -29, y: 48}
+        - {x: -29, y: 51}
+        - {x: -31, y: 53}
+        - {x: -32, y: 53}
     - name: sprite_base_addon_2012_12_14_103
       rect:
         serializedVersion: 2
@@ -1282,8 +3660,84 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 23}
+        - {x: -26, y: 17}
+        - {x: -27, y: 12}
+        - {x: -25, y: 10}
+        - {x: -21, y: 11}
+        - {x: -19, y: 19}
+        - {x: -19, y: 23}
+        - {x: -21, y: 24}
+      - - {x: -14, y: 18}
+        - {x: -14, y: 14}
+        - {x: -13, y: 11}
+        - {x: -8, y: 11}
+        - {x: -5, y: 12}
+        - {x: -5, y: 18}
+        - {x: -8, y: 21}
+        - {x: -11, y: 21}
+      - - {x: -3, y: 21}
+        - {x: -5, y: 19}
+        - {x: -5, y: 11}
+        - {x: 3, y: 11}
+        - {x: 4, y: 12}
+        - {x: 4, y: 18}
+        - {x: 1, y: 21}
+      - - {x: 10, y: 23}
+        - {x: 4, y: 20}
+        - {x: 4, y: 14}
+        - {x: 7, y: 11}
+        - {x: 13, y: 11}
+        - {x: 13, y: 23}
+      - - {x: 23, y: 23}
+        - {x: 20, y: 21}
+        - {x: 20, y: 13}
+        - {x: 23, y: 11}
+        - {x: 26, y: 11}
+        - {x: 32, y: 15}
+        - {x: 32, y: 21}
+        - {x: 28, y: 23}
+      - - {x: -30, y: 53}
+        - {x: -32, y: 47}
+        - {x: -32, y: 41}
+        - {x: -31, y: 40}
+        - {x: -28, y: 41}
+        - {x: -25, y: 49}
+        - {x: -25, y: 52}
+        - {x: -27, y: 54}
+      - - {x: -17, y: 51}
+        - {x: -20, y: 48}
+        - {x: -20, y: 44}
+        - {x: -17, y: 41}
+        - {x: -14, y: 41}
+        - {x: -11, y: 44}
+        - {x: -11, y: 48}
+        - {x: -14, y: 51}
+      - - {x: -10, y: 51}
+        - {x: -10, y: 41}
+        - {x: -2, y: 41}
+        - {x: -1, y: 42}
+        - {x: -1, y: 48}
+        - {x: -2, y: 51}
+      - - {x: -1, y: 48}
+        - {x: -1, y: 44}
+        - {x: 0, y: 41}
+        - {x: 6, y: 41}
+        - {x: 8, y: 42}
+        - {x: 8, y: 51}
+        - {x: 6, y: 53}
+        - {x: 5, y: 53}
+      - - {x: 17, y: 53}
+        - {x: 14, y: 50}
+        - {x: 14, y: 44}
+        - {x: 17, y: 41}
+        - {x: 20, y: 41}
+        - {x: 23, y: 44}
+        - {x: 23, y: 50}
+        - {x: 20, y: 53}
     - name: sprite_base_addon_2012_12_14_104
       rect:
         serializedVersion: 2
@@ -1292,8 +3746,24 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 14}
+        - {x: -24, y: 11}
+        - {x: -21, y: 12}
+        - {x: -21, y: 21}
+        - {x: -22, y: 23}
+        - {x: -26, y: 23}
+        - {x: -32, y: 20}
+      - - {x: -17, y: 23}
+        - {x: -20, y: 20}
+        - {x: -20, y: 14}
+        - {x: -17, y: 11}
+        - {x: -14, y: 11}
+        - {x: -11, y: 14}
+        - {x: -11, y: 20}
+        - {x: -14, y: 23}
     - name: sprite_base_addon_2012_12_14_105
       rect:
         serializedVersion: 2
@@ -1302,8 +3772,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_106
       rect:
         serializedVersion: 2
@@ -1312,8 +3789,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 39}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 31}
     - name: sprite_base_addon_2012_12_14_107
       rect:
         serializedVersion: 2
@@ -1322,8 +3807,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 38}
+        - {x: -13, y: 36}
+        - {x: -13, y: 11}
+        - {x: -10, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 32}
+        - {x: 4, y: 38}
     - name: sprite_base_addon_2012_12_14_108
       rect:
         serializedVersion: 2
@@ -1332,8 +3825,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 39}
+        - {x: -9, y: 39}
+        - {x: -13, y: 29}
+        - {x: -13, y: 12}
+        - {x: -9, y: 8}
+        - {x: 2, y: 8}
+        - {x: 4, y: 11}
+        - {x: 7, y: 18}
+        - {x: 7, y: 36}
     - name: sprite_base_addon_2012_12_14_109
       rect:
         serializedVersion: 2
@@ -1342,8 +3845,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 41}
+        - {x: -13, y: 35}
+        - {x: -13, y: 13}
+        - {x: -8, y: 8}
+        - {x: 2, y: 8}
+        - {x: 10, y: 19}
+        - {x: 10, y: 40}
+        - {x: 9, y: 41}
     - name: sprite_base_addon_2012_12_14_110
       rect:
         serializedVersion: 2
@@ -1352,8 +3864,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 42}
+        - {x: -12, y: 21}
+        - {x: -12, y: 17}
+        - {x: -6, y: 8}
+        - {x: 2, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 42}
     - name: sprite_base_addon_2012_12_14_111
       rect:
         serializedVersion: 2
@@ -1362,8 +3882,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 42}
+        - {x: -12, y: 39}
+        - {x: -12, y: 17}
+        - {x: -6, y: 8}
+        - {x: -1, y: 8}
+        - {x: 9, y: 12}
+        - {x: 9, y: 35}
+        - {x: 5, y: 42}
     - name: sprite_base_addon_2012_12_14_112
       rect:
         serializedVersion: 2
@@ -1372,8 +3901,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 42}
+        - {x: -12, y: 21}
+        - {x: -12, y: 17}
+        - {x: -6, y: 8}
+        - {x: 2, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 42}
     - name: sprite_base_addon_2012_12_14_113
       rect:
         serializedVersion: 2
@@ -1382,8 +3919,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 42}
+        - {x: -10, y: 41}
+        - {x: -10, y: 15}
+        - {x: -9, y: 8}
+        - {x: 6, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 41}
+        - {x: 3, y: 42}
     - name: sprite_base_addon_2012_12_14_114
       rect:
         serializedVersion: 2
@@ -1392,8 +3938,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 42}
+        - {x: -13, y: 32}
+        - {x: -13, y: 22}
+        - {x: -10, y: 12}
+        - {x: -4, y: 8}
+        - {x: 3, y: 8}
+        - {x: 10, y: 13}
+        - {x: 10, y: 34}
+        - {x: 7, y: 42}
     - name: sprite_base_addon_2012_12_14_115
       rect:
         serializedVersion: 2
@@ -1402,8 +3958,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 42}
+        - {x: -10, y: 20}
+        - {x: -6, y: 10}
+        - {x: -4, y: 8}
+        - {x: 3, y: 8}
+        - {x: 10, y: 18}
+        - {x: 10, y: 29}
+        - {x: 5, y: 42}
     - name: sprite_base_addon_2012_12_14_116
       rect:
         serializedVersion: 2
@@ -1412,8 +3977,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 39}
+        - {x: -9, y: 39}
+        - {x: -13, y: 29}
+        - {x: -13, y: 12}
+        - {x: -9, y: 8}
+        - {x: 2, y: 8}
+        - {x: 4, y: 11}
+        - {x: 7, y: 18}
+        - {x: 7, y: 36}
     - name: sprite_base_addon_2012_12_14_117
       rect:
         serializedVersion: 2
@@ -1422,8 +3997,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 38}
+        - {x: -13, y: 36}
+        - {x: -13, y: 11}
+        - {x: -10, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 32}
+        - {x: 4, y: 38}
     - name: sprite_base_addon_2012_12_14_118
       rect:
         serializedVersion: 2
@@ -1432,8 +4015,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_119
       rect:
         serializedVersion: 2
@@ -1442,8 +4032,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_120
       rect:
         serializedVersion: 2
@@ -1452,8 +4049,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 15}
+        - {x: -12, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 41}
     - name: sprite_base_addon_2012_12_14_121
       rect:
         serializedVersion: 2
@@ -1462,8 +4066,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_122
       rect:
         serializedVersion: 2
@@ -1472,8 +4083,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 40}
+        - {x: -15, y: 34}
+        - {x: -15, y: 14}
+        - {x: -11, y: 8}
+        - {x: 8, y: 8}
+        - {x: 14, y: 19}
+        - {x: 14, y: 28}
+        - {x: 8, y: 40}
     - name: sprite_base_addon_2012_12_14_123
       rect:
         serializedVersion: 2
@@ -1482,8 +4102,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 40}
+        - {x: -14, y: 27}
+        - {x: -14, y: 8}
+        - {x: 14, y: 8}
+        - {x: 14, y: 28}
+        - {x: 5, y: 40}
     - name: sprite_base_addon_2012_12_14_124
       rect:
         serializedVersion: 2
@@ -1492,8 +4119,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -13, y: 40}
+        - {x: -13, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_125
       rect:
         serializedVersion: 2
@@ -1502,8 +4136,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 41}
+        - {x: -13, y: 39}
+        - {x: -13, y: 12}
+        - {x: -8, y: 8}
+        - {x: 6, y: 8}
+        - {x: 12, y: 17}
+        - {x: 12, y: 28}
+        - {x: 6, y: 41}
     - name: sprite_base_addon_2012_12_14_126
       rect:
         serializedVersion: 2
@@ -1512,8 +4155,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 41}
+        - {x: -6, y: 41}
+        - {x: -12, y: 37}
+        - {x: -12, y: 8}
+        - {x: 7, y: 8}
+        - {x: 12, y: 16}
+        - {x: 12, y: 28}
+        - {x: 8, y: 37}
     - name: sprite_base_addon_2012_12_14_127
       rect:
         serializedVersion: 2
@@ -1522,8 +4174,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_128
       rect:
         serializedVersion: 2
@@ -1532,8 +4191,22 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25, y: 34}
+        - {x: 23, y: 32}
+        - {x: 23, y: 22}
+        - {x: 25, y: 20}
+        - {x: 27, y: 20}
+        - {x: 29, y: 22}
+        - {x: 29, y: 31}
+        - {x: 28, y: 34}
+      - - {x: 29, y: 24}
+        - {x: 31, y: 22}
+        - {x: 32, y: 22}
+        - {x: 32, y: 30}
+        - {x: 29, y: 29}
     - name: sprite_base_addon_2012_12_14_129
       rect:
         serializedVersion: 2
@@ -1542,8 +4215,45 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 31}
+        - {x: -32, y: 21}
+        - {x: -29, y: 21}
+        - {x: -26, y: 24}
+        - {x: -26, y: 28}
+        - {x: -29, y: 31}
+      - - {x: -24, y: 31}
+        - {x: -26, y: 29}
+        - {x: -26, y: 21}
+        - {x: -18, y: 21}
+        - {x: -17, y: 22}
+        - {x: -17, y: 28}
+        - {x: -20, y: 31}
+      - - {x: -13, y: 31}
+        - {x: -16, y: 28}
+        - {x: -16, y: 24}
+        - {x: -13, y: 21}
+        - {x: -10, y: 21}
+        - {x: -7, y: 24}
+        - {x: -7, y: 28}
+        - {x: -10, y: 31}
+      - - {x: 0, y: 33}
+        - {x: -1, y: 32}
+        - {x: -1, y: 21}
+        - {x: 14, y: 21}
+        - {x: 16, y: 22}
+        - {x: 16, y: 32}
+        - {x: 13, y: 33}
+      - - {x: 19, y: 31}
+        - {x: 16, y: 28}
+        - {x: 16, y: 24}
+        - {x: 19, y: 21}
+        - {x: 22, y: 21}
+        - {x: 25, y: 24}
+        - {x: 25, y: 28}
+        - {x: 22, y: 31}
     - name: sprite_base_addon_2012_12_14_130
       rect:
         serializedVersion: 2
@@ -1552,8 +4262,55 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 34}
+        - {x: 16, y: 32}
+        - {x: 16, y: 23}
+        - {x: 17, y: 20}
+        - {x: 20, y: 20}
+        - {x: 22, y: 22}
+        - {x: 22, y: 32}
+        - {x: 20, y: 34}
+      - - {x: -31, y: 31}
+        - {x: -32, y: 29}
+        - {x: -32, y: 22}
+        - {x: -29, y: 21}
+        - {x: -26, y: 21}
+        - {x: -23, y: 22}
+        - {x: -23, y: 28}
+        - {x: -24, y: 31}
+      - - {x: -22, y: 31}
+        - {x: -23, y: 30}
+        - {x: -23, y: 23}
+        - {x: -22, y: 21}
+        - {x: -15, y: 21}
+        - {x: -14, y: 23}
+        - {x: -14, y: 30}
+        - {x: -17, y: 31}
+      - - {x: -14, y: 31}
+        - {x: -14, y: 21}
+        - {x: -5, y: 21}
+        - {x: -3, y: 22}
+        - {x: -3, y: 28}
+        - {x: -5, y: 31}
+      - - {x: 0, y: 33}
+        - {x: -2, y: 33}
+        - {x: -3, y: 31}
+        - {x: -3, y: 23}
+        - {x: -1, y: 21}
+        - {x: 3, y: 21}
+        - {x: 6, y: 24}
+        - {x: 6, y: 29}
+      - - {x: 10, y: 31}
+        - {x: 7, y: 28}
+        - {x: 7, y: 24}
+        - {x: 10, y: 21}
+        - {x: 13, y: 21}
+        - {x: 16, y: 24}
+        - {x: 16, y: 28}
+        - {x: 13, y: 31}
     - name: sprite_base_addon_2012_12_14_131
       rect:
         serializedVersion: 2
@@ -1562,8 +4319,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_132
       rect:
         serializedVersion: 2
@@ -1572,8 +4336,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -13, y: 38}
+        - {x: -13, y: 8}
+        - {x: 7, y: 8}
+        - {x: 7, y: 40}
+        - {x: 5, y: 41}
     - name: sprite_base_addon_2012_12_14_133
       rect:
         serializedVersion: 2
@@ -1582,8 +4353,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 41}
+        - {x: -14, y: 41}
+        - {x: -14, y: 13}
+        - {x: -13, y: 8}
+        - {x: 12, y: 8}
+        - {x: 14, y: 12}
+        - {x: 14, y: 18}
+        - {x: 5, y: 36}
     - name: sprite_base_addon_2012_12_14_134
       rect:
         serializedVersion: 2
@@ -1592,8 +4372,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 14, y: 8}
+        - {x: 14, y: 21}
+        - {x: 3, y: 41}
     - name: sprite_base_addon_2012_12_14_135
       rect:
         serializedVersion: 2
@@ -1602,8 +4388,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -13, y: 38}
+        - {x: -13, y: 8}
+        - {x: 7, y: 8}
+        - {x: 7, y: 40}
+        - {x: 5, y: 41}
     - name: sprite_base_addon_2012_12_14_136
       rect:
         serializedVersion: 2
@@ -1612,8 +4405,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_137
       rect:
         serializedVersion: 2
@@ -1622,8 +4422,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_138
       rect:
         serializedVersion: 2
@@ -1632,8 +4439,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -13, y: 38}
+        - {x: -13, y: 8}
+        - {x: 7, y: 8}
+        - {x: 7, y: 40}
+        - {x: 5, y: 41}
     - name: sprite_base_addon_2012_12_14_139
       rect:
         serializedVersion: 2
@@ -1642,8 +4456,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -14, y: 38}
+        - {x: -14, y: 10}
+        - {x: -12, y: 8}
+        - {x: 3, y: 8}
+        - {x: 14, y: 11}
+        - {x: 15, y: 13}
+        - {x: 15, y: 21}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_140
       rect:
         serializedVersion: 2
@@ -1652,8 +4476,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: 41}
+        - {x: -13, y: 41}
+        - {x: -13, y: 13}
+        - {x: -11, y: 8}
+        - {x: 1, y: 8}
+        - {x: 15, y: 15}
+        - {x: 15, y: 20}
+        - {x: 7, y: 39}
     - name: sprite_base_addon_2012_12_14_141
       rect:
         serializedVersion: 2
@@ -1662,8 +4495,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -13, y: 38}
+        - {x: -13, y: 8}
+        - {x: 7, y: 8}
+        - {x: 7, y: 40}
+        - {x: 5, y: 41}
     - name: sprite_base_addon_2012_12_14_142
       rect:
         serializedVersion: 2
@@ -1672,8 +4512,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_143
       rect:
         serializedVersion: 2
@@ -1682,8 +4529,57 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 28}
+        - {x: 7, y: 26}
+        - {x: 7, y: 16}
+        - {x: 9, y: 14}
+        - {x: 11, y: 14}
+        - {x: 13, y: 16}
+        - {x: 13, y: 25}
+        - {x: 12, y: 28}
+      - - {x: 13, y: 25}
+        - {x: 13, y: 15}
+        - {x: 22, y: 15}
+        - {x: 24, y: 16}
+        - {x: 24, y: 22}
+        - {x: 22, y: 25}
+      - - {x: 24, y: 17}
+        - {x: 26, y: 15}
+        - {x: 29, y: 16}
+        - {x: 29, y: 25}
+        - {x: 27, y: 27}
+        - {x: 24, y: 26}
+      - - {x: 9, y: 53}
+        - {x: 7, y: 51}
+        - {x: 7, y: 41}
+        - {x: 9, y: 39}
+        - {x: 11, y: 39}
+        - {x: 13, y: 41}
+        - {x: 13, y: 50}
+        - {x: 12, y: 53}
+      - - {x: 13, y: 42}
+        - {x: 15, y: 40}
+        - {x: 18, y: 41}
+        - {x: 18, y: 50}
+        - {x: 16, y: 52}
+        - {x: 13, y: 51}
+      - - {x: 21, y: 50}
+        - {x: 18, y: 47}
+        - {x: 18, y: 43}
+        - {x: 21, y: 40}
+        - {x: 24, y: 40}
+        - {x: 27, y: 43}
+        - {x: 27, y: 47}
+        - {x: 24, y: 50}
+      - - {x: 28, y: 49}
+        - {x: 28, y: 44}
+        - {x: 31, y: 40}
+        - {x: 32, y: 40}
+        - {x: 32, y: 49}
+        - {x: 31, y: 50}
     - name: sprite_base_addon_2012_12_14_144
       rect:
         serializedVersion: 2
@@ -1692,8 +4588,131 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 16}
+        - {x: 31, y: 14}
+        - {x: 32, y: 14}
+        - {x: 32, y: 19}
+        - {x: 30, y: 19}
+      - - {x: -32, y: 15}
+        - {x: -25, y: 15}
+        - {x: -25, y: 27}
+        - {x: -28, y: 27}
+        - {x: -32, y: 24}
+      - - {x: -18, y: 27}
+        - {x: -21, y: 27}
+        - {x: -25, y: 22}
+        - {x: -25, y: 18}
+        - {x: -22, y: 15}
+        - {x: -18, y: 15}
+        - {x: -16, y: 17}
+        - {x: -16, y: 26}
+      - - {x: -16, y: 17}
+        - {x: -14, y: 15}
+        - {x: -11, y: 16}
+        - {x: -11, y: 25}
+        - {x: -13, y: 27}
+        - {x: -16, y: 26}
+      - - {x: -8, y: 25}
+        - {x: -11, y: 22}
+        - {x: -11, y: 18}
+        - {x: -8, y: 15}
+        - {x: -5, y: 15}
+        - {x: -2, y: 18}
+        - {x: -2, y: 22}
+        - {x: -5, y: 25}
+      - - {x: -1, y: 27}
+        - {x: -2, y: 25}
+        - {x: -2, y: 17}
+        - {x: -1, y: 15}
+        - {x: 6, y: 15}
+        - {x: 6, y: 25}
+        - {x: 2, y: 27}
+      - - {x: 7, y: 17}
+        - {x: 9, y: 15}
+        - {x: 12, y: 16}
+        - {x: 12, y: 25}
+        - {x: 10, y: 27}
+        - {x: 7, y: 26}
+      - - {x: 15, y: 25}
+        - {x: 12, y: 22}
+        - {x: 12, y: 18}
+        - {x: 15, y: 15}
+        - {x: 18, y: 15}
+        - {x: 21, y: 18}
+        - {x: 21, y: 22}
+        - {x: 18, y: 25}
+      - - {x: 21, y: 27}
+        - {x: 21, y: 15}
+        - {x: 26, y: 15}
+        - {x: 29, y: 16}
+        - {x: 29, y: 25}
+        - {x: 25, y: 27}
+      - - {x: 29, y: 25}
+        - {x: 31, y: 23}
+        - {x: 32, y: 23}
+        - {x: 32, y: 28}
+        - {x: 30, y: 28}
+      - - {x: 8, y: 53}
+        - {x: 6, y: 51}
+        - {x: 6, y: 42}
+        - {x: 7, y: 39}
+        - {x: 10, y: 39}
+        - {x: 12, y: 41}
+        - {x: 12, y: 51}
+        - {x: 10, y: 53}
+      - - {x: -32, y: 42}
+        - {x: -31, y: 40}
+        - {x: -28, y: 40}
+        - {x: -25, y: 42}
+        - {x: -25, y: 48}
+        - {x: -26, y: 50}
+        - {x: -30, y: 50}
+        - {x: -32, y: 49}
+      - - {x: -23, y: 52}
+        - {x: -25, y: 51}
+        - {x: -25, y: 42}
+        - {x: -24, y: 40}
+        - {x: -20, y: 40}
+        - {x: -17, y: 41}
+        - {x: -17, y: 49}
+        - {x: -20, y: 52}
+      - - {x: -17, y: 42}
+        - {x: -15, y: 40}
+        - {x: -12, y: 41}
+        - {x: -12, y: 50}
+        - {x: -14, y: 52}
+        - {x: -17, y: 51}
+      - - {x: -9, y: 50}
+        - {x: -12, y: 47}
+        - {x: -12, y: 43}
+        - {x: -9, y: 40}
+        - {x: -6, y: 40}
+        - {x: -3, y: 43}
+        - {x: -3, y: 47}
+        - {x: -6, y: 50}
+      - - {x: -2, y: 52}
+        - {x: -3, y: 50}
+        - {x: -3, y: 42}
+        - {x: -2, y: 40}
+        - {x: 2, y: 40}
+        - {x: 5, y: 41}
+        - {x: 5, y: 50}
+        - {x: 0, y: 52}
+      - - {x: 18, y: 46}
+        - {x: 19, y: 41}
+        - {x: 22, y: 40}
+        - {x: 25, y: 41}
+        - {x: 25, y: 50}
+        - {x: 23, y: 52}
+        - {x: 18, y: 50}
+      - - {x: 25, y: 46}
+        - {x: 25, y: 43}
+        - {x: 32, y: 43}
+        - {x: 32, y: 48}
+        - {x: 28, y: 49}
     - name: sprite_base_addon_2012_12_14_145
       rect:
         serializedVersion: 2
@@ -1702,8 +4721,34 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 14}
+        - {x: -29, y: 15}
+        - {x: -29, y: 26}
+        - {x: -31, y: 28}
+        - {x: -32, y: 28}
+      - - {x: -22, y: 27}
+        - {x: -22, y: 19}
+        - {x: -21, y: 16}
+        - {x: -20, y: 15}
+        - {x: 1, y: 15}
+        - {x: 1, y: 27}
+      - - {x: 4, y: 27}
+        - {x: 2, y: 26}
+        - {x: 2, y: 15}
+        - {x: 11, y: 15}
+        - {x: 11, y: 26}
+        - {x: 10, y: 27}
+      - - {x: -30, y: 52}
+        - {x: -32, y: 51}
+        - {x: -32, y: 44}
+        - {x: -27, y: 40}
+        - {x: -24, y: 40}
+        - {x: -21, y: 42}
+        - {x: -21, y: 51}
+        - {x: -22, y: 52}
     - name: sprite_base_addon_2012_12_14_146
       rect:
         serializedVersion: 2
@@ -1712,8 +4757,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_147
       rect:
         serializedVersion: 2
@@ -1722,8 +4774,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -13, y: 38}
+        - {x: -13, y: 8}
+        - {x: 7, y: 8}
+        - {x: 7, y: 40}
+        - {x: 5, y: 41}
     - name: sprite_base_addon_2012_12_14_148
       rect:
         serializedVersion: 2
@@ -1732,8 +4791,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 41}
+        - {x: -14, y: 41}
+        - {x: -14, y: 13}
+        - {x: -13, y: 8}
+        - {x: -2, y: 8}
+        - {x: 14, y: 20}
+        - {x: 14, y: 27}
+        - {x: 8, y: 39}
     - name: sprite_base_addon_2012_12_14_149
       rect:
         serializedVersion: 2
@@ -1742,8 +4810,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 40}
+        - {x: 2, y: 41}
+        - {x: -11, y: 41}
+        - {x: -13, y: 38}
+        - {x: -13, y: 14}
+        - {x: -10, y: 9}
+        - {x: -8, y: 8}
+        - {x: 0, y: 8}
+        - {x: 10, y: 16}
+        - {x: 14, y: 22}
+        - {x: 14, y: 29}
     - name: sprite_base_addon_2012_12_14_150
       rect:
         serializedVersion: 2
@@ -1752,8 +4832,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -13, y: 38}
+        - {x: -13, y: 8}
+        - {x: 7, y: 8}
+        - {x: 7, y: 40}
+        - {x: 5, y: 41}
     - name: sprite_base_addon_2012_12_14_151
       rect:
         serializedVersion: 2
@@ -1762,8 +4849,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_152
       rect:
         serializedVersion: 2
@@ -1772,8 +4866,42 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: 31}
+        - {x: 18, y: 30}
+        - {x: 18, y: 20}
+        - {x: 21, y: 19}
+        - {x: 27, y: 19}
+        - {x: 27, y: 31}
+      - - {x: -1, y: 34}
+        - {x: -3, y: 32}
+        - {x: -3, y: 22}
+        - {x: -1, y: 20}
+        - {x: 1, y: 20}
+        - {x: 3, y: 22}
+        - {x: 3, y: 31}
+        - {x: 2, y: 34}
+      - - {x: 5, y: 33}
+        - {x: 3, y: 31}
+        - {x: 3, y: 21}
+        - {x: 12, y: 21}
+        - {x: 12, y: 29}
+        - {x: 11, y: 33}
+      - - {x: 12, y: 23}
+        - {x: 14, y: 21}
+        - {x: 17, y: 22}
+        - {x: 17, y: 31}
+        - {x: 15, y: 33}
+        - {x: 12, y: 32}
+      - - {x: 29, y: 33}
+        - {x: 27, y: 31}
+        - {x: 27, y: 23}
+        - {x: 29, y: 21}
+        - {x: 32, y: 22}
+        - {x: 32, y: 31}
+        - {x: 30, y: 33}
     - name: sprite_base_addon_2012_12_14_153
       rect:
         serializedVersion: 2
@@ -1782,8 +4910,50 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 34}
+        - {x: 3, y: 32}
+        - {x: 3, y: 23}
+        - {x: 4, y: 20}
+        - {x: 7, y: 20}
+        - {x: 9, y: 22}
+        - {x: 9, y: 32}
+        - {x: 7, y: 34}
+      - - {x: -32, y: 22}
+        - {x: -31, y: 21}
+        - {x: -28, y: 22}
+        - {x: -28, y: 28}
+        - {x: -31, y: 31}
+        - {x: -32, y: 31}
+      - - {x: -28, y: 33}
+        - {x: -28, y: 21}
+        - {x: -23, y: 21}
+        - {x: -20, y: 22}
+        - {x: -20, y: 31}
+        - {x: -24, y: 33}
+      - - {x: -20, y: 23}
+        - {x: -18, y: 21}
+        - {x: -15, y: 22}
+        - {x: -15, y: 31}
+        - {x: -17, y: 33}
+        - {x: -20, y: 32}
+      - - {x: -12, y: 31}
+        - {x: -15, y: 28}
+        - {x: -15, y: 24}
+        - {x: -12, y: 21}
+        - {x: -9, y: 21}
+        - {x: -6, y: 24}
+        - {x: -6, y: 28}
+        - {x: -9, y: 31}
+      - - {x: -4, y: 33}
+        - {x: -5, y: 31}
+        - {x: -5, y: 23}
+        - {x: -4, y: 21}
+        - {x: 3, y: 21}
+        - {x: 3, y: 31}
+        - {x: -1, y: 33}
     - name: sprite_base_addon_2012_12_14_154
       rect:
         serializedVersion: 2
@@ -1792,8 +4962,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_155
       rect:
         serializedVersion: 2
@@ -1802,8 +4979,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 39}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 31}
     - name: sprite_base_addon_2012_12_14_156
       rect:
         serializedVersion: 2
@@ -1812,8 +4997,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 38}
+        - {x: -13, y: 36}
+        - {x: -13, y: 11}
+        - {x: -10, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 32}
+        - {x: 4, y: 38}
     - name: sprite_base_addon_2012_12_14_157
       rect:
         serializedVersion: 2
@@ -1822,8 +5015,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 39}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 31}
     - name: sprite_base_addon_2012_12_14_158
       rect:
         serializedVersion: 2
@@ -1832,8 +5033,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 41}
+        - {x: -13, y: 38}
+        - {x: -13, y: 8}
+        - {x: 7, y: 8}
+        - {x: 7, y: 40}
+        - {x: 5, y: 41}
     - name: sprite_base_addon_2012_12_14_159
       rect:
         serializedVersion: 2
@@ -1842,8 +5050,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 41}
+        - {x: -14, y: 11}
+        - {x: -13, y: 8}
+        - {x: -1, y: 8}
+        - {x: 7, y: 15}
+        - {x: 7, y: 40}
+        - {x: 1, y: 41}
     - name: sprite_base_addon_2012_12_14_160
       rect:
         serializedVersion: 2
@@ -1852,8 +5068,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 41}
+        - {x: -16, y: 40}
+        - {x: -16, y: 15}
+        - {x: -10, y: 9}
+        - {x: -8, y: 8}
+        - {x: -2, y: 8}
+        - {x: 5, y: 22}
+        - {x: 5, y: 40}
+        - {x: -1, y: 41}
     - name: sprite_base_addon_2012_12_14_161
       rect:
         serializedVersion: 2
@@ -1862,8 +5088,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 41}
+        - {x: -14, y: 40}
+        - {x: -14, y: 13}
+        - {x: -12, y: 8}
+        - {x: 12, y: 8}
+        - {x: 12, y: 33}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_162
       rect:
         serializedVersion: 2
@@ -1872,8 +5106,36 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 37}
+        - {x: -5, y: 35}
+        - {x: -5, y: 25}
+        - {x: -3, y: 23}
+        - {x: -1, y: 23}
+        - {x: 1, y: 25}
+        - {x: 1, y: 34}
+        - {x: 0, y: 37}
+      - - {x: 6, y: 36}
+        - {x: 1, y: 31}
+        - {x: 1, y: 27}
+        - {x: 4, y: 24}
+        - {x: 10, y: 24}
+        - {x: 10, y: 36}
+      - - {x: 13, y: 34}
+        - {x: 10, y: 31}
+        - {x: 10, y: 27}
+        - {x: 13, y: 24}
+        - {x: 16, y: 24}
+        - {x: 19, y: 27}
+        - {x: 19, y: 31}
+        - {x: 16, y: 34}
+      - - {x: 20, y: 34}
+        - {x: 20, y: 28}
+        - {x: 22, y: 24}
+        - {x: 31, y: 24}
+        - {x: 31, y: 34}
     - name: sprite_base_addon_2012_12_14_163
       rect:
         serializedVersion: 2
@@ -1882,8 +5144,47 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 34}
+        - {x: -32, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: 31}
+        - {x: -25, y: 34}
+      - - {x: -14, y: 34}
+        - {x: -24, y: 34}
+        - {x: -24, y: 28}
+        - {x: -23, y: 24}
+        - {x: -15, y: 24}
+        - {x: -13, y: 26}
+        - {x: -13, y: 32}
+      - - {x: -10, y: 34}
+        - {x: -13, y: 33}
+        - {x: -13, y: 24}
+        - {x: 2, y: 24}
+        - {x: 3, y: 27}
+        - {x: 3, y: 34}
+      - - {x: 8, y: 36}
+        - {x: 3, y: 31}
+        - {x: 3, y: 27}
+        - {x: 6, y: 24}
+        - {x: 12, y: 24}
+        - {x: 12, y: 36}
+      - - {x: 19, y: 36}
+        - {x: 18, y: 34}
+        - {x: 18, y: 26}
+        - {x: 19, y: 24}
+        - {x: 23, y: 24}
+        - {x: 26, y: 25}
+        - {x: 26, y: 34}
+        - {x: 21, y: 36}
+      - - {x: 26, y: 26}
+        - {x: 28, y: 24}
+        - {x: 31, y: 25}
+        - {x: 31, y: 34}
+        - {x: 29, y: 36}
+        - {x: 26, y: 35}
     - name: sprite_base_addon_2012_12_14_164
       rect:
         serializedVersion: 2
@@ -1892,8 +5193,31 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 37}
+        - {x: -15, y: 36}
+        - {x: -15, y: 23}
+        - {x: -11, y: 23}
+        - {x: -9, y: 25}
+        - {x: -9, y: 35}
+        - {x: -11, y: 37}
+      - - {x: -30, y: 34}
+        - {x: -32, y: 32}
+        - {x: -32, y: 26}
+        - {x: -30, y: 24}
+        - {x: -27, y: 24}
+        - {x: -24, y: 27}
+        - {x: -24, y: 31}
+        - {x: -27, y: 34}
+      - - {x: -21, y: 36}
+        - {x: -23, y: 35}
+        - {x: -23, y: 24}
+        - {x: -16, y: 24}
+        - {x: -15, y: 25}
+        - {x: -15, y: 33}
+        - {x: -18, y: 36}
     - name: sprite_base_addon_2012_12_14_165
       rect:
         serializedVersion: 2
@@ -1902,8 +5226,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_166
       rect:
         serializedVersion: 2
@@ -1912,8 +5243,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 39}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 31}
     - name: sprite_base_addon_2012_12_14_167
       rect:
         serializedVersion: 2
@@ -1922,8 +5261,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 38}
+        - {x: -13, y: 36}
+        - {x: -13, y: 11}
+        - {x: -10, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 32}
+        - {x: 4, y: 38}
     - name: sprite_base_addon_2012_12_14_168
       rect:
         serializedVersion: 2
@@ -1932,8 +5279,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 39}
+        - {x: -9, y: 39}
+        - {x: -13, y: 29}
+        - {x: -13, y: 12}
+        - {x: -9, y: 8}
+        - {x: 2, y: 8}
+        - {x: 4, y: 11}
+        - {x: 7, y: 18}
+        - {x: 7, y: 36}
     - name: sprite_base_addon_2012_12_14_169
       rect:
         serializedVersion: 2
@@ -1942,8 +5299,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 41}
+        - {x: -13, y: 35}
+        - {x: -13, y: 13}
+        - {x: -8, y: 8}
+        - {x: 2, y: 8}
+        - {x: 10, y: 19}
+        - {x: 10, y: 40}
+        - {x: 9, y: 41}
     - name: sprite_base_addon_2012_12_14_170
       rect:
         serializedVersion: 2
@@ -1952,8 +5318,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 39}
+        - {x: -9, y: 39}
+        - {x: -11, y: 37}
+        - {x: -15, y: 25}
+        - {x: -15, y: 17}
+        - {x: -9, y: 8}
+        - {x: 8, y: 8}
+        - {x: 15, y: 15}
+        - {x: 15, y: 28}
     - name: sprite_base_addon_2012_12_14_171
       rect:
         serializedVersion: 2
@@ -1962,8 +5338,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 39}
+        - {x: -11, y: 39}
+        - {x: -14, y: 38}
+        - {x: -15, y: 34}
+        - {x: -15, y: 16}
+        - {x: -8, y: 8}
+        - {x: 5, y: 8}
+        - {x: 11, y: 9}
+        - {x: 14, y: 15}
+        - {x: 15, y: 19}
+        - {x: 15, y: 29}
     - name: sprite_base_addon_2012_12_14_172
       rect:
         serializedVersion: 2
@@ -1972,8 +5360,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 41}
+        - {x: -13, y: 35}
+        - {x: -13, y: 13}
+        - {x: -8, y: 8}
+        - {x: 2, y: 8}
+        - {x: 10, y: 19}
+        - {x: 10, y: 40}
+        - {x: 9, y: 41}
     - name: sprite_base_addon_2012_12_14_173
       rect:
         serializedVersion: 2
@@ -1982,8 +5379,34 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 34}
+        - {x: -5, y: 32}
+        - {x: -5, y: 22}
+        - {x: -3, y: 20}
+        - {x: -1, y: 20}
+        - {x: 1, y: 22}
+        - {x: 1, y: 31}
+        - {x: 0, y: 34}
+      - - {x: 3, y: 33}
+        - {x: 2, y: 32}
+        - {x: 1, y: 29}
+        - {x: 1, y: 25}
+        - {x: 3, y: 21}
+        - {x: 16, y: 21}
+        - {x: 18, y: 23}
+        - {x: 18, y: 32}
+        - {x: 15, y: 33}
+      - - {x: 22, y: 31}
+        - {x: 19, y: 28}
+        - {x: 19, y: 24}
+        - {x: 22, y: 21}
+        - {x: 25, y: 21}
+        - {x: 28, y: 24}
+        - {x: 28, y: 28}
+        - {x: 25, y: 31}
     - name: sprite_base_addon_2012_12_14_174
       rect:
         serializedVersion: 2
@@ -1992,8 +5415,53 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 31}
+        - {x: -30, y: 30}
+        - {x: -30, y: 24}
+        - {x: -29, y: 21}
+        - {x: -24, y: 21}
+        - {x: -21, y: 24}
+        - {x: -21, y: 28}
+        - {x: -24, y: 31}
+      - - {x: -21, y: 23}
+        - {x: -19, y: 21}
+        - {x: -16, y: 22}
+        - {x: -16, y: 31}
+        - {x: -18, y: 33}
+        - {x: -21, y: 32}
+      - - {x: -10, y: 33}
+        - {x: -16, y: 30}
+        - {x: -16, y: 24}
+        - {x: -13, y: 21}
+        - {x: -9, y: 21}
+        - {x: -7, y: 23}
+        - {x: -7, y: 31}
+        - {x: -8, y: 33}
+      - - {x: -3, y: 31}
+        - {x: -6, y: 28}
+        - {x: -6, y: 24}
+        - {x: -3, y: 21}
+        - {x: 0, y: 21}
+        - {x: 3, y: 24}
+        - {x: 3, y: 28}
+        - {x: 0, y: 31}
+      - - {x: 16, y: 31}
+        - {x: 9, y: 31}
+        - {x: 9, y: 23}
+        - {x: 10, y: 21}
+        - {x: 17, y: 21}
+        - {x: 19, y: 23}
+        - {x: 19, y: 30}
+      - - {x: 20, y: 33}
+        - {x: 18, y: 31}
+        - {x: 18, y: 24}
+        - {x: 19, y: 21}
+        - {x: 31, y: 21}
+        - {x: 31, y: 31}
+        - {x: 28, y: 33}
     - name: sprite_base_addon_2012_12_14_175
       rect:
         serializedVersion: 2
@@ -2002,8 +5470,28 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 34}
+        - {x: -7, y: 33}
+        - {x: -7, y: 20}
+        - {x: -3, y: 20}
+        - {x: -1, y: 22}
+        - {x: -1, y: 32}
+        - {x: -3, y: 34}
+      - - {x: -31, y: 31}
+        - {x: -32, y: 30}
+        - {x: -32, y: 21}
+        - {x: -15, y: 21}
+        - {x: -15, y: 31}
+      - - {x: -13, y: 33}
+        - {x: -15, y: 32}
+        - {x: -15, y: 21}
+        - {x: -8, y: 21}
+        - {x: -7, y: 22}
+        - {x: -7, y: 30}
+        - {x: -10, y: 33}
     - name: sprite_base_addon_2012_12_14_176
       rect:
         serializedVersion: 2
@@ -2012,8 +5500,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_177
       rect:
         serializedVersion: 2
@@ -2022,8 +5517,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 39}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 31}
     - name: sprite_base_addon_2012_12_14_178
       rect:
         serializedVersion: 2
@@ -2032,8 +5535,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 38}
+        - {x: -13, y: 36}
+        - {x: -13, y: 11}
+        - {x: -10, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 32}
+        - {x: 4, y: 38}
     - name: sprite_base_addon_2012_12_14_179
       rect:
         serializedVersion: 2
@@ -2042,8 +5553,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 39}
+        - {x: -9, y: 39}
+        - {x: -13, y: 29}
+        - {x: -13, y: 12}
+        - {x: -9, y: 8}
+        - {x: 2, y: 8}
+        - {x: 4, y: 11}
+        - {x: 7, y: 18}
+        - {x: 7, y: 36}
     - name: sprite_base_addon_2012_12_14_180
       rect:
         serializedVersion: 2
@@ -2052,8 +5573,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 12}
+        - {x: -10, y: 8}
+        - {x: 5, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 35}
+        - {x: 7, y: 41}
+        - {x: -9, y: 41}
+        - {x: -13, y: 28}
     - name: sprite_base_addon_2012_12_14_181
       rect:
         serializedVersion: 2
@@ -2062,8 +5592,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 38}
+        - {x: 5, y: 40}
+        - {x: -13, y: 40}
+        - {x: -13, y: 13}
+        - {x: -9, y: 8}
+        - {x: 1, y: 8}
+        - {x: 4, y: 9}
+        - {x: 14, y: 14}
+        - {x: 14, y: 35}
     - name: sprite_base_addon_2012_12_14_182
       rect:
         serializedVersion: 2
@@ -2072,8 +5612,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 36}
+        - {x: 3, y: 40}
+        - {x: -10, y: 40}
+        - {x: -13, y: 37}
+        - {x: -13, y: 12}
+        - {x: -8, y: 8}
+        - {x: 2, y: 8}
+        - {x: 8, y: 14}
+        - {x: 10, y: 18}
+        - {x: 10, y: 27}
     - name: sprite_base_addon_2012_12_14_183
       rect:
         serializedVersion: 2
@@ -2082,8 +5633,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 12}
+        - {x: -10, y: 8}
+        - {x: 5, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 35}
+        - {x: 7, y: 41}
+        - {x: -9, y: 41}
+        - {x: -13, y: 28}
     - name: sprite_base_addon_2012_12_14_184
       rect:
         serializedVersion: 2
@@ -2092,8 +5652,38 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 39}
+        - {x: -5, y: 37}
+        - {x: -5, y: 27}
+        - {x: -3, y: 25}
+        - {x: -1, y: 25}
+        - {x: 1, y: 27}
+        - {x: 1, y: 36}
+        - {x: 0, y: 39}
+      - - {x: 2, y: 36}
+        - {x: 1, y: 34}
+        - {x: 1, y: 28}
+        - {x: 2, y: 26}
+        - {x: 15, y: 26}
+        - {x: 16, y: 28}
+        - {x: 16, y: 36}
+      - - {x: 18, y: 36}
+        - {x: 17, y: 35}
+        - {x: 17, y: 29}
+        - {x: 20, y: 26}
+        - {x: 23, y: 26}
+        - {x: 26, y: 29}
+        - {x: 26, y: 36}
+      - - {x: 26, y: 34}
+        - {x: 26, y: 28}
+        - {x: 27, y: 26}
+        - {x: 30, y: 26}
+        - {x: 32, y: 28}
+        - {x: 32, y: 36}
+        - {x: 28, y: 36}
     - name: sprite_base_addon_2012_12_14_185
       rect:
         serializedVersion: 2
@@ -2102,8 +5692,59 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 39}
+        - {x: 17, y: 37}
+        - {x: 17, y: 28}
+        - {x: 18, y: 25}
+        - {x: 21, y: 25}
+        - {x: 23, y: 27}
+        - {x: 23, y: 37}
+        - {x: 21, y: 39}
+      - - {x: -32, y: 26}
+        - {x: -29, y: 27}
+        - {x: -29, y: 33}
+        - {x: -31, y: 35}
+        - {x: -32, y: 35}
+      - - {x: -22, y: 38}
+        - {x: -25, y: 38}
+        - {x: -29, y: 33}
+        - {x: -29, y: 29}
+        - {x: -26, y: 26}
+        - {x: -22, y: 26}
+        - {x: -20, y: 28}
+        - {x: -20, y: 37}
+      - - {x: -12, y: 38}
+        - {x: -14, y: 37}
+        - {x: -14, y: 26}
+        - {x: -7, y: 26}
+        - {x: -6, y: 27}
+        - {x: -6, y: 35}
+        - {x: -9, y: 38}
+      - - {x: -5, y: 28}
+        - {x: -3, y: 26}
+        - {x: 0, y: 27}
+        - {x: 0, y: 36}
+        - {x: -2, y: 38}
+        - {x: -5, y: 37}
+      - - {x: 3, y: 36}
+        - {x: 0, y: 33}
+        - {x: 0, y: 29}
+        - {x: 3, y: 26}
+        - {x: 6, y: 26}
+        - {x: 9, y: 29}
+        - {x: 9, y: 33}
+        - {x: 6, y: 36}
+      - - {x: 10, y: 38}
+        - {x: 9, y: 36}
+        - {x: 9, y: 28}
+        - {x: 10, y: 26}
+        - {x: 14, y: 26}
+        - {x: 17, y: 27}
+        - {x: 17, y: 36}
+        - {x: 12, y: 38}
     - name: sprite_base_addon_2012_12_14_186
       rect:
         serializedVersion: 2
@@ -2112,8 +5753,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 41}
+        - {x: -13, y: 8}
+        - {x: 8, y: 8}
+        - {x: 9, y: 10}
+        - {x: 9, y: 40}
+        - {x: 4, y: 41}
     - name: sprite_base_addon_2012_12_14_187
       rect:
         serializedVersion: 2
@@ -2122,8 +5770,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 39}
+        - {x: -13, y: 39}
+        - {x: -13, y: 10}
+        - {x: -10, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 31}
     - name: sprite_base_addon_2012_12_14_188
       rect:
         serializedVersion: 2
@@ -2132,8 +5788,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 38}
+        - {x: -12, y: 8}
+        - {x: 7, y: 8}
+        - {x: 8, y: 9}
+        - {x: 8, y: 35}
+        - {x: 6, y: 38}
     - name: sprite_base_addon_2012_12_14_189
       rect:
         serializedVersion: 2
@@ -2142,8 +5805,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 37}
+        - {x: -11, y: 36}
+        - {x: -11, y: 8}
+        - {x: 9, y: 8}
+        - {x: 10, y: 10}
+        - {x: 10, y: 31}
+        - {x: 7, y: 37}
     - name: sprite_base_addon_2012_12_14_190
       rect:
         serializedVersion: 2
@@ -2152,8 +5823,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 40}
+        - {x: -12, y: 12}
+        - {x: -10, y: 8}
+        - {x: 8, y: 8}
+        - {x: 15, y: 14}
+        - {x: 15, y: 37}
+        - {x: 9, y: 40}
     - name: sprite_base_addon_2012_12_14_191
       rect:
         serializedVersion: 2
@@ -2162,8 +5841,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 40}
+        - {x: -11, y: 9}
+        - {x: -9, y: 8}
+        - {x: 12, y: 8}
+        - {x: 12, y: 40}
     - name: sprite_base_addon_2012_12_14_192
       rect:
         serializedVersion: 2
@@ -2172,8 +5857,41 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 36}
+        - {x: 10, y: 24}
+        - {x: 13, y: 24}
+        - {x: 19, y: 27}
+        - {x: 19, y: 35}
+        - {x: 16, y: 36}
+      - - {x: 20, y: 36}
+        - {x: 20, y: 24}
+        - {x: 23, y: 24}
+        - {x: 29, y: 27}
+        - {x: 29, y: 35}
+        - {x: 26, y: 36}
+      - - {x: -3, y: 39}
+        - {x: -5, y: 37}
+        - {x: -5, y: 27}
+        - {x: -3, y: 25}
+        - {x: -1, y: 25}
+        - {x: 1, y: 27}
+        - {x: 1, y: 36}
+        - {x: 0, y: 39}
+      - - {x: 2, y: 36}
+        - {x: 1, y: 35}
+        - {x: 1, y: 29}
+        - {x: 4, y: 26}
+        - {x: 7, y: 26}
+        - {x: 10, y: 29}
+        - {x: 10, y: 36}
+      - - {x: 29, y: 29}
+        - {x: 31, y: 27}
+        - {x: 32, y: 27}
+        - {x: 32, y: 35}
+        - {x: 29, y: 34}
     - name: sprite_base_addon_2012_12_14_193
       rect:
         serializedVersion: 2
@@ -2182,8 +5900,40 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 39}
+        - {x: 5, y: 37}
+        - {x: 6, y: 35}
+        - {x: 3, y: 38}
+        - {x: 0, y: 37}
+        - {x: -1, y: 33}
+        - {x: 0, y: 28}
+        - {x: 1, y: 25}
+        - {x: 11, y: 25}
+        - {x: 11, y: 39}
+      - - {x: -32, y: 36}
+        - {x: -32, y: 26}
+        - {x: -29, y: 26}
+        - {x: -26, y: 29}
+        - {x: -26, y: 33}
+        - {x: -29, y: 36}
+      - - {x: -12, y: 36}
+        - {x: -25, y: 36}
+        - {x: -26, y: 34}
+        - {x: -26, y: 26}
+        - {x: -12, y: 26}
+        - {x: -11, y: 29}
+        - {x: -11, y: 35}
+      - - {x: -10, y: 36}
+        - {x: -11, y: 35}
+        - {x: -11, y: 29}
+        - {x: -8, y: 26}
+        - {x: -5, y: 26}
+        - {x: -2, y: 29}
+        - {x: -2, y: 36}
+    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

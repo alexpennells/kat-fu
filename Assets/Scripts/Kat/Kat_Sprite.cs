@@ -63,6 +63,7 @@ public class Kat_Sprite : SpriteObj {
       case "kat_pound":
         Base.Physics.vspeed = -8;
         Kat.stopPhysics = false;
+        StartBlur(0.0025f, 0.8f, 0.08f);
         break;
       case "kat_punch_1":
         if (Kat.playNextPunch) {
@@ -191,10 +192,13 @@ public class Kat_Sprite : SpriteObj {
       Animate("kat_lunge", 2f);
     else
       Animate("kat_kick", 2f);
+
+    StartBlur(0.005f, 0.8f, 0.1f);
   }
 
   public void PlayUppercut() {
     Animate("kat_uppercut", 1f);
+    StartBlur(0.005f, 0.8f, 0.1f);
   }
 
   public void PlayGroundPound() {

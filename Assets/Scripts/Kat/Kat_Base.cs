@@ -122,6 +122,9 @@ public class Kat_Base : InputObj {
           Physics.hspeedMax = this.gunWalkSpeed - 1;
       }
     }
+
+    if (!stopPhysics && !Uppercutting && !GroundPounding)
+      Sprite.StopBlur();
   }
 
   protected override void LeftHeld (float val) {
