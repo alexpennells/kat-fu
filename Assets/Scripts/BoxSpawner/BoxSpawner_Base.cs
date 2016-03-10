@@ -27,6 +27,9 @@ public class BoxSpawner_Base : BaseObj {
    * PRIVATE VARS AND ACCESSORS
    **********************************/
 
+  private int lastAttackId = -500;
+  public int LastAttackID { get { return lastAttackId; } set { lastAttackId = value; } }
+
   private bool hurt = false;
   public bool Hurt { get { return hurt; } }
 
@@ -82,7 +85,7 @@ public class BoxSpawner_Base : BaseObj {
     spawn.turfMin = -100000;
     spawn.turfMax = 100000;
     spawn.SolidPhysics.startOnGround = false;
-    spawn.GetComponent<SpriteRenderer>().sortingOrder = 30;
+    spawn.Sprite.SetLayer(Sprite.GetLayer() - 1);
     spawn.HasAdjustedLayer = false;
     spawn.Spawner = this;
 
@@ -93,7 +96,7 @@ public class BoxSpawner_Base : BaseObj {
     spawns.Remove(spawnID);
   }
 
-  public void GetHurt(int damage = 10) {
+  public void GetHurt(int damage) {
     Sound.Play("Hurt");
 
     HurtTimer.Enabled = false;
@@ -106,6 +109,10 @@ public class BoxSpawner_Base : BaseObj {
       Physics.gravity = 0.25f;
       Stitch.Kat.Sound.Play("Attack");
       PlayEffect("explosion");
+
+      HeartItem_Base.Create(Mask.Center);
+      HeartItem_Base.Create(Mask.Center + new Vector3(6, 0, 0));
+      HeartItem_Base.Create(Mask.Center + new Vector3(-6, 0, 0));
 
       DestroySelf();
     }

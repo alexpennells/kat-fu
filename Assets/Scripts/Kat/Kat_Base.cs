@@ -104,6 +104,7 @@ public class Kat_Base : InputObj {
       return;
 
     Physics.hspeed -= 0.5f;
+    Sprite.FacingLeft = true;
   }
 
   protected override void RightHeld (float val) {
@@ -114,6 +115,7 @@ public class Kat_Base : InputObj {
       return;
 
     Physics.hspeed += 0.5f;
+    Sprite.FacingRight = true;
   }
 
   protected override void JumpPressed () {

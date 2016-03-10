@@ -28,8 +28,8 @@ public class Kat_Sprite : SpriteObj {
         Play("Idle");
     }
 
-    if (Kat.Stance != eKat_Stance.GUN || (!Game.AttackHeld && !Game.DownHeld))
-      TurnSprite();
+    if (!Base.HasFooting && IsPlaying("kat_idle", "kat_walk", "kat_gun_idle", "kat_gun_walk"))
+      Play("Jump");
 
     if (IsPlaying("kat_lunge", "kat_kick") && Kat.stopPhysics == false) {
       if (Base.HasFooting)
@@ -55,13 +55,6 @@ public class Kat_Sprite : SpriteObj {
     }
   }
 
-  private void TurnSprite() {
-    if (Base.Physics.hspeed < 0)
-      FacingLeft = true;
-    else if (Base.Physics.hspeed > 0)
-      FacingRight = true;
-  }
-
   public void PlayFootstepSound() { Base.Sound.Play("Footstep"); }
   public void PlayLandSound() { Base.Sound.Play("Land"); }
 
@@ -71,7 +64,8 @@ public class Kat_Sprite : SpriteObj {
       nextPunchTime = animationEvent.animatorStateInfo.normalizedTime;
       StopBlur();
     } else {
-      Base.Physics.hspeed = FacingRight ? 5f : -5f;
+      float attackSpeed = Base.Physics.hspeed == 0 ? 7f : 2f;
+      Base.Physics.hspeed = FacingRight ? attackSpeed : -attackSpeed;
       KeepPunching = false;
       Base.Sound.Play("Punch");
       attackId++;

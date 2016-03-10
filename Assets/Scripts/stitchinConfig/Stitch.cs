@@ -8,15 +8,15 @@ public class Stitch : MonoBehaviour
    * ABILITIES
    **********************************/
 
-  public static bool canKick = false;
-  public static bool canGroundPound = false;
-  public static bool canGroundBoom = false;
-  public static bool canClimb = false;
-  public static bool canCling = false;
-  public static bool canDodge = false;
-  public static bool canUseGun = false;
-  public static bool canUseGrenades = false;
-  public static bool canUppercut = false;
+  public static bool canKick = true;
+  public static bool canGroundPound = true;
+  public static bool canGroundBoom = true;
+  public static bool canClimb = true;
+  public static bool canCling = true;
+  public static bool canDodge = true;
+  public static bool canUseGun = true;
+  public static bool canUseGrenades = true;
+  public static bool canUppercut = true;
 
   /***********************************
    * SCALING ABILITIES
@@ -51,6 +51,17 @@ public class Stitch : MonoBehaviour
     string[] colors = { "Red", "White", "Blue", "Green", "Yellow" };
     GameObject p = Game.CreateParticle("Hit" + colors[Game.Random.Next(0, 5)], pos);
     p.GetComponent<Renderer>().sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
+    foreach (Transform t in p.transform)
+      t.GetComponent<Renderer>().sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
+    return p;
+  }
+
+  public static GameObject CreateGroundHit(Vector3 pos) {
+    bool isCrit = Game.Random.Next(1, 10) == 5;
+    GameObject p = Game.CreateParticle(isCrit ? "GroundPoundCrit" : "GroundPound", pos);
+    p.GetComponent<Renderer>().sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
+    foreach (Transform t in p.transform)
+      t.GetComponent<Renderer>().sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
     return p;
   }
 

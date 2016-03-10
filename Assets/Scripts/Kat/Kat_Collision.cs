@@ -21,12 +21,14 @@ public class Kat_Collision : CollisionStubs {
     if (other.Dead)
       return;
 
+    if (!other.Hurt)
+      PushAwayFrom(other);
+
     if (Kat.Is("Punching") && PunchSuccess(other)) {
       if (other.LastAttackID == (Base.Sprite as Kat_Sprite).AttackID)
         return;
 
       Kat.Physics.hspeed = 0;
-
       other.GetHurt(5, (Base.Sprite.FacingRight) ? 2 : -2);
 
       if (Base.Sprite.FacingRight)
@@ -65,11 +67,9 @@ public class Kat_Collision : CollisionStubs {
       BounceOffEnemy(6, false);
       Kat.Physics.hspeed = 0;
 
-      bool isCrit = Game.Random.Next(1, 10) == 5;
-      Game.CreateParticle(isCrit ? "GroundPoundCrit" : "GroundPound", new Vector3(Base.x, Base.Mask.Bottom, Base.z));
-
+      Stitch.CreateGroundHit(new Vector3(Base.x, Base.Mask.Bottom, Base.z));
       other.LastAttackID = (Base.Sprite as Kat_Sprite).AttackID;
-      Game.FreezeFor(0.1f);
+      Game.FreezeFor(0.05f);
       return;
     }
 
@@ -87,6 +87,71 @@ public class Kat_Collision : CollisionStubs {
 
     if (!other.Hurt && !Kat.Is("Invincible") && !Kat.Is("Hurt"))
       GetHurt(other, 0.5f, 5);
+  }
+
+  protected override void BoxSpawnerCollision(BoxSpawner_Base other) {
+    PushAwayFrom(other);
+
+    if (Kat.Is("Punching") && PunchSuccess(other)) {
+      if (other.LastAttackID == (Base.Sprite as Kat_Sprite).AttackID)
+        return;
+
+      Kat.Physics.hspeed = 0;
+      other.GetHurt(5);
+
+      if (Base.Sprite.FacingRight)
+        Stitch.CreateHit(new Vector3(Base.Mask.Right + 10, Base.Mask.Center.y, Base.z));
+      else
+        Stitch.CreateHit(new Vector3(Base.Mask.Left - 10, Base.Mask.Center.y, Base.z));
+
+      other.LastAttackID = (Base.Sprite as Kat_Sprite).AttackID;
+      Game.FreezeFor(0.05f);
+      return;
+    }
+
+    if (Kat.Is("Kicking") && KickSuccess(other)) {
+      if (other.LastAttackID == (Base.Sprite as Kat_Sprite).AttackID)
+        return;
+
+      BounceOffEnemy(4);
+      other.GetHurt(10);
+
+      if (Base.Sprite.FacingRight)
+        Stitch.CreateHit(new Vector3(Base.Mask.Right, Base.Mask.Center.y, Base.z));
+      else
+        Stitch.CreateHit(new Vector3(Base.Mask.Left, Base.Mask.Center.y, Base.z));
+
+      other.LastAttackID = (Base.Sprite as Kat_Sprite).AttackID;
+      Game.FreezeFor(0.05f);
+      return;
+    }
+
+    if (Kat.Is("GroundPounding")) {
+      if (other.LastAttackID == (Base.Sprite as Kat_Sprite).AttackID)
+        return;
+
+      other.GetHurt(10);
+      other.Physics.vspeed = -2;
+      BounceOffEnemy(6, false);
+      Kat.Physics.hspeed = 0;
+
+      Stitch.CreateGroundHit(new Vector3(Base.x, Base.Mask.Bottom, Base.z));
+      other.LastAttackID = (Base.Sprite as Kat_Sprite).AttackID;
+      Game.FreezeFor(0.05f);
+      return;
+    }
+
+    if (Kat.Is("Uppercutting")) {
+      if (other.LastAttackID == (Base.Sprite as Kat_Sprite).AttackID)
+        return;
+
+      other.GetHurt(10);
+      BounceOffEnemy(7, false);
+
+      other.LastAttackID = (Base.Sprite as Kat_Sprite).AttackID;
+      Game.FreezeFor(0.05f);
+      return;
+    }
   }
 
   protected override void AirVentCollision(AirVent_Base other) {
@@ -265,33 +330,6 @@ public class Kat_Collision : CollisionStubs {
       Kat.State("Hurt", new object[] { other.x > Kat.x ? -5 : 5 });
   }
 
-  protected override void BoxSpawnerCollision(BoxSpawner_Base other) {
-    if (GroundAttackSuccess(other)) {
-      other.GetHurt();
-      other.Physics.hspeed = (Base.Sprite.FacingRight) ? 4 : -4;
-      BounceOffEnemy(5);
-    }
-
-    else if (Kat.Is("GroundPounding")) {
-      other.GetHurt();
-      other.Physics.hspeed = (other.Sprite.FacingLeft) ? 2 : -2;
-      BounceOffEnemy(5);
-      Kat.Physics.hspeed = 0;
-    }
-
-    else if (Kat.Is("Uppercutting")) {
-      other.GetHurt();
-      other.Physics.hspeed = (Kat.x > other.x) ? -2 : 2;
-      BounceOffEnemy(6, false);
-      Kat.Physics.hspeed = (Kat.x > other.x) ? 4 : -4;
-    }
-
-    else {
-      BounceOffEnemy(5, false);
-      Kat.Physics.hspeed = (Kat.x > other.x) ? 4 : -4;
-    }
-  }
-
   protected override void EnergyBallCollision(EnergyBall_Base other) {
     if (!other.impacted && !Kat.Is("Invincible") && !Kat.Is("Hurt")) {
       Kat.State("Hurt", new object[] { other.x > Kat.x ? -5 : 5 });
@@ -342,5 +380,12 @@ public class Kat_Collision : CollisionStubs {
     }
 
     Base.Sprite.Play("Spin");
+  }
+
+  private void PushAwayFrom (BaseObj other) {
+    if (other.Mask.Center.x > Base.Mask.Center.x && Base.Physics.hspeed > -1)
+      Base.Physics.hspeed -= Base.Physics.friction * 4;
+    else if (other.Mask.Center.x <= Base.Mask.Center.x && Base.Physics.hspeed < 1)
+      Base.Physics.hspeed += Base.Physics.friction * 4;
   }
 }

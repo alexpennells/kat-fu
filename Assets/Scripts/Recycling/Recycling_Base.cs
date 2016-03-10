@@ -62,7 +62,7 @@ public class Recycling_Base : BaseObj {
   protected override void Step () {
     if (!hasAdjustedLayer && Physics.vspeed < 0) {
       hasAdjustedLayer = true;
-      GetComponent<SpriteRenderer>().sortingOrder = 40;
+      Sprite.SetLayer(Sprite.GetLayer() + 2);
     }
 
     if (Dead) {
