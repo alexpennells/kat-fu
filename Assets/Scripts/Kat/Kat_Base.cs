@@ -33,43 +33,10 @@ public class Kat_Base : InputObj {
   [Tooltip("Horizontal speed of the cat when walking in Gun stance")]
   public float gunWalkSpeed = 3;
 
-  public bool Invincible { get { return Sprite.GetAlpha() < 0.8f; } }
-  public bool Hurt { get { return Sprite.IsPlaying("kat_hurt", "kat_recover", "kat_gun_hurt", "kat_gun_recover"); } }
-  public bool Punching { get { return Sprite.IsPlaying("kat_punch"); } }
-  public bool Kicking { get { return Sprite.IsPlaying("kat_kick", "kat_lunge"); } }
-  public bool GroundPounding { get { return Sprite.IsPlaying("kat_pound") && Physics.vspeed < 0; } }
-  public bool Uppercutting { get { return Sprite.IsPlaying("kat_uppercut") && Physics.vspeed > 0; } }
-
   private eKat_Stance stance = eKat_Stance.KATFU;
   public eKat_Stance Stance {
     get { return stance; }
     set { stance = value; }
-  }
-
-  public void GetHurt(float hspeed) {
-    stopPhysics = false;
-    AirKickTimer.Enabled = false;
-    GroundKickTimer.Enabled = false;
-    hasAirAttack = true;
-    hasUppercut = true;
-
-    Physics.hspeedMax = this.walkSpeed;
-    Physics.vspeed = 0;
-    Physics.hspeed = hspeed;
-    if (hspeed < 0)
-      Sprite.FacingRight = true;
-    else
-      Sprite.FacingLeft = true;
-
-    Sound.Play("Hurt");
-    Sprite.Play("Hurt");
-  }
-
-  public void StartInvincible() {
-    Sprite.SetAlpha(0.5f);
-    Sprite.Play("Idle");
-    InvincibleTimer.Enabled = true;
-    preventAlphaChange = true;
   }
 
   protected override void LoadReferences() {
@@ -98,8 +65,8 @@ public class Kat_Base : InputObj {
   }
 
   protected override void Step () {
-    if (Hurt) {
-      if (Physics.hspeed == 0)
+    if (Is("Hurt")) {
+      if (Physics.hspeed == 0 && Stitch.katHealth > 0)
         Sprite.Play("Recover");
       return;
     }
@@ -110,8 +77,7 @@ public class Kat_Base : InputObj {
       Physics.SkipNextFrictionUpdate();
       Physics.SkipNextGravityUpdate();
       Physics.hspeedMax = this.kickSpeed;
-    }
-    else {
+    } else {
       if (Stance == eKat_Stance.KATFU)
         Physics.hspeedMax = this.walkSpeed;
       else if (Stance == eKat_Stance.GUN) {
@@ -122,12 +88,16 @@ public class Kat_Base : InputObj {
       }
     }
 
-    if (!stopPhysics && !Uppercutting && !GroundPounding && !Punching)
+    if (!stopPhysics && !Is("Uppercutting") && !Is("GroundPounding") && !Is("Punching"))
       Sprite.StopBlur();
   }
 
+  /***********************************
+   * INPUT HANDLERS
+   **********************************/
+
   protected override void LeftHeld (float val) {
-    if (stopPhysics || Punching)
+    if (stopPhysics || Is("Punching"))
       return;
 
     if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
@@ -137,7 +107,7 @@ public class Kat_Base : InputObj {
   }
 
   protected override void RightHeld (float val) {
-    if (stopPhysics || Punching)
+    if (stopPhysics || Is("Punching"))
       return;
 
     if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
@@ -167,7 +137,7 @@ public class Kat_Base : InputObj {
     if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
       return;
 
-    if (!stopPhysics && HasFooting) {
+    if (Stitch.canDodge && !stopPhysics && HasFooting) {
       DodgeTimer.Enabled = true;
       stopPhysics = true;
       Sprite.Play("Dodge");
@@ -181,14 +151,13 @@ public class Kat_Base : InputObj {
   }
 
   protected override void GrindPressed () {
-    if (Sprite.IsPlaying("kat_idle", "kat_walk", "kat_gun_idle", "kat_gun_walk")) {
+    if (Stitch.canUseGun && Sprite.IsPlaying("kat_idle", "kat_walk", "kat_gun_idle", "kat_gun_walk")) {
       Sprite.Play("SwitchStance");
 
       if (Stance == eKat_Stance.KATFU) {
         Stance = eKat_Stance.GUN;
         Sound.Play("GunStart");
-      }
-      else {
+      } else {
         Stance = eKat_Stance.KATFU;
         Sound.Play("GunEnd");
       }
@@ -200,38 +169,72 @@ public class Kat_Base : InputObj {
       return;
 
     if (!SolidPhysics.HasFooting) {
-      if (Game.DownHeld && !Sprite.IsPlaying("kat_pound"))
-        StartPound();
-      else if (hasUppercut && Game.UpHeld) {
+      if (Stitch.canGroundPound && Game.DownHeld && !Sprite.IsPlaying("kat_pound"))
+        State("GroundPound");
+      else if (Stitch.canUppercut && Game.UpHeld && hasUppercut) {
         if (!Sprite.IsPlaying("kat_uppercut"))
-          StartUppercut();
+          State("Uppercut");
       }
-      else if (hasAirAttack)
-        StartAirKick();
+      else if (Stitch.canKick && hasAirAttack)
+        State("AirKick");
     }
 
     if (SolidPhysics.HasFooting && !Sprite.IsPlaying("kat_uppercut")) {
-      if (Game.UpHeld) {
-        StartUppercut();
+      if (Stitch.canUppercut && Game.UpHeld) {
+        State("Uppercut");
         return;
       }
 
       if (stopPhysics)
         return;
 
-      if (Game.LeftHeld || Game.RightHeld) {
-        StartGroundKick();
+      if (Stitch.canKick && (Game.LeftHeld || Game.RightHeld)) {
+        State("GroundKick");
         return;
       }
 
-      if (Sprite.IsPlaying("kat_punch"))
+      if (Is("Punching"))
         (Sprite as Kat_Sprite).KeepPunching = true;
       else
         Sprite.Play("Punch");
     }
   }
 
-  private void StartAirKick () {
+  public void CreateBullet() {
+    BaseObj bullet = Game.Create("Bullet", new Vector2(x, Mask.Center.y - 5));
+    bullet.z = z;
+    Sound.Play("Gunshot");
+
+    if (Sprite.FacingRight)
+      bullet.Physics.hspeed = 10;
+    else
+      bullet.Physics.hspeed = -10;
+  }
+
+  /***********************************
+   * STATE CHANGE FUNCTIONS
+   **********************************/
+
+  public void StateHurt(float hspeed) {
+    stopPhysics = false;
+    AirKickTimer.Enabled = false;
+    GroundKickTimer.Enabled = false;
+    hasAirAttack = true;
+    hasUppercut = true;
+
+    Physics.hspeedMax = this.walkSpeed;
+    Physics.vspeed = 0;
+    Physics.hspeed = hspeed;
+    if (hspeed < 0)
+      Sprite.FacingRight = true;
+    else
+      Sprite.FacingLeft = true;
+
+    Sound.Play("Hurt");
+    Sprite.Play("Hurt");
+  }
+
+  public void StateAirKick() {
     hasAirAttack = false;
     stopPhysics = true;
     Physics.vspeed = 0;
@@ -246,7 +249,7 @@ public class Kat_Base : InputObj {
     AirKickTimer.Enabled = true;
   }
 
-  private void StartGroundKick () {
+  public void StateGroundKick () {
     stopPhysics = true;
 
     if (Sprite.FacingLeft)
@@ -259,7 +262,7 @@ public class Kat_Base : InputObj {
     GroundKickTimer.Enabled = true;
   }
 
-  private void StartPound () {
+  public void StateGroundPound () {
     Sprite.Play("GroundPound");
     Sound.Play("Uppercut");
     hasAirAttack = false;
@@ -267,7 +270,7 @@ public class Kat_Base : InputObj {
     Physics.vspeed = 2f;
   }
 
-  private void StartUppercut () {
+  public void StateUppercut () {
     hasUppercut = false;
     GroundKickTimer.Enabled = false;
     stopPhysics = false;
@@ -277,16 +280,23 @@ public class Kat_Base : InputObj {
     Game.CreateParticle("JumpRipple", Mask.Center);
   }
 
-  public void CreateBullet() {
-    BaseObj bullet = Game.Create("Bullet", new Vector2(x, Mask.Center.y - 5));
-    bullet.z = z;
-    Sound.Play("Gunshot");
-
-    if (Sprite.FacingRight)
-      bullet.Physics.hspeed = 10;
-    else
-      bullet.Physics.hspeed = -10;
+  public void StateInvincible() {
+    Sprite.SetAlpha(0.5f);
+    Sprite.Play("Idle");
+    InvincibleTimer.Enabled = true;
+    preventAlphaChange = true;
   }
+
+  /***********************************
+   * STATE CHECKERS
+   **********************************/
+
+  public bool IsHurt() { return Sprite.IsPlaying("kat_hurt", "kat_recover", "kat_gun_hurt", "kat_gun_recover"); }
+  public bool IsPunching() { return Sprite.IsPlaying("kat_punch"); }
+  public bool IsKicking() { return Sprite.IsPlaying("kat_kick", "kat_lunge"); }
+  public bool IsGroundPounding() { return Sprite.IsPlaying("kat_pound") && Physics.vspeed < 0; }
+  public bool IsUppercutting() { return Sprite.IsPlaying("kat_uppercut") && Physics.vspeed > 0; }
+  public bool IsInvincible() { return Sprite.GetAlpha() < 0.8f; }
 
   /***********************************
    * TIMER HANDLERS

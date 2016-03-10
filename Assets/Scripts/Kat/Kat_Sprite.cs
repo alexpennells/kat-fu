@@ -13,7 +13,7 @@ public class Kat_Sprite : SpriteObj {
   private Kat_Base Kat { get { return Base as Kat_Base; } }
 
   public override void Step() {
-    if (Kat.Hurt || IsPlaying("kat_gun_start", "kat_gun_end"))
+    if (Kat.Is("Hurt") || IsPlaying("kat_gun_start", "kat_gun_end"))
       return;
 
     if (IsPlaying("kat_dodge", "kat_gun_dodge")) {
@@ -89,10 +89,10 @@ public class Kat_Sprite : SpriteObj {
         Play("Jump");
         break;
       case "kat_recover":
-        Kat.StartInvincible();
+        Kat.State("Invincible");
         break;
       case "kat_gun_recover":
-        Kat.StartInvincible();
+        Kat.State("Invincible");
         break;
       case "kat_gun_start":
         Animate("kat_gun_idle", 1f);
