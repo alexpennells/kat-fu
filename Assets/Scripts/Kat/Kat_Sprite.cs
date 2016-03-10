@@ -2,6 +2,13 @@ using System;
 using UnityEngine;
 
 public class Kat_Sprite : SpriteObj {
+  public bool KeepPunching { get { return keepPunching; } set { keepPunching = value; } }
+  private bool keepPunching = false;
+
+  public int AttackID { get { return attackId; } }
+  private int attackId = -1;
+
+  private float nextPunchTime = 0f;
 
   private Kat_Base Kat { get { return Base as Kat_Base; } }
 
@@ -34,7 +41,7 @@ public class Kat_Sprite : SpriteObj {
     if (IsPlaying("kat_jump", "kat_gun_jump", "kat_gun_jump_shoot"))
       Play("Jump");
 
-    if (Base.HasFooting && !IsPlaying("kat_punch_1", "kat_punch_2", "kat_lunge", "kat_uppercut")) {
+    if (Base.HasFooting && !IsPlaying("kat_punch", "kat_lunge", "kat_uppercut")) {
       if (!Game.LeftHeld && !Game.RightHeld)
         Play("Idle");
       else {
@@ -58,23 +65,25 @@ public class Kat_Sprite : SpriteObj {
   public void PlayFootstepSound() { Base.Sound.Play("Footstep"); }
   public void PlayLandSound() { Base.Sound.Play("Land"); }
 
+  public void StopPunch(AnimationEvent animationEvent) {
+    if (!KeepPunching) {
+      PlayIdle();
+      nextPunchTime = animationEvent.animatorStateInfo.normalizedTime;
+      StopBlur();
+    } else {
+      Base.Physics.hspeed = FacingRight ? 5f : -5f;
+      KeepPunching = false;
+      Base.Sound.Play("Punch");
+      attackId++;
+    }
+  }
+
   public void AnimationComplete (string animation) {
     switch (animation) {
       case "kat_pound":
         Base.Physics.vspeed = -8;
         Kat.stopPhysics = false;
         StartBlur(0.0025f, 0.8f, 0.08f);
-        break;
-      case "kat_punch_1":
-        if (Kat.playNextPunch) {
-          Play("Punch2");
-          Base.Sound.Play("Punch");
-        }
-        else
-          Play("Idle");
-        break;
-      case "kat_punch_2":
-        Play("Idle");
         break;
       case "kat_uppercut":
         Play("Jump");
@@ -167,24 +176,11 @@ public class Kat_Sprite : SpriteObj {
       Animate("kat_gun_end", 1f);
   }
 
-  public void PlayPunch1() {
-    bool isCrit = Game.Random.Next(1, 10) == 5;
-    if (FacingLeft)
-      Game.CreateParticle(isCrit ? "SlashCritLeft" : "SlashLeft", new Vector3(Base.Mask.Center.x - 8, Base.Mask.Center.y, Base.z));
-    else
-      Game.CreateParticle(isCrit ? "SlashCritRight" : "SlashRight", new Vector3(Base.Mask.Center.x + 8, Base.Mask.Center.y, Base.z));
-
-    Animate("kat_punch_1", 1f);
-  }
-
-  public void PlayPunch2() {
-    bool isCrit = Game.Random.Next(1, 10) == 5;
-    if (FacingLeft)
-      Game.CreateParticle(isCrit ? "SlashCritLeft" : "SlashLeft", new Vector3(Base.Mask.Center.x - 8, Base.Mask.Center.y, Base.z));
-    else
-      Game.CreateParticle(isCrit ? "SlashCritRight" : "SlashRight", new Vector3(Base.Mask.Center.x + 8, Base.Mask.Center.y, Base.z));
-
-    Animate("kat_punch_2", 1f);
+  public void PlayPunch() {
+    KeepPunching = true;
+    Animate("kat_punch", 1.5f, nextPunchTime);
+    StartBlur(0.001f, 0.4f, 0.05f);
+    attackId++;
   }
 
   public void PlayKick() {
@@ -193,16 +189,19 @@ public class Kat_Sprite : SpriteObj {
     else
       Animate("kat_kick", 2f);
 
-    StartBlur(0.005f, 0.8f, 0.1f);
+    StartBlur(0.001f, 0.4f, 0.05f);
+    attackId++;
   }
 
   public void PlayUppercut() {
     Animate("kat_uppercut", 1f);
-    StartBlur(0.005f, 0.8f, 0.1f);
+    StartBlur(0.001f, 0.3f, 0.02f);
+    attackId++;
   }
 
   public void PlayGroundPound() {
     Animate("kat_pound", 1f);
+    attackId++;
   }
 
   public void PlaySpin() {

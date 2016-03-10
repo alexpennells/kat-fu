@@ -14,7 +14,9 @@ public class Kat_SFXLib : SFXLib {
       new Clip("CatAttack", 3),
       new Clip("CatHiss", 3),
       new Clip("CatHurt", 1),
-      new Clip("CatUppercut", 1)
+      new Clip("CatUppercut", 1),
+      new Clip("HeartAdd", 1),
+      new Clip("HeartPickup", 1)
     };
   }
 }

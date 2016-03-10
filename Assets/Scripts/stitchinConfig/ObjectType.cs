@@ -22,5 +22,6 @@ public enum eObjectType
   BOX_SPAWNER,
   DOG,
   SCENE_EXIT,
-  AIR_VENT
+  AIR_VENT,
+  HEART_ITEM
 };

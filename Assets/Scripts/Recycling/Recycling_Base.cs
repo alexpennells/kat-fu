@@ -34,6 +34,7 @@ public class Recycling_Base : BaseObj {
 
   private bool hurt = false;
   public bool Hurt { get { return hurt; } }
+  public bool Dead { get { return hurt && health <= 0; } }
 
   // The spawner of this object, if it exists.
   private BoxSpawner_Base spawner = null;
@@ -42,6 +43,9 @@ public class Recycling_Base : BaseObj {
   // Whether or not the rendering layer has been adjusted to the front of a spawner yet.
   private bool hasAdjustedLayer = true;
   public bool HasAdjustedLayer { get { return hurt; } set { hasAdjustedLayer = value; } }
+
+  private int lastAttackId = -500;
+  public int LastAttackID { get { return lastAttackId; } set { lastAttackId = value; } }
 
   /***********************************
    * FUNCTIONS
@@ -61,7 +65,7 @@ public class Recycling_Base : BaseObj {
       GetComponent<SpriteRenderer>().sortingOrder = 40;
     }
 
-    if (hurt && health <= 0) {
+    if (Dead) {
       Physics.SkipNextFrictionUpdate();
 
       transform.RotateAround(
@@ -97,7 +101,7 @@ public class Recycling_Base : BaseObj {
     canJump = false;
   }
 
-  public void GetHurt(int damage = 10) {
+  public void GetHurt(int damage, float newHspeed) {
     if (Sound)
       Sound.Play("Hurt");
 
@@ -106,12 +110,16 @@ public class Recycling_Base : BaseObj {
 
     health -= damage;
     hurt = true;
+    Physics.hspeed = newHspeed;
 
     if (health <= 0) {
       Physics.vspeed = 3;
       Physics.gravity = 0.25f;
       Destroy(SolidPhysics.Collider);
       Stitch.Kat.Sound.Play("Attack");
+
+      if (Game.Random.Next(1, 5) == 1)
+        HeartItem_Base.Create(Mask.Center);
 
       if (spawner != null)
         spawner.RemoveSpawn(ID);

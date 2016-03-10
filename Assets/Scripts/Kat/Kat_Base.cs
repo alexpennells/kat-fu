@@ -3,7 +3,6 @@ using System.Timers;
 using UnityEngine;
 
 public class Kat_Base : InputObj {
-
   // Whehter the air kick is still up.
   public bool hasAirAttack = true;
 
@@ -36,7 +35,7 @@ public class Kat_Base : InputObj {
 
   public bool Invincible { get { return Sprite.GetAlpha() < 0.8f; } }
   public bool Hurt { get { return Sprite.IsPlaying("kat_hurt", "kat_recover", "kat_gun_hurt", "kat_gun_recover"); } }
-  public bool Punching { get { return Sprite.IsPlaying("kat_punch_1", "kat_punch_2"); } }
+  public bool Punching { get { return Sprite.IsPlaying("kat_punch"); } }
   public bool Kicking { get { return Sprite.IsPlaying("kat_kick", "kat_lunge"); } }
   public bool GroundPounding { get { return Sprite.IsPlaying("kat_pound") && Physics.vspeed < 0; } }
   public bool Uppercutting { get { return Sprite.IsPlaying("kat_uppercut") && Physics.vspeed > 0; } }
@@ -123,12 +122,12 @@ public class Kat_Base : InputObj {
       }
     }
 
-    if (!stopPhysics && !Uppercutting && !GroundPounding)
+    if (!stopPhysics && !Uppercutting && !GroundPounding && !Punching)
       Sprite.StopBlur();
   }
 
   protected override void LeftHeld (float val) {
-    if (stopPhysics || Sprite.IsPlaying("kat_punch_1", "kat_punch_2"))
+    if (stopPhysics || Punching)
       return;
 
     if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
@@ -138,7 +137,7 @@ public class Kat_Base : InputObj {
   }
 
   protected override void RightHeld (float val) {
-    if (stopPhysics || Sprite.IsPlaying("kat_punch_1", "kat_punch_2"))
+    if (stopPhysics || Punching)
       return;
 
     if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
@@ -225,13 +224,10 @@ public class Kat_Base : InputObj {
         return;
       }
 
-      if (Sprite.IsPlaying("kat_punch_1"))
-        playNextPunch = true;
-      else if (!Sprite.IsPlaying("kat_punch_2")) {
-        Sound.Play("Punch");
-        Sprite.Play("Punch1");
-        playNextPunch = false;
-      }
+      if (Sprite.IsPlaying("kat_punch"))
+        (Sprite as Kat_Sprite).KeepPunching = true;
+      else
+        Sprite.Play("Punch");
     }
   }
 

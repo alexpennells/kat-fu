@@ -53,6 +53,9 @@ public class CollisionStubs : CollisionObj
       case eObjectType.AIR_VENT:
         AirVentCollision(other as AirVent_Base);
         break;
+      case eObjectType.HEART_ITEM:
+        HeartItemCollision(other as HeartItem_Base);
+        break;
     }
   }
 
@@ -83,4 +86,5 @@ public class CollisionStubs : CollisionObj
   protected virtual void BoxSpawnerCollision(BoxSpawner_Base other) {}
   protected virtual void DogCollision(Dog_Base other) {}
   protected virtual void AirVentCollision(AirVent_Base other) {}
+  protected virtual void HeartItemCollision(HeartItem_Base other) {}
 }
