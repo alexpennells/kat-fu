@@ -15,6 +15,9 @@ public class Kat_SolidCollider : SolidColliderObj {
     if (Base.Physics.vspeed != 0)
       Base.Sound.Play("Land");
 
+    if (footing.SpecialType == eObjectType.MANHOLE && Base.Physics.vspeed < 0)
+      (footing as Manhole_Base).StartSpinning();
+
     base.FootingCollision(footing);
 
     bounced = false;
@@ -30,6 +33,13 @@ public class Kat_SolidCollider : SolidColliderObj {
 
   protected override void WallCollision (SolidObj wall) {
     Base.Physics.hspeed = 0;
+  }
+
+  protected override void RoofCollision (SolidObj roof) {
+    if (roof.SpecialType == eObjectType.MANHOLE && Base.Physics.vspeed > 0)
+      (roof as Manhole_Base).StartSpinning();
+    else
+      base.RoofCollision(roof);
   }
 
   private void BounceOffGround () {

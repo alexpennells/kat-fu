@@ -12,6 +12,13 @@ public class Kat_Collision : CollisionStubs {
     Game.ChangeScene(other.sceneName, other.exitID, "KatHead");
   }
 
+  protected override void TunaCanCollision(TunaCan_Base other) {
+    if (!Game.UpHeld || !Base.HasFooting)
+      return;
+
+    other.Collect();
+  }
+
   protected override void HeartItemCollision(HeartItem_Base other) {
     if (!other.Collected && other.CanBeCollected && Stitch.heartCount > Stitch.katHealth)
       other.Collect();

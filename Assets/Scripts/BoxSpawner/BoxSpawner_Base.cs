@@ -111,9 +111,6 @@ public class BoxSpawner_Base : BaseObj {
       PlayEffect("explosion");
 
       HeartItem_Base.Create(Mask.Center);
-      HeartItem_Base.Create(Mask.Center + new Vector3(6, 0, 0));
-      HeartItem_Base.Create(Mask.Center + new Vector3(-6, 0, 0));
-
       DestroySelf();
     }
     else

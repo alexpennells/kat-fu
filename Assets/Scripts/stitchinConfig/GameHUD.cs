@@ -39,6 +39,17 @@ public class GameHUD : MonoBehaviour {
     return (int)(Stitch.katHealth + 0.25);
   }
 
+  public void CreateNewHeart() {
+    int newIndex = hearts.Count;
+    hearts.Add(CreateHeart(newIndex * 15, emptyHeartSprite));
+    currentBubbleHeart = newIndex;
+    hearts[currentBubbleHeart].transform.localScale += new Vector3(0.12f, 0.12f, 0.12f);
+
+    reverseBubbleHeart = true;
+    StopCoroutine("BubbleHearts");
+    StartCoroutine("BubbleHearts");
+  }
+
   public void AddHeart(int index) {
     currentBubbleHeart = index;
     hearts[currentBubbleHeart].transform.localScale += new Vector3(0.12f, 0.12f, 0.12f);

@@ -16,10 +16,11 @@ public class HeartItem_Base : BaseObj {
   // Once collected, move to this destination point before destroying self.
   private int uiHeartIndex;
 
-  public static void Create(Vector3 position) {
+  public static BaseObj Create(Vector3 position) {
     BaseObj b = Game.Create("HeartItem", position);
     b.Physics.hspeed = Game.Random.Next(-2, 3);
     b.Physics.vspeed = Game.Random.Next(1, 3);
+    return b;
   }
 
   public override void DestroySelf() {
@@ -88,7 +89,7 @@ public class HeartItem_Base : BaseObj {
       yield return null;
     }
 
-    yield return new WaitForSeconds(0.5f);
+    yield return new WaitForSeconds(0.1f);
     transform.parent = Game.HUD.transform;
 
     Vector3 start = transform.localPosition;

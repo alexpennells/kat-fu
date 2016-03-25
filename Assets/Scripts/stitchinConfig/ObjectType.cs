@@ -23,5 +23,7 @@ public enum eObjectType
   DOG,
   SCENE_EXIT,
   AIR_VENT,
-  HEART_ITEM
+  HEART_ITEM,
+  TUNA_CAN,
+  MANHOLE
 };

@@ -2,21 +2,27 @@ using UnityEngine;
 
 public class Stitch : MonoBehaviour
 {
-  public static float katHealth = 2f;
+  public static float katHealth = 1f;
+
+  /***********************************
+   * SINGLETON ITEMS
+   **********************************/
+
+   public static bool[] tunaCans = { false, false, false, false, false, false, false, false };
 
   /***********************************
    * ABILITIES
    **********************************/
 
-  public static bool canKick = true;
-  public static bool canGroundPound = true;
-  public static bool canGroundBoom = true;
-  public static bool canClimb = true;
-  public static bool canCling = true;
-  public static bool canDodge = true;
-  public static bool canUseGun = true;
-  public static bool canUseGrenades = true;
-  public static bool canUppercut = true;
+  public static bool canKick = false;
+  public static bool canGroundPound = false;
+  public static bool canGroundBoom = false;
+  public static bool canClimb = false;
+  public static bool canCling = false;
+  public static bool canDodge = false;
+  public static bool canUseGun = false;
+  public static bool canUseGrenades = false;
+  public static bool canUppercut = false;
 
   /***********************************
    * SCALING ABILITIES
@@ -45,6 +51,14 @@ public class Stitch : MonoBehaviour
   void Awake() {
     instance = this;
     kat = GameObject.FindWithTag("Player").GetComponent<Kat_Base>();
+  }
+
+  public static GameObject CreateDust(Vector3 pos) {
+    GameObject p = Game.CreateParticle("Dust", pos);
+    p.GetComponent<Renderer>().sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
+    foreach (Transform t in p.transform)
+      t.GetComponent<Renderer>().sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
+    return p;
   }
 
   public static GameObject CreateHit(Vector3 pos) {

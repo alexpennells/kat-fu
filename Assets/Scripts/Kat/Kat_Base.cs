@@ -104,7 +104,8 @@ public class Kat_Base : InputObj {
       return;
 
     Physics.hspeed -= 0.5f;
-    Sprite.FacingLeft = true;
+    if (!(Stance == eKat_Stance.GUN && Game.DownHeld))
+      Sprite.FacingLeft = true;
   }
 
   protected override void RightHeld (float val) {
@@ -115,7 +116,9 @@ public class Kat_Base : InputObj {
       return;
 
     Physics.hspeed += 0.5f;
-    Sprite.FacingRight = true;
+
+    if (!(Stance == eKat_Stance.GUN && Game.DownHeld))
+      Sprite.FacingRight = true;
   }
 
   protected override void JumpPressed () {

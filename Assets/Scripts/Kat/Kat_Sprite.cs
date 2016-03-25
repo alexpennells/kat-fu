@@ -53,6 +53,9 @@ public class Kat_Sprite : SpriteObj {
     if (!Kat.preventAlphaChange && GetAlpha() < 1f) {
       SetAlpha(GetAlpha() + 0.025f);
     }
+
+    if (Base.HasFooting && Math.Abs(Base.Physics.hspeed) > 0.5f)
+      Stitch.CreateDust(Base.Position + Vector3.up * 12 + Vector3.right * Base.Physics.hspeed);
   }
 
   public void PlayFootstepSound() { Base.Sound.Play("Footstep"); }
