@@ -3,10 +3,12 @@ using UnityEngine;
 public class Manhole_Base : SolidObj {
   public override eObjectType SpecialType { get { return eObjectType.MANHOLE; } }
   protected Animator animator;
-  private float restY;
+  private float restY, spriteRestY;
 
   protected override void Init() {
     this.animator = transform.Find("Sprite").GetComponent<Animator>();
+    this.spriteRestY = animator.gameObject.transform.position.y;
+
     restY = y;
     Physics.Active = false;
   }
@@ -19,6 +21,17 @@ public class Manhole_Base : SolidObj {
     }
 
     Physics.Active = !active;
+
+    if (active) {
+      if (Stitch.Kat.Footing == this && animator.gameObject.transform.position.y != spriteRestY - 1) {
+        SetSpriteY(spriteRestY - 1);
+        Sound.Play("Down");
+      }
+      else if (Stitch.Kat.Footing != this && animator.gameObject.transform.position.y == spriteRestY - 1){
+        SetSpriteY(spriteRestY);
+        Sound.Play("Up");
+      }
+    }
   }
 
   public void StartSpinning() {
@@ -28,5 +41,10 @@ public class Manhole_Base : SolidObj {
     animator.Play("Spin");
     animator.speed = 2f;
     Physics.vspeed = 5;
+    Sound.Play("Flip");
+  }
+
+  private void SetSpriteY(float y) {
+    animator.gameObject.transform.position = new Vector3(animator.gameObject.transform.position.x, y, animator.gameObject.transform.position.z);
   }
 }
