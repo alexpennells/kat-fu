@@ -25,5 +25,6 @@ public enum eObjectType
   AIR_VENT,
   HEART_ITEM,
   TUNA_CAN,
-  MANHOLE
+  MANHOLE,
+  FAN
 };

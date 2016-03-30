@@ -19,6 +19,17 @@ public class Kat_Collision : CollisionStubs {
     other.Collect();
   }
 
+  protected override void FanCollision(Fan_Base other) {
+    if (Kat.Is("Punching") && Kat.x > other.Mask.Center.x && Kat.Sprite.FacingRight) {
+      BounceOffEnemy(4);
+      other.DestroySelf();
+      Game.FreezeFor(0.1f);
+      return;
+    }
+
+    Base.x += other.power;
+  }
+
   protected override void HeartItemCollision(HeartItem_Base other) {
     if (!other.Collected && other.CanBeCollected && Stitch.heartCount > Stitch.katHealth)
       other.Collect();

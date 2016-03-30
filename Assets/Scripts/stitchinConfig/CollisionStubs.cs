@@ -59,6 +59,9 @@ public class CollisionStubs : CollisionObj
       case eObjectType.TUNA_CAN:
         TunaCanCollision(other as TunaCan_Base);
         break;
+      case eObjectType.FAN:
+        FanCollision(other as Fan_Base);
+        break;
     }
   }
 
@@ -91,4 +94,5 @@ public class CollisionStubs : CollisionObj
   protected virtual void AirVentCollision(AirVent_Base other) {}
   protected virtual void HeartItemCollision(HeartItem_Base other) {}
   protected virtual void TunaCanCollision(TunaCan_Base other) {}
+  protected virtual void FanCollision(Fan_Base other) {}
 }

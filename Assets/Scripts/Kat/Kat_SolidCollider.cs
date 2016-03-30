@@ -15,14 +15,24 @@ public class Kat_SolidCollider : SolidColliderObj {
     if (Base.Physics.vspeed != 0)
       Base.Sound.Play("Land");
 
-    if (footing.SpecialType == eObjectType.MANHOLE && Base.Physics.vspeed < 0)
-      (footing as Manhole_Base).StartSpinning();
+    bool dontBounce = false;
+    if (footing.SpecialType == eObjectType.MANHOLE && Base.Physics.vspeed < 0) {
+      Manhole_Base manhole = footing as Manhole_Base;
+
+      if (manhole.strength == 0 || (Base.Is("GroundPounding") && (manhole.strength == 1 || Stitch.canGroundBoom))) {
+        manhole.StartSpinning();
+        dontBounce = true;
+      }
+    }
 
     base.FootingCollision(footing);
 
     bounced = false;
     if (Base.Sprite.IsPlaying("kat_pound"))
       BounceOffGround();
+
+    if (dontBounce)
+      Base.Physics.vspeed = 0;
 
     Stitch.Kat.hasAirAttack = true;
     Stitch.Kat.hasUppercut = true;
@@ -52,7 +62,11 @@ public class Kat_SolidCollider : SolidColliderObj {
     Base.Physics.hspeed = 0;
     Base.Physics.vspeed = 5;
 
-    Stitch.CreateGroundHit(new Vector3(Base.x, Base.Mask.Bottom, Base.z));
+    if (Stitch.canGroundBoom)
+      Stitch.CreateGroundBoom(new Vector3(Base.x, Base.Mask.Bottom, Base.z));
+    else
+      Stitch.CreateGroundHit(new Vector3(Base.x, Base.Mask.Bottom, Base.z));
+
     Base.Sound.Play("Impact");
     Base.Sprite.Play("Spin");
     bounced = true;

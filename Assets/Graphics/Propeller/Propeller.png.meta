@@ -1,9 +1,26 @@
 fileFormatVersion: 2
 guid: 9209800f8a6f94a17852a49f7fe5fae3
-timeCreated: 1459271654
+timeCreated: 1459274056
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Propeller_0
+    21300002: Propeller_1
+    21300004: Propeller_2
+    21300006: Propeller_3
+    21300008: Propeller_4
+    21300010: Propeller_5
+    21300012: Propeller_6
+    21300014: Propeller_7
+    21300016: Propeller_8
+    21300018: Propeller_9
+    21300020: Propeller_10
+    21300022: Propeller_11
+    21300024: Propeller_12
+    21300026: Propeller_13
+    21300028: Propeller_14
+    21300030: Propeller_15
+    21300032: Propeller_16
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +47,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +55,205 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Propeller_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_2
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_4
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_5
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_8
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_9
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_10
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_11
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_12
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_13
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_14
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_15
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Propeller_16
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 8
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

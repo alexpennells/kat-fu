@@ -9,14 +9,15 @@ public class Stitch : MonoBehaviour
    **********************************/
 
    public static bool[] tunaCans = { false, false, false, false, false, false, false, false };
+   public static bool[] fanStatus = { true, true };
 
   /***********************************
    * ABILITIES
    **********************************/
 
   public static bool canKick = false;
-  public static bool canGroundPound = false;
-  public static bool canGroundBoom = false;
+  public static bool canGroundPound = true;
+  public static bool canGroundBoom = true;
   public static bool canClimb = false;
   public static bool canCling = false;
   public static bool canDodge = false;
@@ -76,6 +77,40 @@ public class Stitch : MonoBehaviour
     p.GetComponent<Renderer>().sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
     foreach (Transform t in p.transform)
       t.GetComponent<Renderer>().sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
+    return p;
+  }
+
+  public static GameObject CreateGroundBoom(Vector3 pos) {
+    bool isCrit = Game.Random.Next(1, 10) == 5;
+    GameObject p = Game.CreateParticle(isCrit ? "GroundBoomCrit" : "GroundBoom", pos);
+    p.GetComponent<Renderer>().sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
+    foreach (Transform t in p.transform) {
+      Renderer child = t.GetComponent<Renderer>();
+      if (child != null)
+        child.sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
+    }
+    return p;
+  }
+
+  public static GameObject CreateSmallElectricBlast(Vector3 pos) {
+    GameObject p = Game.CreateParticle("SmallElectricBlast", pos);
+    p.GetComponent<Renderer>().sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
+    foreach (Transform t in p.transform) {
+      Renderer child = t.GetComponent<Renderer>();
+      if (child != null)
+        child.sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
+    }
+    return p;
+  }
+
+  public static GameObject CreateSmallSmokePuff(Vector3 pos) {
+    GameObject p = Game.CreateParticle("SmallSmokePuff", pos);
+    p.GetComponent<Renderer>().sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
+    foreach (Transform t in p.transform) {
+      Renderer child = t.GetComponent<Renderer>();
+      if (child != null)
+        child.sortingOrder = Stitch.Kat.Sprite.GetLayer() + 1;
+    }
     return p;
   }
 

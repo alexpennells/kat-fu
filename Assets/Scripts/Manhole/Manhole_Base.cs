@@ -5,6 +5,9 @@ public class Manhole_Base : SolidObj {
   protected Animator animator;
   private float restY, spriteRestY;
 
+  [Tooltip("Attack needed to open. 0 = standard jump, 1 = ground pound, 2 = ground boom")]
+  public int strength = 0;
+
   protected override void Init() {
     this.animator = transform.Find("Sprite").GetComponent<Animator>();
     this.spriteRestY = animator.gameObject.transform.position.y;
