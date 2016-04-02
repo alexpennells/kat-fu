@@ -5,10 +5,12 @@ public class FrontLayer : MonoBehaviour {
   private float fade = 1f;
   private Ferr2DT_PathTerrain floor;
   private Ferr2DT_PathTerrain blackness;
+  private Fan_Base fan;
 
   void Start() {
     floor = transform.Find("Floor").GetComponent<Ferr2DT_PathTerrain>();
     blackness = transform.Find("BlacknessFade").GetComponent<Ferr2DT_PathTerrain>();
+    fan = GameObject.Find("Fan").GetComponent<Fan_Base>();
   }
 
   void Update() {
@@ -21,5 +23,8 @@ public class FrontLayer : MonoBehaviour {
     floor.Build();
     blackness.vertexColor = new Color(1, 1, 1, fade);
     blackness.Build();
+
+    if (fan)
+      fan.SetHumVolume(Math.Min(1 - fade, 0.8f));
   }
 }

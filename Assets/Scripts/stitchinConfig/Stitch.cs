@@ -16,8 +16,8 @@ public class Stitch : MonoBehaviour
    **********************************/
 
   public static bool canKick = false;
-  public static bool canGroundPound = true;
-  public static bool canGroundBoom = true;
+  public static bool canGroundPound = false;
+  public static bool canGroundBoom = false;
   public static bool canClimb = false;
   public static bool canCling = false;
   public static bool canDodge = false;
@@ -29,7 +29,7 @@ public class Stitch : MonoBehaviour
    * SCALING ABILITIES
    **********************************/
 
-  public static int heartCount = 2;
+  public static int heartCount = 1;
   public static int jumpHeight = 6;
   public static int moveSpeed = 3;
   public static int maxGrenades = 5;
