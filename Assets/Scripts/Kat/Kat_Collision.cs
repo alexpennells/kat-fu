@@ -20,11 +20,20 @@ public class Kat_Collision : CollisionStubs {
   }
 
   protected override void FanCollision(Fan_Base other) {
-    if (Kat.Is("Punching") && Kat.x > other.Mask.Center.x && Kat.Sprite.FacingRight) {
-      BounceOffEnemy(4);
-      other.DestroySelf();
-      Game.FreezeFor(0.1f);
-      return;
+    if (Kat.Is("Punching") && Kat.x > other.Mask.Right - 20 && Kat.Sprite.FacingRight) {
+      if ((other.LastAttackID != (Base.Sprite as Kat_Sprite).AttackID)) {
+        other.LastAttackID = (Base.Sprite as Kat_Sprite).AttackID;
+        other.GetHurt();
+
+        if (Base.Sprite.FacingRight)
+          Stitch.CreateHit(new Vector3(Base.Mask.Right + 10, Base.Mask.Center.y, Base.z));
+        else
+          Stitch.CreateHit(new Vector3(Base.Mask.Left - 10, Base.Mask.Center.y, Base.z));
+
+        Base.Physics.hspeed = 0;
+        Game.FreezeFor(0.1f);
+        return;
+      }
     }
 
     Base.x += other.power;

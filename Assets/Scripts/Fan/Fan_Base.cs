@@ -10,7 +10,21 @@ public class Fan_Base : BaseObj {
   [Tooltip("Which unique fan is this in the Stitchin engine")]
   public int fanID = 0;
 
+  [Tooltip("The number of times the fan must be hit before it's destroyed")]
+  public int fanHealth = 1;
+
+  /***********************************
+   * PRIVATE VARS AND ACCESSORS
+   **********************************/
+
   private AudioSource hum;
+
+  private int lastAttackId = -500;
+  public int LastAttackID { get { return lastAttackId; } set { lastAttackId = value; } }
+
+  /***********************************
+   * FUNCTIONS
+   **********************************/
 
   protected override void LoadReferences() {
     hum = GetComponent<AudioSource>();
@@ -24,11 +38,18 @@ public class Fan_Base : BaseObj {
   public override void DestroySelf() {
     if (Stitch.fanStatus[fanID]) {
       Stitch.CreateSmallElectricBlast(new Vector3(Mask.Right, Mask.Center.y, z));
-      Stitch.CreateSmallSmokePuff(new Vector3(Mask.Right, Mask.Center.y, z));
       Sound.Play("Break");
       Stitch.fanStatus[fanID] = false;
     }
     base.DestroySelf();
+  }
+
+  public void GetHurt() {
+    fanHealth--;
+    Stitch.CreateSmallSmokePuff(new Vector3(Mask.Right, Mask.Center.y, z));
+
+    if (fanHealth < 1)
+      DestroySelf();
   }
 
   public void SetHumVolume(float vol) {
