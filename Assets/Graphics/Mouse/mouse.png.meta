@@ -1,0 +1,261 @@
+fileFormatVersion: 2
+guid: cd0487b748a3a497f94bc3a33a2fa5d8
+timeCreated: 1459971143
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_0
+    21300002: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_1
+    21300004: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_2
+    21300006: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_3
+    21300008: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_4
+    21300010: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_5
+    21300012: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_6
+    21300014: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_7
+    21300016: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_8
+    21300018: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_9
+    21300020: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_10
+    21300022: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_11
+    21300024: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_12
+    21300026: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_13
+    21300028: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_14
+    21300030: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_15
+    21300032: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_16
+    21300034: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_17
+    21300036: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_18
+    21300038: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_19
+    21300040: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_20
+    21300042: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_21
+    21300044: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_22
+    21300046: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_23
+    21300048: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_24
+    21300050: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_25
+    21300052: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_26
+    21300054: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_27
+    21300056: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_28
+    21300058: brown_mouse_sprite__battle_pals__by_happy2322-d6py0g7_29
+    21300060: Mouse_0
+    21300062: Mouse_1
+    21300064: Mouse_2
+    21300066: Mouse_3
+    21300068: Mouse_4
+    21300070: Mouse_5
+    21300072: Mouse_6
+    21300074: Mouse_7
+    21300076: Mouse_8
+    21300078: Mouse_9
+    21300080: Mouse_10
+    21300082: Mouse_11
+    21300084: Mouse_12
+    21300086: Mouse_13
+    21300088: Mouse_14
+    21300090: Mouse_15
+    21300092: Mouse_16
+    21300094: Mouse_17
+    21300096: Mouse_18
+    21300098: Mouse_19
+    21300100: Mouse_20
+    21300102: Mouse_21
+    21300104: Mouse_22
+    21300106: Mouse_23
+    21300108: Mouse_24
+    21300110: Mouse_25
+    21300112: Mouse_26
+    21300114: Mouse_27
+    21300116: Mouse_28
+    21300118: Mouse_29
+    21300120: mouse_0
+    21300122: mouse_1
+    21300124: mouse_2
+    21300126: mouse_3
+    21300128: mouse_4
+    21300130: mouse_5
+    21300132: mouse_6
+    21300134: mouse_7
+    21300136: mouse_8
+    21300138: mouse_9
+    21300140: mouse_10
+    21300142: mouse_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: mouse_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 106
+        width: 32
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouse_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 82
+        width: 32
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouse_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 82
+        width: 32
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouse_3
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 58
+        width: 32
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouse_4
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 34
+        width: 32
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouse_5
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 34
+        width: 32
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouse_6
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 34
+        width: 32
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouse_7
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 34
+        width: 32
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouse_8
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 34
+        width: 32
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouse_9
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 34
+        width: 32
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouse_10
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 10
+        width: 32
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouse_11
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 10
+        width: 32
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

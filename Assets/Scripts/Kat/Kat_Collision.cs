@@ -36,7 +36,8 @@ public class Kat_Collision : CollisionStubs {
       }
     }
 
-    Base.x += other.power;
+    if (!Kat.Is("Punching"))
+      Base.x += other.power;
   }
 
   protected override void HeartItemCollision(HeartItem_Base other) {

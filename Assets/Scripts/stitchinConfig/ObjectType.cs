@@ -26,5 +26,6 @@ public enum eObjectType
   HEART_ITEM,
   TUNA_CAN,
   MANHOLE,
-  FAN
+  FAN,
+  MOUSE
 };
