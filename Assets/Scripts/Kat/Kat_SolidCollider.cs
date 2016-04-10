@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -48,8 +49,10 @@ public class Kat_SolidCollider : SolidColliderObj {
   protected override void RoofCollision (SolidObj roof) {
     if (roof.SpecialType == eObjectType.MANHOLE && Base.Physics.vspeed > 0)
       (roof as Manhole_Base).StartSpinning();
-    else
+    else {
+      Base.Physics.vspeed = Math.Min(Base.Physics.vspeed, 2);
       base.RoofCollision(roof);
+    }
   }
 
   private void BounceOffGround () {

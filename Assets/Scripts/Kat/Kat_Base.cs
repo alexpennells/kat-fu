@@ -97,7 +97,7 @@ public class Kat_Base : InputObj {
    **********************************/
 
   protected override void LeftHeld (float val) {
-    if (stopPhysics || Is("Punching"))
+    if (stopPhysics || Is("Punching") || SolidPhysics.InWall)
       return;
 
     if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
@@ -109,7 +109,7 @@ public class Kat_Base : InputObj {
   }
 
   protected override void RightHeld (float val) {
-    if (stopPhysics || Is("Punching"))
+    if (stopPhysics || Is("Punching") || SolidPhysics.InWall)
       return;
 
     if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
@@ -122,7 +122,7 @@ public class Kat_Base : InputObj {
   }
 
   protected override void JumpPressed () {
-    if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end"))
+    if (Sprite.IsPlaying("kat_gun_start", "kat_gun_end") || SolidPhysics.InWall)
       return;
 
     if (HasFooting && !stopPhysics) {

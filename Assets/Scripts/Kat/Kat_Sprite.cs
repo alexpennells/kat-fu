@@ -42,12 +42,10 @@ public class Kat_Sprite : SpriteObj {
       Play("Jump");
 
     if (Base.HasFooting && !IsPlaying("kat_punch", "kat_lunge", "kat_uppercut")) {
-      if (!Game.LeftHeld && !Game.RightHeld)
+      if (Base.Physics.hspeed == 0 || (!Game.LeftHeld && !Game.RightHeld))
         Play("Idle");
-      else {
+      else
         Play("Walk");
-        SetSpeed(Math.Abs(Base.Physics.hspeed / 4f));
-      }
     }
 
     if (!Kat.preventAlphaChange && GetAlpha() < 1f) {
