@@ -17,7 +17,7 @@ public class Manhole_Base : SolidObj {
   }
 
   protected override void Step() {
-    if (Physics.Active && y <= restY) {
+    if (Physics.Active && y <= restY && Physics.vspeed < 0) {
       active = true;
       y = restY;
       animator.Play("Idle");

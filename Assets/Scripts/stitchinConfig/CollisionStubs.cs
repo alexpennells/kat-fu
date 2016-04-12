@@ -65,6 +65,9 @@ public class CollisionStubs : CollisionObj
       case eObjectType.MOUSE:
         MouseCollision(other as Mouse_Base);
         break;
+      case eObjectType.MANHOLE:
+        MouseCollision(other as Mouse_Base);
+        break;
     }
   }
 
@@ -99,4 +102,5 @@ public class CollisionStubs : CollisionObj
   protected virtual void TunaCanCollision(TunaCan_Base other) {}
   protected virtual void FanCollision(Fan_Base other) {}
   protected virtual void MouseCollision(Mouse_Base other) {}
+  protected virtual void ManholeCollision(Manhole_Base other) {}
 }

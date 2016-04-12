@@ -15,15 +15,15 @@ public class Stitch : MonoBehaviour
    * ABILITIES
    **********************************/
 
-  public static bool canKick = false;
-  public static bool canGroundPound = false;
+  public static bool canKick = true;
+  public static bool canGroundPound = true;
   public static bool canGroundBoom = false;
   public static bool canClimb = false;
   public static bool canCling = false;
   public static bool canDodge = false;
   public static bool canUseGun = false;
   public static bool canUseGrenades = false;
-  public static bool canUppercut = false;
+  public static bool canUppercut = true;
 
   /***********************************
    * SCALING ABILITIES
