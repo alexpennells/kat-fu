@@ -80,7 +80,7 @@ public class Recycling_Base : BaseObj {
     if (!HasFooting)
       Physics.SkipNextFrictionUpdate();
 
-    if (HasFooting && canJump && !hurt && Stitch.Kat.z == z) {
+    if (ShouldChase()) {
       // Jump towards the cat.
       if (x < TurfMin)
         StartJump(moveSpeed);
@@ -127,6 +127,10 @@ public class Recycling_Base : BaseObj {
       HurtTimer.Enabled = true;
       JumpTimer.Enabled = true;
     }
+  }
+
+  private bool ShouldChase() {
+    return HasFooting && canJump && !hurt && Stitch.Kat.z == z && Math.Abs(Stitch.Kat.y - y) < 75;
   }
 
   /***********************************

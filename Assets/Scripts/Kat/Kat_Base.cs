@@ -39,17 +39,25 @@ public class Kat_Base : InputObj {
     set { stance = value; }
   }
 
+  private SceneExit exit;
+  public SceneExit Exit { get { return exit; } set { exit = value; } }
+
   protected override void LoadReferences() {
     // Don't initialize scene stuff if in edit mode.
     if (!Game.Instance)
       return;
 
     if (Game.Instance.Entrance) {
-      Position = Game.Instance.Entrance.StartPosition();
+      this.DisableInput = true;
       Sprite.SetLayer(-z + 10);
-    }
+      Sprite.Play("Walk");
+      Sprite.mirrorToStart = Game.Instance.Entrance.StartPosition.x < Game.Instance.Entrance.Position.x;
+      if (Game.Instance.Entrance.isDoor)
+        Sprite.SetAlpha(0f);
 
-    y = y + Mask.LocalBottom;
+      Position = Game.Instance.Entrance.Position + Vector3.up * Mask.LocalBottom;
+      MoveTo(Game.Instance.Entrance.StartPosition + Vector3.up * Mask.LocalBottom, 20, "WalkInStep", "WalkInComplete");
+    }
 
     if (Game.Camera) {
       Game.Camera.ViewObj = this;
@@ -90,6 +98,26 @@ public class Kat_Base : InputObj {
 
     if (!stopPhysics && !Is("Uppercutting") && !Is("GroundPounding") && !Is("Punching"))
       Sprite.StopBlur();
+  }
+
+  public void WalkInStep(float t) {
+    if (Game.Instance.Entrance && Game.Instance.Entrance.isDoor) {
+      Sprite.SetAlpha(t);
+    }
+  }
+
+  public void WalkInComplete() {
+    this.DisableInput = false;
+  }
+
+  public void WalkOutStep(float t) {
+    if (Exit.isDoor) {
+      Sprite.SetAlpha(1 - t);
+    }
+  }
+
+  public void WalkOutComplete() {
+    Game.ChangeScene(Exit.sceneName, Exit.exitID, "KatHead");
   }
 
   /***********************************

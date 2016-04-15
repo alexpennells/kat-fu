@@ -6,7 +6,8 @@ public class LaundryGaragePipe : MonoBehaviour {
   private Fan_Base fan;
 
   void Start() {
-    fan = GameObject.Find("Fan").GetComponent<Fan_Base>();
+    if (Stitch.fanStatus[1])
+      fan = GameObject.Find("Fan").GetComponent<Fan_Base>();
 
     if (Game.Instance.Entrance && Game.Instance.Entrance.entranceID == 0) {
       Mouse_Base mouse = Game.Create("Mouse", new Vector3(1712, 224, 0)) as Mouse_Base;

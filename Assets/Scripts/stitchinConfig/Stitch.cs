@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class Stitch : MonoBehaviour
 {
-  public static float katHealth = 1f;
+  public static float katHealth = 2f;
 
   /***********************************
    * SINGLETON ITEMS
    **********************************/
 
-   public static bool[] tunaCans = { false, false, false, false, false, false, false, false };
-   public static bool[] fanStatus = { true, true };
+   public static bool[] tunaCans = { true, false, false, false, false, false, false, false };
+   public static bool[] fanStatus = { false, false };
 
   /***********************************
    * ABILITIES
@@ -29,7 +29,7 @@ public class Stitch : MonoBehaviour
    * SCALING ABILITIES
    **********************************/
 
-  public static int heartCount = 1;
+  public static int heartCount = 2;
   public static int jumpHeight = 6;
   public static int moveSpeed = 3;
   public static int maxGrenades = 5;

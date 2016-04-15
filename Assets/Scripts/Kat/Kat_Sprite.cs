@@ -13,6 +13,9 @@ public class Kat_Sprite : SpriteObj {
   private Kat_Base Kat { get { return Base as Kat_Base; } }
 
   public override void Step() {
+    if (Kat.DisableInput)
+      return;
+
     if (Kat.Is("Hurt") || IsPlaying("kat_gun_start", "kat_gun_end"))
       return;
 
@@ -126,7 +129,7 @@ public class Kat_Sprite : SpriteObj {
     if (IsPlaying("kat_gun_start", "kat_gun_end"))
       return;
 
-    float animSpeed = Math.Abs(Base.Physics.hspeed / 4f);
+    float animSpeed = Kat.DisableInput ? 1.5f : Math.Abs(Base.Physics.hspeed / 4f);
 
     if (Kat.Stance == eKat_Stance.KATFU)
       Animate("kat_walk", animSpeed);

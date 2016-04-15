@@ -6,10 +6,14 @@ public class Kat_Collision : CollisionStubs {
   private Kat_Base Kat { get { return Base as Kat_Base; } }
 
   protected override void SceneExitCollision(SceneExit other) {
-    if (other.isDoor && (!Game.UpHeld || !Base.HasFooting))
+    if (Kat.DisableInput || (other.isDoor && (!Game.UpHeld || !Base.HasFooting)))
       return;
 
-    Game.ChangeScene(other.sceneName, other.exitID, "KatHead");
+    Kat.DisableInput = true;
+    Kat.Exit = other;
+    Base.Sprite.FacingRight = (other.ExitPosition.x >= Base.Mask.Center.x);
+
+    Kat.MoveTo(other.ExitPosition + Vector3.up * Base.Mask.LocalBottom, 20, "WalkOutStep", "WalkOutComplete");
   }
 
   protected override void TunaCanCollision(TunaCan_Base other) {

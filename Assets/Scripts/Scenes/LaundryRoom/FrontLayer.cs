@@ -10,9 +10,9 @@ public class FrontLayer : MonoBehaviour {
   void Start() {
     floor = transform.Find("Floor").GetComponent<Ferr2DT_PathTerrain>();
     blackness = transform.Find("BlacknessFade").GetComponent<Ferr2DT_PathTerrain>();
-    fan = GameObject.Find("Fan").GetComponent<Fan_Base>();
 
     if (Stitch.fanStatus[0]) {
+      fan = GameObject.Find("Fan").GetComponent<Fan_Base>();
       Mouse_Base m = Game.Create("Mouse", new Vector3(1700, 32, 0)) as Mouse_Base;
       m.runAway = true;
     }
