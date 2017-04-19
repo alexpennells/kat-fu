@@ -27,5 +27,6 @@ public enum eObjectType
   TUNA_CAN,
   MANHOLE,
   FAN,
-  MOUSE
+  MOUSE,
+  SPIDER
 };

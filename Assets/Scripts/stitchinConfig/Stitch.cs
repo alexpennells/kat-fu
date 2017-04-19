@@ -8,8 +8,8 @@ public class Stitch : MonoBehaviour
    * SINGLETON ITEMS
    **********************************/
 
-   public static bool[] tunaCans = { true, false, false, false, false, false, false, false };
-   public static bool[] fanStatus = { false, false };
+   public static bool[] tunaCans = { false, false, false, false, false, false, false, false };
+   public static bool[] fanStatus = { true, true };
 
   /***********************************
    * ABILITIES
@@ -17,12 +17,12 @@ public class Stitch : MonoBehaviour
 
   public static bool canKick = true;
   public static bool canGroundPound = true;
-  public static bool canGroundBoom = false;
-  public static bool canClimb = false;
-  public static bool canCling = false;
-  public static bool canDodge = false;
-  public static bool canUseGun = false;
-  public static bool canUseGrenades = false;
+  public static bool canGroundBoom = true;
+  public static bool canClimb = true;
+  public static bool canCling = true;
+  public static bool canDodge = true;
+  public static bool canUseGun = true;
+  public static bool canUseGrenades = true;
   public static bool canUppercut = true;
 
   /***********************************

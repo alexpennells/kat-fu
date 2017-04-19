@@ -23,6 +23,28 @@ public class Kat_Collision : CollisionStubs {
     other.Collect();
   }
 
+  protected override void SpiderCollision(Spider_Base other) {
+    if (other.Dead)
+      return;
+
+    if (Kat.Is("Punching")) {
+      if (other.LastAttackID == (Base.Sprite as Kat_Sprite).AttackID)
+        return;
+
+      Kat.Physics.hspeed = 0;
+      other.GetHurt(Base.Sprite.FacingRight);
+
+      if (Base.Sprite.FacingRight)
+        Stitch.CreateHit(new Vector3(Base.Mask.Right + 10, Base.Mask.Center.y, Base.z));
+      else
+        Stitch.CreateHit(new Vector3(Base.Mask.Left - 10, Base.Mask.Center.y, Base.z));
+
+      other.LastAttackID = (Base.Sprite as Kat_Sprite).AttackID;
+      Game.FreezeFor(0.05f);
+      return;
+    }
+  }
+
   protected override void FanCollision(Fan_Base other) {
     if (Kat.Is("Punching") && Kat.x > other.Mask.Right - 20 && Kat.Sprite.FacingRight) {
       if ((other.LastAttackID != (Base.Sprite as Kat_Sprite).AttackID)) {
